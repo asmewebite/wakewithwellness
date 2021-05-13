@@ -309,7 +309,7 @@ li span{
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
-    height: auto;
+    height: 15vw;
     overflow-y: hidden;
   }
 
@@ -340,7 +340,7 @@ li span{
   }
 
   .report{
-  margin-top: 30vw;
+  margin-top: 25vw;
   height: 70px;
   display: flex; 
   flex-direction: row;
@@ -523,7 +523,7 @@ li span{
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
-    height: auto;
+    height: 14vw;
     overflow-y: hidden;
   }
 
@@ -554,7 +554,7 @@ li span{
   }
 
   .report{
-  margin-top: 27vw;
+  margin-top: 20vw;
   height: 70px;
   display: flex; 
   flex-direction: row;
