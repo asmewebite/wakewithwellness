@@ -138,7 +138,6 @@ html,body{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: -40vw;
 }
 
 .aboutText{
@@ -355,6 +354,10 @@ li span{
 
 }
 
+.report h2{
+  font-size: 4vw;
+}
+
 .report h5{
   font-size: 12px;
 
@@ -405,7 +408,7 @@ li span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -35vw;
+    margin-top: -40vw;
   }
 
   .aboutText h1{
@@ -620,6 +623,7 @@ li span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -35vw;
   }
 
   .aboutText h1{
