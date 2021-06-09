@@ -28,6 +28,21 @@
 
 
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  
+    <style>
+    .row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+  </style>
+
+
+
 
 
 </head>
@@ -213,7 +228,7 @@
     
     
     
-    <div class="titl" style="background-color: #5793D1;padding: 20px">
+    <div class="titl" style="background-color: #5793D1;padding: 8px">
 
       <div class="container">
 
@@ -229,60 +244,19 @@
     <div class="grid-portfolio" id="portfolio" style="margin-bottom: 20px;background-image:url(assets/img/env/bg.jpg);padding: 10px">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                          <div class="image">
-                                <img src="assets/img/env/j.png">
-                            </div>
-                            <a href="assets/img/env/j.png" data-lightbox="image-1"><div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1></h1>
-                                    <p></p>
-                                </div>
-                            </div></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                          <div class="image">
-                                <img src="assets/img/env/r.png">
-                            </div>
-                            <a href="assets/img/env/r.png" data-lightbox="image-1"><div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1></h1>
-                                    <p></p>
-                                </div>
-                            </div></a>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <div class="thumb">
-                          <div class="image">
-                                <img src="assets/img/env/b.png">
-                            </div>
-                            <a href="assets/img/env/b.png" data-lightbox="image-1"><div class="hover-effect">
-                                <div class="hover-content">
-                                    <h1></h1>
-                                    <p></p>
-                                </div>
-                            </div></a>
-                            
-                        </div>
-                    </div>
-                </div>
-           
-                
+              <div class="column">
+                <img src="assets/img/env/j.png" alt="Snow" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="assets/img/env/r.png" alt="Forest" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="assets/img/env/b.png" alt="Mountains" style="width:100%">
+            </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="load-more-button" style="background-color: white ;height: 45px;width: 150px;padding: 10px;border-radius: 15px">
+                    <div class="load-more-button" style="background-color: white ;margin-top: 10px;height: 45px;width: 150px;padding: 10px;border-radius: 15px">
                         <a href="gallery.html" style="color: black;margin-left: 10px">Load More</a>
                     </div>
                 </div>
