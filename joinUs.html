@@ -39,6 +39,31 @@ input[type=text], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
+input[type=email], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=tel], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=number], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
 
 /* Style the label to display next to the inputs */
 label {
@@ -200,7 +225,7 @@ input[type=submit] {
         <label for="email">E-mail</label>
       </div>
       <div class="col-75">
-        <input type="text" id="email" name="email" placeholder="Your e-mail.." required>
+        <input type="email" id="email" name="email" placeholder="Your e-mail.." required>
       </div>
     </div>
     <div class="row">
@@ -208,7 +233,7 @@ input[type=submit] {
         <label for="contact no.">Contact no.</label>
       </div>
       <div class="col-75">
-        <input type="text" id="contact no." name="contact no." placeholder="Your contact number.." required>
+        <input type="tel" id="contact no." name="contact no." pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"  title="Ten digits code"  placeholder="Your contact number.." required>
       </div>
     </div>
     <div class="row">
@@ -216,7 +241,7 @@ input[type=submit] {
         <label for="whatsapp no.">Whatsapp no.</label>
       </div>
       <div class="col-75">
-        <input type="text" id="whatsapp no." name="whatsapp no." placeholder="Your whatsapp number.." required>
+        <input type="tel" id="whatsapp no." name="whatsapp no." pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"  title="Ten digits code"  placeholder="Your whatsapp number.." required>
       </div>
     </div>
     <div class="row">
@@ -248,7 +273,7 @@ input[type=submit] {
         <label for="pincode">Pincode</label>
       </div>
       <div class="col-75">
-        <input type="text" id="pincode" name="pincode" placeholder="Your pincode.." required>
+        <input type="number" id="pincode" name="pincode" placeholder="Your pincode.." required>
       </div>
     </div>
 
