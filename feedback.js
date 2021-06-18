@@ -35,3 +35,10 @@ submitBtn.addEventListener('click', function(){
         console.log(error);
     });
 });
+
+
+
+submitBtn.addEventListener('click', () => {
+    userMessage.value = ''
+
+});
