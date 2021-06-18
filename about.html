@@ -142,7 +142,7 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
   <footer id="footer">
 
     <div class="footer-top">
@@ -179,12 +179,16 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter" hidden="">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            
+              <div class="form-group">
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;" id="submit" onclick="submitt()" class="btn btn-primary" >Submit</button>
+              
+          
           </div>
 
         </div>
@@ -222,6 +226,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    function submitt(){
+      alert("Success\n" +
+                  "Your feedback has been sent successfully," + 
+                           " Thank you!");
+                         
+      
+    }
+  </script>
+
+  
+  
+  <!--Firebase-->
+  
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+          <script src="feedback.js"></script>
 
 </body>
 
