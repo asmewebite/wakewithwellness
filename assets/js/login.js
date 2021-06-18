@@ -30,7 +30,7 @@ const auth =  firebase.auth();
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       var email = user.email;
-      window.location = "adminhome.html"
+      window.location = "error.html"
     
       window.alert("Login Successfull "+email);
   
