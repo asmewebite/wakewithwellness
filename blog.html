@@ -376,6 +376,18 @@ Thus, engendering to you, no harm....<br>
             </ul>
           </div>
 
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            
+              <div class="form-group">
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;" id="submit" onclick="submitt()" class="btn btn-primary" >Submit</button>
+              
+          
+          </div>
+
         </div>
       </div>
     </div>
@@ -411,32 +423,51 @@ Thus, engendering to you, no harm....<br>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
+
   <script>
+    function submitt(){
+      alert("Success\n" +
+                  "Your feedback has been sent successfully," + 
+                           " Thank you!");
+                         
+      
+    }
+  </script>
+
+<script>
     
-    document.onkeydown=function(e)
+  document.onkeydown=function(e)
+  {
+    if (event.keyCode == 123) 
     {
-      if (event.keyCode == 123) 
-      {
-        return false;
-      }
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
-      {
-        return false;
-      }
-
-      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
-      {
-        return false;
-      }
-
-      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
-      {
-        return false;
-      }
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+    {
+      return false;
     }
 
-  </script>
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+    {
+      return false;
+    }
+
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+    {
+      return false;
+    }
+  }
+
+</script>
+
+  
+  
+  <!--Firebase-->
+  
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+          <script src="feedback.js"></script>
 
 </body>
 
