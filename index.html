@@ -316,6 +316,19 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#">Design Department</a></li>
             </ul>
           </div>
+          
+          
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            
+              <div class="form-group">
+                <textarea name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;width: 100%;height: 50px;background-color: #5793D1;border-radius: 8px;color: azure;" id="submit" onclick="submitt()" >Submit</button>
+              
+          
+          </div>
 
           
 
@@ -380,6 +393,24 @@
     }
 
   </script>  
+    
+    
+    <script>
+    function submitt(){
+      alert("Success\n" +
+                  "Your message has been sent successfully," + 
+                           " Thank you!");
+      
+    }
+  </script>
+
+  
+  
+  <!--Firebase-->
+  
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+          <script src="feedback.js"></script>
 
 
 </body>
