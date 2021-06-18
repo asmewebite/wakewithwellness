@@ -169,17 +169,17 @@
   <h4 class="text-center">Contact Us</h4>
   <div class="form-group">
     <label for="Name">Full Name</label>
-    <input type="text" name="Full Name" id="userFullName" class="form-control">
+    <input type="text" name="Full Name" id="userFullName" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="Email">Email</label>
-    <input type="Email" name="Email" id="userEmail" class="form-control">
+    <input type="Email" name="Email" id="userEmail" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label for="Message">Message</label>
-    <textarea name="Message" id="userMessage" class="form-control"></textarea>
+    <textarea name="Message" id="userMessage" class="form-control" required></textarea>
   </div>
 
   <button style="margin-top: 20px;" id="submit" onclick="submitt()" class="btn btn-primary">Submit</button>
@@ -207,7 +207,9 @@
     
 <script>
   function submitt(){
-    alert("Message sent successfully");
+    alert("Success\n" +
+                "Your message has been sent successfully," + 
+                         " Thank you!");
     
   }
 </script>
