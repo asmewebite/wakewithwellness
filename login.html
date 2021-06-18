@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Thank You</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
+
+
+
+  <style>
+
+
+/* Full-width inputs */
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #5793D1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  margin-top: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+      <h1 class="logo me-auto"><a href="index.html"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+        
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex">
+        <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bu bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bu bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section style="margin-top: 120px">
+      <h1 class="text-center">Login</h1>
+      <div class="row d-flex justify-content-center" style="margin-top: 20px; margin-bottom: 20px;padding: 10px;">
+        <div class="col-md-6">
+          <label for="email"><b>Email:</b></label>
+          <input type="email" placeholder="email here" id="email">
+      
+          <label for="psw"><b>Password:</b></label>
+          <input type="password" placeholder="password here" id="password">
+      
+          <button onclick="signIn()" id="signIp">SignIn</button>
+      
+        </div>
+      </div>
+
+    </section>      
+
+    <div style="margin-bottom: 80px;">
+
+    </div>      
+    </main>
+
+
+  <script src="assets/js/login.js"></script>
+  
+
+</body>
+
+</html>
