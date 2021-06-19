@@ -153,7 +153,7 @@
         //GET ALL DATA
 
         function SelectAllData(){
-            firebase.database().ref('members').on('value',
+            firebase.database().ref('members').once('value',
             function(AllRecords){
                 AllRecords.forEach(
                     function(CurrentRecord){
