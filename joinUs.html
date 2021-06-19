@@ -65,6 +65,7 @@ input[type=number], select, textarea{
 }
 
 
+
 /* Style the label to display next to the inputs */
 label {
   padding: 12px 12px 12px 0;
@@ -110,7 +111,7 @@ input[type=submit] {
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -125,6 +126,8 @@ input[type=submit] {
   
 </head>
 
+ 
+
 <body oncontextmenu="return false">
 
   <!-- ======= Header ======= -->
@@ -133,7 +136,7 @@ input[type=submit] {
 
       <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
       <h1 class="logo me-auto"><a href="index.html"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
+    
       
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -144,16 +147,7 @@ input[type=submit] {
             <ul>
               <li><a href="about.html">About Us</a></li>
               <li><a href="team.html">Team</a></li>
-              <!--<li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>-->
+          
             </ul>
           </li>
 
@@ -209,14 +203,13 @@ input[type=submit] {
     <section style="margin-top: -80px">
     
      <div class="container1">
-  <form action="https://formsubmit.co/wakewithwellness@gmail.com" method="POST">
-    <input type="hidden" name="_next" value="https://wakewithwellness.online/thankyou.html">
+  <form id="registrations">
     <div class="row">
       <div class="col-25">
         <label for="name">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="name" name="name" placeholder="Your name.." required>
+        <input type="text" id="Membername" name="name" placeholder="Your name.." required>
       </div>
     </div>
     
@@ -225,23 +218,23 @@ input[type=submit] {
         <label for="email">E-mail</label>
       </div>
       <div class="col-75">
-        <input type="email" id="email" name="email" placeholder="Your e-mail.." required>
+        <input type="email" id="Email" name="email" placeholder="Your e-mail.." required>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="contact no.">Contact no.</label>
+        <label for="contact">Contact no.</label>
       </div>
       <div class="col-75">
-        <input type="tel" id="contact no." name="contact no."  maxlength="12"  title="Ten digits code"  placeholder="Your contact number.." required>
+        <input type="tel" id="Contact" name="contact"  maxlength="12"  title="Ten digits code"  placeholder="Your contact number.." required>
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="whatsapp no.">Whatsapp no.</label>
+        <label for="whatsapp">Whatsapp no.</label>
       </div>
       <div class="col-75">
-        <input type="tel" id="whatsapp no." name="whatsapp no."  maxlength="12"  title="Ten digits code"  placeholder="Your whatsapp number.." required>
+        <input type="tel" id="Whatsapp" name="whatsapp"  maxlength="12"  title="Ten digits code"  placeholder="Your whatsapp number.." required>
       </div>
     </div>
     <div class="row">
@@ -249,7 +242,7 @@ input[type=submit] {
         <label for="qualifications">Educational Qualifications</label>
       </div>
       <div class="col-75">
-        <input type="text" id="qualifications" name="qualifications" placeholder="Your educational qualifications.." required>
+        <input type="text" id="Qualifications" name="qualifications" placeholder="Your educational qualifications.." required>
       </div>
     </div>
     <div class="row">
@@ -257,7 +250,7 @@ input[type=submit] {
         <label for="institution">Name of institution you are currently enrolled in / workplace</label>
       </div>
       <div class="col-75">
-        <input type="text" id="institution" name="institution" placeholder="Your educational institution.." required>
+        <input type="text" id="College" name="institution" placeholder="Your educational institution.." required>
       </div>
     </div>
     <div class="row">
@@ -265,7 +258,7 @@ input[type=submit] {
         <label for="state">State</label>
       </div>
       <div class="col-75">
-        <input type="text" id="state" name="state" placeholder="Your state.." required>
+        <input type="text" id="State" name="state" placeholder="Your state.." required>
       </div>
     </div>
     <div class="row">
@@ -273,7 +266,7 @@ input[type=submit] {
         <label for="pincode">Pincode</label>
       </div>
       <div class="col-75">
-        <input type="number" id="pincode" name="pincode" placeholder="Your pincode.." required>
+        <input type="number" id="Pincode" name="pincode" placeholder="Your pincode.." required>
       </div>
     </div>
 
@@ -282,7 +275,7 @@ input[type=submit] {
         <label for="country">Country</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country" required>
+        <select id="Country" name="country" required>
           <option value="india">India</option>
         </select>
       </div>
@@ -292,7 +285,7 @@ input[type=submit] {
         <label for="department">Department Preferences</label>
       </div>
       <div class="col-75">
-        <select id="department" name="department" required>
+        <select id="Department" name="department" required>
           <option value="" disabled selected>Select your department</option>
           <option value="Curation Department">Curation Department</option>
           <option value="Editorial Department">Editorial Department</option>
@@ -309,7 +302,7 @@ input[type=submit] {
         <label for="experience">Prior Experience in working for a NGO/CBO</label>
       </div>
       <div class="col-75">
-        <select id="experience" name="experience" required>
+        <select id="Experience" name="experience" required>
           <option value="" disabled selected>Your experience..</option>
           <option value="No">No</option>
           <option value="Yes">Yes</option>
@@ -319,12 +312,12 @@ input[type=submit] {
 
     <div>
       <label>
-          <input type="checkbox" name="declaration" required> I certify that the information I have provided is true and complete to the best of my knowledge. I am aware that this self declaration statement is subject to review and verification and if such information has been falsified,I may be terminated from further proceedings.</label>
+          <input type="checkbox" id="Checkbox" name="declaration" required> I certify that the information I have provided is true and complete to the best of my knowledge. I am aware that this self declaration statement is subject to review and verification and if such information has been falsified,I may be terminated from further proceedings.</label>
     </div>
 
 
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" id="submit" value="Submit">
     </div>
   </form>
 </div>
@@ -405,12 +398,13 @@ input[type=submit] {
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
- 
+  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-    
+
   <script>
     
-    document.onkeydown=function(e)
+    
+      document.onkeydown=function(e)
     {
       if (event.keyCode == 123) 
       {
@@ -432,9 +426,13 @@ input[type=submit] {
       }
     }
 
-  </script>  
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+  <script src="scripts/joinus.js"></script>
 
 </body>
-
 
 </html>
