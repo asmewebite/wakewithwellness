@@ -36,5 +36,10 @@ submitBtn.addEventListener('click', function(){
     });
 });
 
+submitBtn.addEventListener('click', () => {
+    userMessage.value = ''
+
+});
+
 
 
