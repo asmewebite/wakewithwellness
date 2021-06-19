@@ -5,7 +5,7 @@
         db.collection('contactData').get().then(snapshot => {
             setupcontactData(snapshot.docs);
             setupUI(user);
-          });
+          }, err => console.log(err.message));
     } else {
         setupUI();
         setupcontactData([]);
