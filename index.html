@@ -313,12 +313,14 @@
           
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Feedback</h4>
-            
-              <div class="form-group">
-                <textarea  style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+            <div class="alert">Feedback sent</div>
+            <form id="feedbacks"> 
+              <div class="form-group" >
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" onsubmitt="required()"></textarea>
               </div>
             
-              <button style="margin-top: 10px;" id="submit" onclick="submitt()" class="btn btn-primary" >Submit</button>
+              <button style="margin-top: 10px;" id="submit" class="btn btn-primary" >Submit</button>
+            </form>
               
           
           </div>
@@ -402,7 +404,7 @@
   <!--Firebase-->
   
           <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
           <script src="feedback.js"></script>
 
 
