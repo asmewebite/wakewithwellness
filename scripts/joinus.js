@@ -26,7 +26,7 @@ function submitForm(e){
   var Membername = getInputVal('Membername');
   var Email = getInputVal('Email');
   var Contact = getInputVal('Contact');
-  var Chatsapp = getInputVal('Whatsapp');
+  var Whatsapp = getInputVal('Whatsapp');
   var Qualifications = getInputVal('Qualifications');
   var College = getInputVal('College');
   var State = getInputVal('State');
