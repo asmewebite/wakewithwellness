@@ -11,35 +11,49 @@ var firebaseConfig = {
 
 //Init Firebase
 firebase.initializeApp(firebaseConfig);
-var firestore = firebase.firestore();
+
+// Reference messages collection
+var dataRef = firebase.database().ref('feedback');
+
+// Listen for form submit
+document.getElementById('feedbacks').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var userMessage = getInputVal('userMessage');
+  
+  // Save message
+  saveData(userMessage);
 
 
-//Start grabbing our DOM element
-const submitBtn = document.querySelector('#submit');
+ // Show alert
+ document.querySelector('.alert').style.display = 'block';
 
-let userMessage = document.querySelector("#userMessage");
+ // Hide alert after 3 seconds
+ setTimeout(function(){
+   document.querySelector('.alert').style.display = 'none';
+ },3000);
 
-const db = firestore.collection("feedback");
+ // Clear form
+ document.getElementById('feedbacks').reset();
+}
 
-submitBtn.addEventListener('click', function(){
-    let userMessageInput = userMessage.value;
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
 
-    //Access the Database
-    db.doc().set({
-        message: userMessageInput
-    }).then(function(){
-        console.log("Data Saved");
-       
-    })
-    .catch(function(error){
-        console.log(error);
-    });
-});
-
-submitBtn.addEventListener('click', () => {
-    userMessage.value = ''
-
-});
+// Save message to firebase
+function saveData(userMessage){
+  var newDataRef = dataRef.push();
+  newDataRef.set({
+    userMessage: userMessage
+  
+  });
+}
 
 
 
