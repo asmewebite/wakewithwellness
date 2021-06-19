@@ -41,4 +41,11 @@ submitBtn.addEventListener('click', function(){
     });
 });
 
+submitBtn.addEventListener('click', () => {
+    userName.value = '';
+    userEmail.value = '';
+    userMessage.value = '';
+
+});
+
 
