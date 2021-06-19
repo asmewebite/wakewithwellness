@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Registrations</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+        <h1 class="logo me-auto"><a href="index.html"></a></h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="adminpanel.html">Home</a></li>
+          <li><a href="feedbacks.html">Feedbacks</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Registrations</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <section>
+        <div class="container">
+
+
+
+
+            <div class="table-responsive custom-table-responsive">
+    
+                <table class="table custom-table" id="myTable">
+                    <thead>
+                        <tr>  
+                        <th scope="col">Name.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Whatsapp</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">College</th>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">State</th>
+                        
+                  
+                        </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                       
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </section>
+
+    
+
+    
+    </main>
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+  <script id="MainScript">
+      //Connection
+        var firebaseConfig = {
+            apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+            authDomain: "website-818ed.firebaseapp.com",
+            projectId: "website-818ed",
+            storageBucket: "website-818ed.appspot.com",
+            messagingSenderId: "542030860652",
+            appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+            measurementId: "G-2VWCQ9QR4S"
+        };
+
+        //Init Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+
+
+        //GET ALL DATA
+
+        function SelectAllData(){
+            firebase.database().ref('members').on('value',
+            function(AllRecords){
+                AllRecords.forEach(
+                    function(CurrentRecord){
+                        var name = CurrentRecord.val().Membername;
+                        var email = CurrentRecord.val().Email;
+                        var contact = CurrentRecord.val().Contact;
+                        var whatsapp = CurrentRecord.val().Whatsapp;
+                        var department = CurrentRecord.val().Department;
+                        var college = CurrentRecord.val().College;
+                        var qualification = CurrentRecord.val().Qualification;
+                        var experience = CurrentRecord.val().Experience;
+                        var state = CurrentRecord.val().State;
+                        AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state);
+
+                    }
+                );
+
+            });
+        }
+
+        window.onload = SelectAllData;
+
+        //Filling the table
+       
+        function AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            var td6 = document.createElement('td');
+            var td7 = document.createElement('td');
+            var td8 = document.createElement('td');
+            var td9 = document.createElement('td');
+            
+           
+            td1.innerHTML = name;
+            td2.innerHTML = email;
+            td3.innerHTML = contact;
+            td4.innerHTML = whatsapp;
+            td5.innerHTML = department;
+            td6.innerHTML = college;
+            td7.innerHTML = qualification;
+            td8.innerHTML = experience;
+            td9.innerHTML = state;
+            trow.appendChild(td1); 
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            trow.appendChild(td4); 
+            trow.appendChild(td5); 
+            trow.appendChild(td6); 
+            trow.appendChild(td7); 
+            trow.appendChild(td8); 
+            trow.appendChild(td9); 
+            
+            tbody.appendChild(trow);
+            
+        }
+
+
+  </script>
+
+</body>
+
+</html>
