@@ -40,6 +40,18 @@ function submitForm(e){
 
   // Save message
   saveData(Membername, Email, Contact, Whatsapp, Qualifications, College, State, Pincode, Country, Department, Experience, Checkbox);
+    
+    // Show alert
+ document.querySelector('.alert').style.display = 'block';
+
+ // Hide alert after 3 seconds
+ setTimeout(function(){
+   document.querySelector('.alert').style.display = 'none';
+ },3000);
+
+ // Clear form
+ document.getElementById('registrations').reset();
+
 }
 
 // Function to get get form values
