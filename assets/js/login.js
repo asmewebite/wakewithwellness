@@ -25,14 +25,25 @@ const auth =  firebase.auth();
     
   }
 
+  //signOut
+
+  function signOut(){
+    auth.signOut();
+    alert("SignOut Successfully from System");
+  }
+
 
   //active user to homepage
   firebase.auth().onAuthStateChanged((user)=>{
     if(user){
       var email = user.email;
-      window.location = "error.html"
+      setTimeout(function(){
+        window.alert("Login Successfull "+email);
+        window.location.replace("adminhome.html");
+      },1000)
+      
     
-      window.alert("Login Successfull "+email);
+      
   
 
     }else{
