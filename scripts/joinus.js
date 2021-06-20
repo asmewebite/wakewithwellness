@@ -13,7 +13,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Reference messages collection
-var dataRef = firebase.database().ref('members');
+var dataRef = firebase.database().ref('joinus');
 
 // Listen for form submit
 document.getElementById('registrations').addEventListener('submit', submitForm);
