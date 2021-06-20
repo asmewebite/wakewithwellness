@@ -39,7 +39,7 @@
     <div class="container d-flex align-items-center">
 
         <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
-        <h1 class="logo me-auto"><a href="index.html"></a></h1>
+
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -56,12 +56,12 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs" style="margin-top: 70px;">
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="adminpanel.html">Home</a></li>
             <li>Registrations</li>
           </ol>
         </div>
@@ -70,17 +70,15 @@
     </section><!-- End Breadcrumbs -->
 
 
-    <section>
-        <div class="container">
-
-
-
+  
+        <div class="container-fluid" >
 
             <div class="table-responsive custom-table-responsive">
     
                 <table class="table custom-table" id="myTable">
                     <thead>
-                        <tr>  
+                        <tr> 
+                        <th scope="col">S No.</th> 
                         <th scope="col">Name.</th>
                         <th scope="col">Email</th>
                         <th scope="col">Contact</th>
@@ -101,14 +99,7 @@
                 </table>
             </div>
         </div>
-
-
-    </section>
-
-    
-
-    
-    </main>
+   </main>
 
   
 
@@ -177,7 +168,7 @@
         window.onload = SelectAllData;
 
         //Filling the table
-       
+        var stdNo = 0;
         function AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state){
             var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
@@ -190,17 +181,18 @@
             var td7 = document.createElement('td');
             var td8 = document.createElement('td');
             var td9 = document.createElement('td');
+            var td10 = document.createElement('td');
             
-           
-            td1.innerHTML = name;
-            td2.innerHTML = email;
-            td3.innerHTML = contact;
-            td4.innerHTML = whatsapp;
-            td5.innerHTML = department;
-            td6.innerHTML = college;
-            td7.innerHTML = qualification;
-            td8.innerHTML = experience;
-            td9.innerHTML = state;
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = name;
+            td3.innerHTML = email;
+            td4.innerHTML = contact;
+            td5.innerHTML = whatsapp;
+            td6.innerHTML = department;
+            td7.innerHTML = college;
+            td8.innerHTML = qualification;
+            td9.innerHTML = experience;
+            td10.innerHTML = state;
             trow.appendChild(td1); 
             trow.appendChild(td2); 
             trow.appendChild(td3); 
@@ -209,7 +201,8 @@
             trow.appendChild(td6); 
             trow.appendChild(td7); 
             trow.appendChild(td8); 
-            trow.appendChild(td9); 
+            trow.appendChild(td9);
+            trow.appendChild(td10); 
             
             tbody.appendChild(trow);
             
