@@ -27,10 +27,10 @@ function submitForm(e){
   var Email = getInputVal('Email');
   var Contact = getInputVal('Contact');
   var Whatsapp = getInputVal('Whatsapp');
-  var Whatsapp = getInputVal('Alternate');
+  var Alternate = getInputVal('Alternate');
   var College = getInputVal('College');
   var Department = getInputVal('Department');
-  var Department = getInputVal('Position');
+  var Position = getInputVal('Position');
   var Checkbox1 = getInputVal('Checkbox1');
   var Checkbox2= getInputVal('Checkbox2');
   var Checkbox3 = getInputVal('Checkbox3');
