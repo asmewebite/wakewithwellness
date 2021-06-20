@@ -144,7 +144,7 @@
         //GET ALL DATA
 
         function SelectAllData(){
-            firebase.database().ref('members').once('value',
+            firebase.database().ref('joinus').once('value',
             function(AllRecords){
                 AllRecords.forEach(
                     function(CurrentRecord){
