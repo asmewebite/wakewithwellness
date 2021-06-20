@@ -23,25 +23,26 @@ function submitForm(e){
   e.preventDefault();
 
   // Get values
-  var Membername = getInputVal('Membername');
-  var Email = getInputVal('Email');
-  var Contact = getInputVal('Contact');
-  var Whatsapp = getInputVal('Whatsapp');
-  var Qualifications = getInputVal('Qualifications');
-  var College = getInputVal('College');
-  var State = getInputVal('State');
-  var Pincode = getInputVal('Pincode');
-  var Country = getInputVal('Country');
-  var Department = getInputVal('Department');
-  var Experience = getInputVal('Experience');
-  var Checkbox = getInputVal('Checkbox');
+  var name = getInputVal('Membername');
+  var email = getInputVal('Email');
+  var contact = getInputVal('Contact');
+  var whatsapp = getInputVal('Whatsapp');
+  var qualifications = getInputVal('Qualifications');
+  var college = getInputVal('College');
+  var state = getInputVal('State');
+  var pincode = getInputVal('Pincode');
+  var country = getInputVal('Country');
+  var department = getInputVal('Department');
+  var experience = getInputVal('Experience');
+  var checkbox = getInputVal('Checkbox');
   
 
 
   // Save message
-  saveData(Membername, Email, Contact, Whatsapp, Qualifications, College, State, Pincode, Country, Department, Experience, Checkbox);
-    
-    // Show alert
+  saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department, experience, checkbox);
+
+
+ // Show alert
  document.querySelector('.alert').style.display = 'block';
 
  // Hide alert after 3 seconds
@@ -51,7 +52,6 @@ function submitForm(e){
 
  // Clear form
  document.getElementById('registrations').reset();
-
 }
 
 // Function to get get form values
@@ -60,20 +60,20 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(Membername, Email, Contact, Whatsapp, Qualifications, College, State, Pincode, Country, Department, Experience, Checkbox){
+function saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department, experience, checkbox){
   var newDataRef = dataRef.push();
   newDataRef.set({
-    Membername: Membername,
-    Email:Email,
-    Contact:Contact,
-    Whatsapp:Whatsapp,
-    Qualifications:Qualifications,
-    College:College,
-    State:State,
-    Pincode:Pincode,
-    Country:Country,
-    Department:Department,
-    Experience:Experience,
-    Checkbox:Checkbox
+    name: name,
+    email:email,
+    contact:contact,
+    whatsapp:whatsapp,
+    qualifications:qualifications,
+    college:college,
+    state:state,
+    pincode:pincode,
+    country:country,
+    department:department,
+    experience:experience,
+    checkbox:checkbox
   });
 }
