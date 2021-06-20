@@ -148,15 +148,15 @@
             function(AllRecords){
                 AllRecords.forEach(
                     function(CurrentRecord){
-                        var name = CurrentRecord.val().Membername;
-                        var email = CurrentRecord.val().Email;
-                        var contact = CurrentRecord.val().Contact;
-                        var whatsapp = CurrentRecord.val().Whatsapp;
-                        var department = CurrentRecord.val().Department;
-                        var college = CurrentRecord.val().College;
-                        var qualification = CurrentRecord.val().Qualifications;
-                        var experience = CurrentRecord.val().Experience;
-                        var state = CurrentRecord.val().State;
+                        var name = CurrentRecord.val().name;
+                        var email = CurrentRecord.val().email;
+                        var contact = CurrentRecord.val().contact;
+                        var whatsapp = CurrentRecord.val().whatsapp;
+                        var department = CurrentRecord.val().department;
+                        var college = CurrentRecord.val().college;
+                        var qualification = CurrentRecord.val().qualifications;
+                        var experience = CurrentRecord.val().experience;
+                        var state = CurrentRecord.val().state;
                         AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state);
 
                     }
@@ -210,6 +210,7 @@
 
 
   </script>
+
 
 </body>
 
