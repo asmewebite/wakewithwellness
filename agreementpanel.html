@@ -29,57 +29,66 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+
 
 </head>
 
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-        <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+<body style="background-color: rgb(41, 41, 41);">
 
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a href="adminpanel.html">Home</a></li>
-          <li><a href="feedbacks.html">Feedbacks</a></li>
-          <li><a href="registrations.html">Registrations</a></li>
-
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+  <div class="topnav" style="width: 100%;">
+    <div style="margin-right: 10px;">
+      <h5 style="float: left;color: white;font-weight: 400; margin-top: 15px;margin-left: 14px;color: #5793D1;">Agreements</h5>
+      <a style="float: right;" href="adminpanel.html">Home</a>
+      
 
     </div>
-  </header><!-- End Header -->
+  
+  </div>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs"  style="margin-top: 70px;">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <ol>
-            <li><a href="adminpanel.html">Home</a></li>
-            <li>Agreement</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
+  
 
 
   
-        <div class="container-fluid" style="margin-top: 10px;" >
+        <div class="container-fluid" >
 
             <div class="table-responsive custom-table-responsive">
     
-                <table class="table custom-table" id="myTable">
+                <table class="table custom-table" id="myTable" style="color: whitesmoke;">
                     <thead>
                         <tr> 
-                        <th scope="col">S No.</th> 
+                        <th scope="col">SNo.</th> 
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Contact</th>
