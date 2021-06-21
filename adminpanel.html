@@ -1,131 +1,318 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Compiled and minified CSS -->
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Admin Panel</title>
+
+        <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <title>Admin Panel</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+<style>
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
- 
-</head>
-<body oncontextmenu="return false" class="grey lighten-3">
+/* Text Align */
+.text-c {
+    text-align: center;
+}
+.text-l {
+    text-align: left;
+}
+.text-r {
+    text-align: right
+}
+.text-j {
+    text-align: justify;
+}
 
-  <!-- NAVBAR -->
-  <nav class="z-depth-0 grey lighten-4 ">
-    <div class="nav-wrapper container ">
-      <a href="#" class="brand-logo left">
-        <img src="img/logoonly.png" style="width: 150px; margin-top: 15px;">
+/* Text Color */
+.text-whitesmoke {
+    color: whitesmoke
+}
+.text-darkyellow {
+    color: rgba(255, 235, 59, 0.432)
+}
+
+/* Lines */
+
+.line-b {
+    border-bottom: 1px solid #FFEB3B !important;
+}
+
+/* Buttons */
+.button {
+    border-radius: 3px;
+}
+.form-button {
+    background-color: rgba(255, 235, 59, 0.24);
+    border-color: rgba(255, 235, 59, 0.24);
+    color: #e6e6e6;
+}
+.form-button:hover,
+.form-button:focus,
+.form-button:active,
+.form-button.active,
+.form-button:active:focus,
+.form-button:active:hover,
+.form-button.active:hover,
+.form-button.active:focus {
+    background-color: rgba(255, 235, 59, 0.473);
+    border-color: rgba(255, 235, 59, 0.473);
+    color: #e6e6e6;
+}
+.button-l {
+    width: 100% !important;
+}
+
+/* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
+
+.margin-g {
+    margin: 15px;
+}
+.margin-g-sm {
+    margin: 10px;
+}
+.margin-g-md {
+    margin: 20px;
+}
+.margin-g-lg {
+    margin: 30px;
+}
+
+.margin-l {
+    margin-left: 15px;
+}
+.margin-l-sm {
+    margin-left: 10px;
+}
+.margin-l-md {
+    margin-left: 20px;
+}
+.margin-l-lg {
+    margin-left: 30px;
+}
+
+.margin-r {
+    margin-right: 15px;
+}
+.margin-r-sm {
+    margin-right: 10px;
+}
+.margin-r-md {
+    margin-right: 20px;
+}
+.margin-r-lg {
+    margin-right: 30px;
+}
+
+.margin-t {
+    margin-top: 15px;
+}
+.margin-t-sm {
+    margin-top: 10px;
+}
+.margin-t-md {
+    margin-top: 20px;
+}
+.margin-t-lg {
+    margin-top: 30px;
+}
+
+.margin-b {
+    margin-bottom: 15px;
+}
+.margin-b-sm {
+    margin-bottom: 10px;
+}
+.margin-b-md {
+    margin-bottom: 20px;
+}
+.margin-b-lg {
+    margin-bottom: 30px;
+}
+
+/* Bootstrap Form Control Extension */
+
+.form-control,
+.border-line {
+    background-color: #5f5f5f;
+    background-image: none;
+    border: 1px solid #424242;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.form-control:focus,
+.border-line:focus {
+    border-color: #FFEB3B;
+    background-color: #616161;
+    color: #e6e6e6;
+}
+.form-control,
+.form-control:focus {
+    box-shadow: none;
+}
+.form-control::-webkit-input-placeholder { color: #BDBDBD; }
+
+/* Container */
+
+.container-content {
+    background-color: #3a3a3aa2;
+    color: inherit;
+    padding: 15px 20px 20px 20px;
+    border-color: #FFEB3B;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+}
+
+/* Backgrounds */
+
+.main-bg {
+
+    background: #424242;
+    background: linear-gradient( #424242, #212121);
+}
+
+/* Login & Register Pages*/
+
+.login-container {
+    max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.login.login-container {
+    width: 300px;
+}
+.wrapper.login-container {
+    margin-top: 140px;
+}
+.logo-badge {
+    color: #e6e6e6;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -10px;
+    margin-bottom: 0;
+}
+        </style>
+
+
+<style>
+  /* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+    </head>
+
+
+    <body style="background-color: rgb(41, 41, 41);">
+
+      
+
+        <div id="login_div" class="login-container text-c animated" style="margin-top: 50px;display: none;">
+            <div>
+                <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
+            </div>
+            <h3 class="text-whitesmoke">Members Login</h3>
+            <div style="background-color: rgb(41, 41, 41);" class="container-content">
+
+                <div class="form-group">
+                    <input style="width: 90%;height: 40px;padding: 5px;" type="email" placeholder="Email..." id="email_field" />
+                </div>
+                <div class="form-group">
+                    <input style="width: 90%;height: 40px;margin-top: 10px;padding: 5px;" type="password" placeholder="Password..." id="password_field" />
+                </div>
+
+                <button onclick="login()" style="margin-top: 20px;background-color: aquamarine;width: 50%;border-radius: 10px;height: 40px;cursor: pointer;">Login to Account</button>
+            </div>
+            
+          </div>
+
+<!--VERY VERY IMPORTANT-->
+
+
+<section id="user_div" class="loggedin-div" style="display: none;">
+
+  <div class="topnav" style="width: 100%;">
+    <div style="float: right">
+      <a href="#home">Home</a>
+      <a style="color: tomato;" onclick="logout()">LogOut</a>
+
+    </div>
+  
+  </div>
+
+  
+
+  <div >
+    <p id="user_para" style="color: white;padding: 10px;">User mail</p>
+  </div class="row d-flex justify-content-center">
+
+
+
+  <div class="d-flex justify-content-around" style="padding: 10px;">
+    <ul id="nav-mobile" class="center">
+      <a class="logged-in" href="feedbacks.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Feedbacks
       </a>
-      <ul id="nav-mobile" class="right">
-          <li class="logged-in" style="display: none;">
-            <a href="#" style="color: black;"  class="modal-trigger" data-target="modal-account">Account</a>
-          </li>
-          <li class="logged-in" style="display: none;">
-            <a href="#" style="color: black;color: red;font-weight: bold;" id="logout">Logout</a>
-          </li>
-          <li class="logged-out" style="display: none;">
-            <a href="#" style="color: black;font-weight: 700;" class="modal-trigger" data-target="modal-login">Login</a>
-          </li>
-          
-        </span>
-      </ul>
-  
-    </div>
-    
-  </nav>
 
-  <!-- SIGN UP MODAL -->
-  <div id="modal-signup" class="modal">
-    <div class="modal-content">
-      <h4>Sign up</h4><br />
-      <form id="signup-form">
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="signup-password" required />
-          <label for="signup-password">Choose password</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-      </form>
-    </div>
-  </div>
+      <a class="logged-in" href="registrations.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Registrations
+      </a>
 
-  <!-- LOGIN MODAL -->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
-      <h4>Login</h4><br />
-      <form id="login-form">
-        <div class="input-field">
-          <input type="email" id="login-email" required />
-          <label for="login-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="login-password" required />
-          <label for="login-password">Your password</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ACCOUNT MODAL -->
-  <div id="modal-account" class="modal">
-    <div class="modal-content center-align">
-      <h4>Account details</h4><br />
-      <div class="account-details"></div>
-    </div>
-  </div>
-  
-
-
-  <!-- CONTACT DATA LIST -->
-  
-  <div class="container" style="margin-top: 40px;">
-    <ul class="collapsible z-depth-0 contactdata" style="border: none;">
-
+      <a class="logged-in" href="agreementpanel.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Agreements
+      </a>
+      
     </ul>
   </div>
 
+  
 
-  <div class="container" style="margin-top: 40px;">
-    <ul id="nav-mobile" class="center">
-      <a class="logged-in" href="feedbacks.html" style="margin-top: 20px;color: white;padding: 15px;display: none;background-color: #5793D1; border-radius: 8px;">Feedbacks
-      </a>
 
-      <a class="logged-in" href="registrations.html" style="margin-top: 20px;color: white;padding: 15px;display: none;background-color: #5793D1; border-radius: 8px;">Registrations
-      </a>
-
-      <a class="logged-in" href="agreementpanel.html" style="margin-top: 20px;padding: 15px;display: none;color: white;background-color: #5793D1; border-radius: 8px;">Agreements
-      </a>
-      
-    </span>
-  </ul>
-
+    
   </div>
+
+</section>
 
 
 
@@ -147,17 +334,10 @@
     //Init Firebase
     firebase.initializeApp(firebaseConfig);
 
-    //make auth and firestore reference
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+    </script>
 
-
-    //update firestore setting
-    db.settings({ timestampsInSnapshots: true });
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="scripts/auth.js"></script>
   <script src="scripts/admin.js"></script>
 
 
