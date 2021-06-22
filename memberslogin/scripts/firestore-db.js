@@ -35,7 +35,17 @@ async function getuserInfo(userID){
         userDetails.innerHTML = `
         <div class="container">
       
-        <h3 style=" color: white;">Members login only</h3></div>
+        <h4 style="color: yellow;">'Members login only'</h4></div>
+
+        <div class="container" style="margin-top:50px">
+          <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Wake With Wellness</h5>
+          <p style="color: rgb(196, 194, 194);text-align: justify;">Wake With Wellness is a community based organization registered under 
+            UNITED NATIONS to exercise good actions for the rehabilitation of communities regarding health and social 
+            awareness without ascertaining the foundations of legal norms. We’ll create health awareness campaigns that will include posters, 
+            content creation, interactive sessions and imparting information that can increase the awareness of 
+            people in the country about palliative and health care.</p>
+
+  </div>
         `
     }
 
@@ -56,13 +66,40 @@ async function getuserInfoRealtime(userID){
                         userDetails.innerHTML = `
                         <div class="userdee" style="background-color:#5793D1;text-align: left;width: 100%;padding: 10px">
                           <div class="collection-item"><h5 style="color:white">${userInfo.name}</h5></div>
-                          <div class="collection-item"  style="color:rgb(219, 219, 219)">${userInfo.email}<br>
-                          Contact no.:  ${userInfo.phone}<br>
-                          Whatsapp no.:  ${userInfo.whatsapp}<br>
+                          <div class="collection-item"  style="color:rgb(219, 219, 219)"> E mail:  ${userInfo.email}<br>
+                          Contact no:  ${userInfo.phone}<br>
+                          Whatsapp no:  ${userInfo.whatsapp}<br>
                           Department:  ${userInfo.department}<br>
                           College:  ${userInfo.college}</div>
                         </div>
-                    
+
+                        <div class="container">
+      <div>
+          <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Wake With Wellness</h5>
+          <p style="color: rgb(196, 194, 194);text-align: justify;">Wake With Wellness is a community based organization registered under 
+            UNITED NATIONS to exercise good actions for the rehabilitation of communities regarding health and social 
+            awareness without ascertaining the foundations of legal norms. We’ll create health awareness campaigns that will include posters, 
+            content creation, interactive sessions and imparting information that can increase the awareness of 
+            people in the country about palliative and health care.</p>
+
+  </div>
+  </div>
+
+
+
+  <div class="d-flex justify-content-around" style="padding: 10px;">
+    <ul id="nav-mobile" class="center">
+      <a class="logged-in" href="feedbacks.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Suggestions
+      </a>
+
+      <a class="logged-in" href="attendanceform.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Attendance
+      </a>
+
+      <a class="logged-in" href="memberagreement.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Agreement
+      </a>
+      
+    </ul>
+  </div>
                         `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
@@ -83,7 +120,15 @@ async function getuserInfoRealtime(userID){
         userDetails.innerHTML = `
         <div class="container">
       
-        <h3 style=" color: white;">Members login only</h3></div>
+        <h4 style="color: yellow;">'Members login only'</h4></div>
+
+        <div class="container" style="margin-top:50px">
+          <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
+          
+
+  </div>
+  <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:200px">
+  <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px">Login</a></div>
         
        
         `
