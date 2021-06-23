@@ -177,7 +177,7 @@ body {
     background-color: #3a3a3aa2;
     color: inherit;
     padding: 15px 20px 20px 20px;
-    border-color: #FFEB3B;
+    border-color: #5793D1;
     border-image: none;
     border-style: solid solid none;
     border-width: 1px 0;
@@ -265,7 +265,7 @@ body {
                     <input style="width: 90%;height: 40px;margin-top: 10px;padding: 5px;color: white;" type="password" placeholder="Password..." id="password_field" />
                 </div>
 
-                <button onclick="login()" style="margin-top: 20px;background-color: aquamarine;width: 50%;border-radius: 10px;height: 40px;cursor: pointer;">Login to Account</button>
+                <button class="btn waves-effect" onclick="login()" style="margin-top: 20px;background-color: #5793D1;width: 50%;border-radius: 10px;height: 40px;cursor: pointer;">Login to Account</button>
             </div>
             
           </div>
@@ -276,7 +276,7 @@ body {
 <section id="user_div" class="loggedin-div" style="display: none;">
 
   <div class="topnav" style="width: 100%;">
-      <img src="memberslogin/logoonly.png" style="width: 190px;margin-top: 4.5px;margin-left: 10px;">
+    <img src="memberslogin/logoonly.png" style="width: 190px;margin-top: 4.5px;margin-left: 10px;">
     <div style="float: right">
       <a style="color: tomato;cursor: pointer" onclick="logout()">LogOut</a>
 
@@ -291,9 +291,9 @@ body {
     <div style="background-color: yellow;width: 100%;height: 1px;">
     </div>
   </div class="row d-flex justify-content-center">
-    
-    
-    <div class="container">
+
+
+  <div class="container">
     <div>
         <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Wake With Wellness</h5>
         <p style="color: rgb(196, 194, 194);text-align: justify;">Wake With Wellness is a community based organization registered under UNITED NATIONS to exercise good actions for the rehabilitation of communities regarding health and social awareness without ascertaining the foundations of legal norms. We’ll create health awareness campaigns that will include posters, content creation, interactive sessions and imparting information that can increase the awareness of people in the country about palliative and health care.</p>
@@ -312,6 +312,19 @@ body {
       </a>
 
       <a class="logged-in" href="agreementpanel.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Agreements
+      </a>
+      
+    </ul>
+  </div>
+  <div class="d-flex justify-content-around" style="padding: 10px;">
+    <ul id="nav-mobile" class="center">
+      <a class="logged-in" href="admincomplaints.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Complaints
+      </a>
+
+      <a class="logged-in" href="members.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Members
+      </a>
+
+      <a class="logged-in" href="adminattendance.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Attendance
       </a>
       
     </ul>
