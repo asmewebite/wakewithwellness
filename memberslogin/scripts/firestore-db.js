@@ -200,11 +200,11 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var attend = document.getElementById('attend').value
-  var userRef = firebase.firestore().collection('attendance').doc("Months").collection('August').doc(firebase.auth().currentUser.uid);
+  var July = document.getElementById('attend').value
+  var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    attend:attend
+    July:July
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
@@ -214,14 +214,10 @@ setTimeout(function(){
 },2000);
 
 // Clear form
-document.getElementById('updateattendance').reset();
+document.getElementById('attend').reset();
 
   });
 }
-
-
-
-
 
 
 
