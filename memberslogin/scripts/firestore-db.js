@@ -1,6 +1,7 @@
 const userDetails  = document.querySelector('.userDetails')
 const editProfile  = document.querySelector('#editProfile')
 
+
 function createUserCollection(user){
    firebase.firestore().collection('users')
    .doc(user.uid)
@@ -34,12 +35,10 @@ async function getuserInfo(userID){
     }else{
         userDetails.innerHTML = `
         <div class="container">
-      
-        <div class="container">
 
         <h5 style="color: red;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
       
-        <h4 style="color: yellow;margin-top:150px">'Member login only'</h4></div>
+        <h4 style="color: yellow;margin-top:120px">'Member login only'</h4></div>
 
         <div class="container" style="margin-top:50px">
           
@@ -72,12 +71,26 @@ async function getuserInfoRealtime(userID){
                         userDetails.innerHTML = `
                         <div class="userdee" style="background-color:#5793D1;text-align: left;width: 100%;padding: 10px">
                           <div class="collection-item"><h5 style="color:white">${userInfo.name}</h5></div>
-                          <div class="collection-item"  style="color:rgb(219, 219, 219)"> E mail:  ${userInfo.email}<br>
-                          Contact no:  ${userInfo.phone}<br>
-                          Whatsapp no:  ${userInfo.whatsapp}<br>
-                          Department:  ${userInfo.department}<br>
-                          College:  ${userInfo.college}</div>
+                          <div class="collection-item"  style="color:rgb(219, 219, 219)"> E-mail :  ${userInfo.email}<br>
+                          Contact no :  ${userInfo.phone}<br>
+                          Whatsapp no :  ${userInfo.whatsapp}<br>
+                          Department :  ${userInfo.department}<br>
+                          College :  ${userInfo.college}</div>
                         </div>
+
+                        <div class="d-flex justify-content-around" style="padding: 10px;">
+    <ul id="nav-mobile" class="center">
+      <a class="logged-in" href="feedbacks.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Suggestions
+      </a>
+
+      <a class="logged-in" href="attendanceform.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Attendance
+      </a>
+
+      <a class="logged-in" href="memberagreement.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Agreement
+      </a>
+      
+    </ul>
+  </div>
 
                         <div class="container">
       <div>
@@ -93,19 +106,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-  <div class="d-flex justify-content-around" style="padding: 10px;">
-    <ul id="nav-mobile" class="center">
-      <a class="logged-in" href="feedbacks.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Suggestions
-      </a>
-
-      <a class="logged-in" href="attendanceform.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Attendance
-      </a>
-
-      <a class="logged-in" href="memberagreement.html" style="padding: 10px;color: white;background-color: #5793D1; border-radius: 8px;">Agreement
-      </a>
-      
-    </ul>
-  </div>
+  
                         `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
@@ -125,12 +126,10 @@ async function getuserInfoRealtime(userID){
     }else{
         userDetails.innerHTML = `
         <div class="container">
-      
-        <div class="container">
 
         <h5 style="color: red;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
       
-        <h4 style="color: yellow;margin-top:150px">'Member login only'</h4></div>
+        <h4 style="color: yellow;margin-top:120px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"">'Member login only'</h4></div>
 
         <div class="container" style="margin-top:50px">
           
@@ -191,9 +190,39 @@ async function allUserDetails(){
            `
     })
  
-  
-  
-
-
-
 }
+
+
+
+
+//Attendance
+
+
+function updateattendance(event){
+  event.preventDefault()
+  var attend = document.getElementById('attend').value
+  var userRef = firebase.firestore().collection('attendance').doc("Months").collection('August').doc(firebase.auth().currentUser.uid);
+
+  var setWithMerge = userRef.set({
+    attend:attend
+  },{ merge: true}).then(()=>{
+    document.querySelector('.alert').style.display = 'block';
+
+// Hide alert after 3 seconds
+setTimeout(function(){
+  document.querySelector('.alert').style.display = 'none';
+},2000);
+
+// Clear form
+document.getElementById('updateattendance').reset();
+
+  });
+}
+
+
+
+
+
+
+
+
