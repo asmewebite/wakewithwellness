@@ -35,17 +35,23 @@ async function getuserInfo(userID){
         userDetails.innerHTML = `
         <div class="container">
       
-        <h4 style="color: yellow;">'Members login only'</h4></div>
+        <div class="container">
+
+        <h5 style="color: red;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
+      
+        <h4 style="color: yellow;margin-top:150px">'Member login only'</h4></div>
 
         <div class="container" style="margin-top:50px">
-          <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Wake With Wellness</h5>
-          <p style="color: rgb(196, 194, 194);text-align: justify;">Wake With Wellness is a community based organization registered under 
-            UNITED NATIONS to exercise good actions for the rehabilitation of communities regarding health and social 
-            awareness without ascertaining the foundations of legal norms. We’ll create health awareness campaigns that will include posters, 
-            content creation, interactive sessions and imparting information that can increase the awareness of 
-            people in the country about palliative and health care.</p>
+          
+
+          <p style="color:white">Be a part of this welfare operation by undertaking the pledge to serve people and generation.<br>
+          Looking forward towards the growth of an incredible community</p>
+          <p></p>
+          
 
   </div>
+  <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:70px;cursor: pointer">
+  <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px;width:200px">Login</a></div>
         `
     }
 
@@ -120,15 +126,23 @@ async function getuserInfoRealtime(userID){
         userDetails.innerHTML = `
         <div class="container">
       
-        <h4 style="color: yellow;">'Members login only'</h4></div>
+        <div class="container">
+
+        <h5 style="color: red;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
+      
+        <h4 style="color: yellow;margin-top:150px">'Member login only'</h4></div>
 
         <div class="container" style="margin-top:50px">
-          <h5 style="color: white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Page Under Construction</h5>
+          
+
+          <p style="color:white">Be a part of this welfare operation by undertaking the pledge to serve people and generation.<br>
+          Looking forward towards the growth of an incredible community</p>
+          <p></p>
           
 
   </div>
-  <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:200px">
-  <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px">Login</a></div>
+  <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:70px;cursor: pointer">
+  <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px;width:200px">Login</a></div>
         
        
         `
