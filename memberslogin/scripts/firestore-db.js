@@ -200,20 +200,14 @@ async function allUserDetails(){
 function updateattendance(event){
   event.preventDefault()
   var July1 = document.getElementById('attend').value
+  var July1f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    July1:July1
+    July1:July1,
+    July1f:July1f
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
-
-// Hide alert after 3 seconds
-setTimeout(function(){
-  document.querySelector('.alert').style.display = 'none';
-},2000);
-
-// Clear form
-document.getElementById('attend').reset();
 
   });
 }
