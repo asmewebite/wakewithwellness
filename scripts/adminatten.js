@@ -8,17 +8,20 @@ function renderAtten1(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let July1 = document.createElement('span');
+    let July1f = document.createElement('span');
   
 
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     July1.textContent = doc.data().July1;
+    July1f.textContent = doc.data().July1f;
   
 
 
     li.appendChild(name);
     li.appendChild(July1);
+    li.appendChild(July1f);
     
   
 
@@ -44,17 +47,20 @@ function renderAtten2(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let July2 = document.createElement('span');
+    let July2f = document.createElement('span');
   
 
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     July2.textContent = doc.data().July2;
+    July2f.textContent = doc.data().July2f;
   
 
 
     li.appendChild(name);
     li.appendChild(July2);
+    li.appendChild(July2f);
     
   
 
@@ -79,17 +85,20 @@ function renderAtten3(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let July3 = document.createElement('span');
+    let July3f = document.createElement('span');
   
 
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     July3.textContent = doc.data().July3;
+    July3f.textContent = doc.data().July3f;
   
 
 
     li.appendChild(name);
     li.appendChild(July3);
+    li.appendChild(July3f);
     
   
 
@@ -116,17 +125,20 @@ function renderAtten4(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
     let July4 = document.createElement('span');
+    let July4f = document.createElement('span');
   
 
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     July4.textContent = doc.data().July4;
+    July4f.textContent = doc.data().July4f;
   
 
 
     li.appendChild(name);
     li.appendChild(July4);
+    li.appendChild(July4f);
     
   
 
