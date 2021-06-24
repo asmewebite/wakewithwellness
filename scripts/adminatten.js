@@ -3,16 +3,17 @@ const attendancelist = document.querySelector('#attendancelist');
 function renderAtten(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
-    let July = document.createElement('span');
+    let July1 = document.createElement('span');
 
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
-    July.textContent = doc.data().July;
+    July1.textContent = doc.data().July1;
+    
 
 
     li.appendChild(name);
-    li.appendChild(July);
+    li.appendChild(July1);
   
 
     attendancelist.appendChild(li);
