@@ -101,7 +101,7 @@ li span{
 }
 
 li span:nth-child(2){
-    font-size: 12px;
+    font-size: 14px;
     float: right;
     margin-top: -20px;
     color: rgb(27, 39, 39);
@@ -132,12 +132,7 @@ form input{
     font-size: 10px;
 }
 
-form input:focus{
-    outline: none;
-    border-bottom: 3px solid #88236f;
-    padding-bottom: 8px;
-    transition: all ease 0.2s;
-}
+
 
 form:after{
     content: '';
@@ -145,7 +140,11 @@ form:after{
     display: block;
 }
 
+
   </style>
+
+    
+
 
 
 
@@ -167,18 +166,49 @@ form:after{
 
   <main id="main">
 
+ 
+    
+
+    <div class="content" hidden>
+        <h6 style="color: #5793D1;">Month of July(4th Week)</h6>
+        <form id="attend-form">
+            <ul id="July4">
+             
+            </ul>
+        </form>
+    </div>
+
+
+    <div class="content" hidden>
+        <h6 style="color: #5793D1;">Month of July(3rd Week)</h6>
+        <form id="attend-form">
+            <ul id="July3">
+             
+            </ul>
+        </form>
+    </div>
+
+
+    <div class="content" hidden>
+        <h6 style="color: #5793D1;">Month of July(2nd Week)</h6>
+        <form id="attend-form">
+            <ul id="July2">
+             
+            </ul>
+        </form>
+    </div>
+
 
         <div class="content">
-            <h6 style="color: #5793D1;">Month of July</h6>
+            <h6 style="color: #5793D1;">Month of July(1st Week)</h6>
             <form id="attend-form">
-                <ul id="attendancelist">
+                <ul id="July1">
                  
                 </ul>
             </form>
         </div>
 
 
-    
    </main>
 
   
@@ -223,6 +253,9 @@ form:after{
   </script>
 
 <script src="scripts/adminatten.js"></script>
+
+
+    
 
 </body>
 
