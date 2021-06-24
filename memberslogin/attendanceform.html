@@ -36,10 +36,21 @@
       padding: 3px;
       }
 
+      textarea {
+        width: 100%;
+        color: whitesmoke;
+        height: 140px;
+      padding: 7px 0;
+      border-radius: 3px;
+      border: 1px solid rgb(230, 230, 230);
+      background: transparent;
+      }
+
 
       select {
       padding: 7px 0;
       border-radius: 3px;
+      margin-top: 5px;
       border: 1px solid rgb(230, 230, 230);
       background: transparent;
       }
@@ -48,7 +59,7 @@
       }
  
       .btn-block {
-      margin-top: 100px;
+      margin-top: 30px;
       text-align: center;
       }
       button {
@@ -98,7 +109,7 @@
     .alert{
   text-align: center;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   background:#79c879;
   color: white;
   margin-bottom: 10px;
@@ -126,7 +137,6 @@
     <div class="topnav" style="width: 100%;height: 51px;">
         <img src="logoonly.png" style="width: 190px;margin-top: 4.5px;margin-left: 10px;">
         <div style="float: right"> 
-          <a class="modal-trigger" href="" style="color: blue;" >Details</a>
           <a class="modal-trigger" href="main.html"  >Home</a>
           
     
@@ -138,12 +148,13 @@
       <form onsubmit="updateattendance(event)">
         <h1 style="color: aliceblue;text-align: center;">Weekly attendance</h1>
         <hr>
-        <h4 style="color: beige;font-weight: 200;">I post my attendance for the the month of july</h4>
+        <h4 style="color: beige;font-weight: 200;">I post my attendance for the <span style="font-weight: bold;">1st week of July</span></h4>
+        <label>Works</label>
+        <textarea id="work" maxlength="300" required></textarea>
         
-        <select id="attend">
-          <option value=""></option>
-          <option style="color: red;" value="Absent">Absent</option>
-          <option style="color: rgb(122, 243, 1);" value="Present">Present</option>
+        <select id="attend" style="color: whitesmoke;font-weight: 600;">
+          <option style="color: rgb(5, 216, 33);font-weight: 600;" value="Present">Present</option>
+          <option style="color: red;font-weight: 600;" value="Absent">Absent</option>
          </select>
          <div class="alert">Posted</div>
         <div class="btn-block">
