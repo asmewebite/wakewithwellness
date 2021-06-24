@@ -30,6 +30,29 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <style>
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
     /* Add a black background color to the top navigation */
   .topnav {
     background-color: #333;
@@ -66,12 +89,9 @@
 }
 
 
-.content{
-
-    max-width: 900px;
-    margin: 10px auto;
-    padding:  20px 30px;
-    border-radius: 10px 10px 10px 10px;
+.container{
+  margin-top: 20px;
+    border-radius: 20px 20px 20px 20px;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
 }
 
@@ -131,27 +151,6 @@ li div{
     cursor:  pointer;
 }
 
-form input{
-    float: left;
-    width: 38%;
-    margin: 0;
-    border: 0;
-    border-bottom: 1px solid #eee;
-    margin: 0 1%;
-    padding: 10px;
-    display: block;
-    box-sizing: border-box;
-    font-size: 10px;
-}
-
-
-
-form:after{
-    content: '';
-    clear: both;
-    display: block;
-}
-
 
   </style>
 
@@ -181,7 +180,7 @@ form:after{
  
     
 
-    <div class="content">
+    <div class="container">
         <h6 style="color: #5793D1;">Registered Members List</h6>
         <form id="members-form">
             <ul id="members">
