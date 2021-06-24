@@ -197,14 +197,13 @@ async function allUserDetails(){
 
 //Attendance
 
-
 function updateattendance(event){
   event.preventDefault()
-  var July = document.getElementById('attend').value
+  var July1 = document.getElementById('attend').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    July:July
+    July1:July1
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
