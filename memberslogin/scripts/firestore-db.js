@@ -80,7 +80,7 @@ async function getuserInfoRealtime(userID){
 
                         <div class="d-flex justify-content-around" style="padding: 10px;">
     <ul id="nav-mobile" class="center">
-      <a class="logged-in" href="feedbacks.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Suggestions
+      <a class="logged-in" href="message.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Suggestions
       </a>
 
       <a class="logged-in" href="attendanceform.html" style="margin-right: 20px;color: white;padding: 10px;background-color: #5793D1; border-radius: 8px;">Attendance
