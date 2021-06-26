@@ -81,7 +81,7 @@ async function getuserInfoRealtime(userID){
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
 
       <div class="logged-in" style="background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">
-        <a  href="message.html" style="color: #f2f2f2;" >Suggestions
+        <a  href="message.html" style="color: #f2f2f2;" >Feedbacks
         </a>
      </div>
       
