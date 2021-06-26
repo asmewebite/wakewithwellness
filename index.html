@@ -76,31 +76,312 @@
   </style>
 
 
-
-  
-
-
-
 </head>
 
-<body style="background-color: #2e2e2e;">
-  
+<body oncontextmenu="return false">
 
-  <section>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
-    <div class="container" style="text-align: center;margin-top: 60px;">
-      <div>
-        <img style="width: 250px;" src="assets/img/features-2.png">
-        <h4 style="color: rgb(235, 17, 17);margin-top: 10px;">Website under maintainance</h4>
-        <p style="color: aliceblue;">We will be available soon...</p>
+      <a  class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+      <h1 class="logo me-auto"></h1>
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="joinUs.html" style="color: green">Join Us</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+           </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Updates</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="india updates.html">India Updates</a></li>
+              <li><a href="globalupdates.html">Global Updates</a></li>
+            </ul>
+          </li>
+
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <li class="dropdown"><a href="#"><span style="color: rgb(255, 136, 0);">Login</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="memberslogin/login.html">Members Login</a></li>
+              <li><a href="adminpanel.html">Admin Login</a></li>
+            </ul>
+          </li>
+          
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex">
+        <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bu bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bu bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
       </div>
-  
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Slide Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="4000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-2.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Welcome to <span>Wake With Wellness</span></h2>
+              <p>Wake With Wellness is a community based organization registered under <span style="font-weight: 500">UNITED NATIONS </span>established to exercise good actions for the rehabilitation of communities regarding health and social awareness without ascertaining the foundations of legal norms.</p>
+              <div class="text-center"><a href="about.html" class="btn-get-started">Read More</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-1.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Get COVID-19 updates</h2>
+              <p>Lets all work together to put an end to this pandemic.<br> Help stop the spread</p>
+              <div class="text-center"><a href="india updates.html" class="btn-get-started">India Updates</a></div>
+              <div class="text-center"><a href="globalupdates.html" class="btn-get-started">Global Updates</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Join Us</h2>
+              <p>Be a part of this welfare operation by undertaking the pledge to serve people and generation. <br><br> Looking forward towards the growth of an incredible community</p>
+              <div class="text-center"><a href="joinUs.html" class="btn-get-started">Join Us</a></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    
+
+    <!-- ======= Features Section 1 ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 pt-4 pt-lg-0">
+                <h3>Why is it important that<span style="color: #5793D1"> You Stay Home</span></h3><br>
+                
+                <ul>
+                  <li> Our mind is a trigger of our words, what we say it imagines and starts working on it. Our surroundings affect the most of it. During this hard time, being positive must be our utmost concern.</li><br>
+                  <li> People usally have the habit of acting as their own doctor and hence, it must be avoided. Self-medication equals to self-poisoning and therefore, consulting a doctor is a must.</li><br>
+                  <li> Covid-19 vaccines are equally safe and effective and therefore, without having and 2nd thoughts one should get vaccinated at the earliest. However, it is advisable to consult a doctor in case of any uncertainty.</li><br>
+                  <li> Maintaining hygiene and wearing masks are indispensable. It is advised to use alcohol based sanitizers and surgical masks, properly tucked and hence, covered by another layer of mask to prevent infection.</li>
+                </ul>
+                
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/mainpic.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <section style="margin-left: 10px;margin-right: 10px" >
+      <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="100%" height="600px"></iframe>
+    </section>
+
+    <section style="margin-left: 10px;margin-right: 10px">
+      <iframe src="https://ourworldindata.org/grapher/total-deaths-covid-19?country=ITA+ESP+USA" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+    </section>
+
+    
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2>Who we are</h2>
+            <p>Wake With Wellness is a community based organization registered under <span style="font-weight: bold;">UNITED NATIONS</span> to exercise good actions for the rehabilitation of communities regarding health and social awareness without ascertaining the foundations of legal norms. We’ll create health awareness campaigns that will include posters, content creation, interactive sessions and imparting information that can increase the awareness of people in the country about palliative and health care. </p>
+
+            <p>
+              There are six working departments -
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Curation Department</li>
+              <li><i class="ri-check-double-line"></i> Public Relations Department</li>
+              <li><i class="ri-check-double-line"></i> Editorial Department</li>
+              <li><i class="ri-check-double-line"></i> Marketing Department</li>
+              <li><i class="ri-check-double-line"></i> Events Department</li>
+              <li><i class="ri-check-double-line"></i> Design/Media Department</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            
+            <p><br><br><br>To improve the attitude of the community about delivery of palliative and health care services, more sustained efforts are required to make them believe that palliative and health care can be provided by community volunteers also and not necessarily only by professionals. Thus the only way to provide palliative and health care to a huge number of people in need is through community participation. With this vision of steering people for a hale and hearty life form ,</p>
+            <p class="fst-italic">
+              ‘we are<span style="font-weight: bold;"> People Caring For People’</span><br>
+              Be a part of this welfare operation by undertaking the pledge to serve people and generations.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+    
+
+    <div class="titl" style="background-color: #5793D1;padding: 8px">
+
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <h2 style="color: white;margin-top: 20px">World Environment Day 2021</h2>    
+                  
+          </div>
+          <p style="font-size: smaller; color: black;">Our environment is the most valuable gift to humans, as well as to all living creatures, because it provides the resources needed to sustain life on Earth. The environment is made up of all living things, including water, air, soil, and vegetation. However, the contamination and pollution of these valuable resources has increased. Trees are cut down, soil erosion occurs, and water bodies and the air are polluted. As a result, it is important to raise awareness in order to preserve the ecosystem for current and future generations.
+          </p> 
+        </div>
+      </div>
     </div>
 
-  </section>
 
-  
+    <div class="grid-portfolio" id="portfolio" style="margin-bottom: 20px;padding: 10px">
+        <div class="container">
+            <div class="row">
+              <div class="column">
+                <img src="assets/img/env/j.png" alt="jimpi" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="assets/img/env/r.png" alt="rudrani" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="assets/img/env/b.png" alt="bhaswati" style="width:100%">
+            </div>
+            </div>
+            <div class="row" style="margin-top: 15px">
+                <div class="col-md-12">
+                    <div class="load-more-button" style="background-color: white ;height: 35px;width: 130px;padding: 5px;border-radius: 15px">
+                        <a href="gallery.html" style="color: black;margin-left: 10px">Load More</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>WakeWithWellness</h3>
+            <p>
+              Assam, India<br><br>
+              <strong>Phone:</strong> +91-6385334226<br>
+              <strong>Email:</strong> wakewithwellness@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="joinUs.html">Join Us</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Departments</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Curation Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Editorial Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Marketing Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Events Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Design Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter" >
+            <h4>Feedback</h4>
+            <div class="alert">Feedback sent</div>
+            <form id="feedbacks" > 
+              <div class="form-group" >
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;background-color: #5793D1;" id="submit" class="btn btn-primary" >Submit</button>
+            </form>  
+          
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>WakeWithWellness</span></strong>. All Rights Reserved
+        </div>
+        
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
   <script src="assets/vendor/aos/aos.js"></script>
