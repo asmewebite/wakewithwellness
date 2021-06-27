@@ -253,33 +253,6 @@ function sendMessage(event){
 }
 
 
-//Leave apply
-
-
-function updateleave(event){
-  event.preventDefault()
-  var name = document.getElementById('name').value
-  var from = document.getElementById('from').value
-  var reason = document.getElementById('reason').value
-  var to = document.getElementById('to').value
-  var userRef = firebase.firestore().collection('leave').doc(firebase.auth().currentUser.uid).collection('subleave').add({
-    from:from,
-    to:to,
-    name:name,
-    reason:reason
-  }).then(()=>{
-    document.querySelector('.alert').style.display = 'block';
-
-         // Hide alert after 3 seconds
- setTimeout(function(){
-  document.querySelector('.alert').style.display = 'none';
-},3000);
-
-// Clear form
-document.getElementById('extraForm').reset();
-
-  });
-}
 
 
 
