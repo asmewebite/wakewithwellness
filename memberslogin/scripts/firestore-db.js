@@ -93,7 +93,7 @@ async function getuserInfoRealtime(userID){
      </div>
 
      <div class="logged-in" style="background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;margin-top: 6px;">
-      <a  href="memberagreement.html" style="color: #f2f2f2;">Agreement
+      <a  href="leave.html" style="color: #f2f2f2;">Apply Leave
       </a>
 
      </div>
