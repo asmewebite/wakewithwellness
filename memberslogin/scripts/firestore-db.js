@@ -227,6 +227,31 @@ function sendMessage(event){
 }
 
 
+//Leave apply
+
+
+function updateleave(event){
+  event.preventDefault()
+  var name = document.getElementById('name').value
+  var from = document.getElementById('from').value
+  var reason = document.getElementById('reason').value
+  var to = document.getElementById('to').value
+  var userRef = firebase.firestore().collection('leave').doc(firebase.auth().currentUser.uid);
+
+  var setWithMerge = userRef.set({
+    from:from,
+    to:to,
+    name:name,
+    reason:reason
+  },{ merge: false}).then(()=>{
+    document.querySelector('.alert').style.display = 'block';
+
+  });
+}
+
+
+
+
 
 
 
