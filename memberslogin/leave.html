@@ -117,6 +117,69 @@
       display: none;
     }
 
+    
+.container{
+  margin-top: 20px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 10px;
+    background: #f6f6f6;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: sans-serif;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 100%;
+}
+
+li:nth-child(even){
+    padding: 10px;
+    background: #f2f2f2;
+}
+
+li span{
+    display: block;
+}
+
+li span:nth-child(2){
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(235, 156, 38);
+}
+
+
+li span:nth-child(3){
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(53, 58, 58, 0.815);
+}
+li span:nth-child(4){
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(2, 134, 13, 0.815);
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
 
       @media (min-width: 568px) {
       .title-block {
@@ -144,12 +207,17 @@
       <form onsubmit="updateleave(event)">
         <h1 style="color: aliceblue;text-align: center;min-width: 330px;">Leave Application</h1>
         <hr>
-        <label style="color: #ddd;">From :</label><br>
-           <input type="date" id="from" style="cursor: pointer;width: 100%;height: 35px;"><br><br>
-        <label style="color: #ddd;">To :</label>   <br>
-          <input type="date" id="to" style="cursor: pointer;width: 100%;height: 35px;">
 
-         <div class="alert">Your leave request sent. Please wait for the approval</div>
+        <input type="text" id="name" style="height: 30px;width: 100%;border-radius: 5px;padding:4px;background-color: #ddd;" placeholder="Name" required><br><br>
+        <textarea id="reason" maxlength="300" style="padding: 1px;background-color: #ddd;color: black;"  required placeholder="Reason"></textarea><br>
+
+
+        <label style="color: #ddd;">From :</label><br>
+           <input type="date" id="from" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;" required><br><br>
+        <label style="color: #ddd;">To :</label>   <br>
+          <input type="date" id="to" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;" required>
+
+         <div class="alert">Your leave request sent.<br> Please wait for the approval</div>
         <div class="btn-block">
           <button id="send" type="submit">Apply</button>    
         </div>
@@ -184,7 +252,6 @@
 
 <script src="./scripts/auth.js"></script>
 <script src="./scripts/firestore-db.js" ></script>
-<script src="scripts/leavestatus.js"></script>
 
 
   </body>
