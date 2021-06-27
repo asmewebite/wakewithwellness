@@ -244,17 +244,13 @@ function updateattendance(event){
 function sendMessage(event){
   event.preventDefault()
   var message = document.getElementById('msg').value
-  var userRef = firebase.firestore().collection('membermsg').doc(firebase.auth().currentUser.uid);
-
-  var setWithMerge = userRef.set({
+  var userRef = firebase.firestore().collection('membermsg').doc(firebase.auth().currentUser.uid).collection('msgs').add({
     message:message
-  },{ merge: false}).then(()=>{
+  }).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
   });
 }
-
-
 
 
 //Leave apply
@@ -266,14 +262,12 @@ function updateleave(event){
   var from = document.getElementById('from').value
   var reason = document.getElementById('reason').value
   var to = document.getElementById('to').value
-  var userRef = firebase.firestore().collection('leave').doc(firebase.auth().currentUser.uid);
-
-  var setWithMerge = userRef.set({
+  var userRef = firebase.firestore().collection('leave').doc(firebase.auth().currentUser.uid).collection('subleave').add({
     from:from,
     to:to,
     name:name,
     reason:reason
-  },{ merge: false}).then(()=>{
+  }).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
          // Hide alert after 3 seconds
