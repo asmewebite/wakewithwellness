@@ -107,81 +107,7 @@
     }
 
     
-.container{
-  margin-top: 20px;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
-}
 
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-li{
-    padding: 10px;
-    background: #f6f6f6;
-    font-size: 15px;
-    font-weight: 550;
-    font-family: sans-serif;
-    color: #555;
-    position: relative;
-    border-bottom: 1px solid #e6e6e6;
-    height: 100%;
-}
-
-li:nth-child(even){
-    padding: 10px;
-    background: #f2f2f2;
-}
-
-li span{
-    display: block;
-}
-
-li span:nth-child(2){
-    font-size: 14px;
-    font-weight: 300;
-    color: rgb(235, 156, 38);
-}
-
-
-li span:nth-child(3){
-    font-size: 12px;
-    font-weight: 100;
-    color: rgba(53, 58, 58, 0.815);
-}
-li span:nth-child(4){
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(2, 134, 13, 0.815);
-}
-
-li div{
-    position: absolute;
-    top: 0;
-    right: 0px;
-    background: rgba(255, 255, 255, 0.5);
-    width: 40px;
-    text-align: center;
-    padding: 10px 0;
-    font-weight:  bold;
-    cursor:  pointer;
-}
-
-
-      @media (min-width: 568px) {
-      .title-block {
-      display: flex;
-      justify-content: space-between;
-      }
-      .title-block select {
-      width: 30%;
-      margin-bottom: 0;
-      }
-    
-    
-      }
     </style>
   </head>
   <body style="background-color: rgb(41, 41, 41)">
@@ -193,7 +119,7 @@ li div{
       </div>
 
     <div class="testbox">
-      <form onsubmit="updateleave(event)">
+      <form id="leaveform">
         <h1 style="color: aliceblue;text-align: center;min-width: 300px;">Leave Request</h1>
         <hr>
 
@@ -239,9 +165,7 @@ li div{
  
 </script>
 
-<script src="./scripts/auth.js"></script>
-<script src="./scripts/firestore-db.js" ></script>
-<script src="./scripts/leavestatus.js" ></script>
+<script src="./scripts/leave.js" ></script>
 
 
   </body>
