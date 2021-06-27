@@ -12,7 +12,8 @@ function createUserCollection(user){
        phone:"",
        whatsapp:"",
        department:"",
-       college:""
+       college:"",
+       status:""
    })
 }
 
@@ -75,9 +76,11 @@ async function getuserInfoRealtime(userID){
                           Whatsapp no :  ${userInfo.whatsapp}<br>
                           Department :  ${userInfo.department}<br>
                           College :  ${userInfo.college}</div>
+                          
                         </div>
-                        
-                        
+                        <div style="color:white;text-align:left;margin-left:10px">
+                          Leave status : ${userInfo.status}</div>
+
                         <div class="container-fluid" style="background-color: white;padding:3px;margin-top:5px">
 
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
@@ -95,7 +98,7 @@ async function getuserInfoRealtime(userID){
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
 
       <div class="logged-in" style="background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">
-        <a  href="message.html" style="color: #f2f2f2;" >Feedback
+        <a  href="message.html" style="color: #f2f2f2;" >Suggestions
         </a>
      </div>
       
@@ -107,7 +110,13 @@ async function getuserInfoRealtime(userID){
      </div>
 
      <div class="logged-in" style="background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;margin-top: 6px;">
-      <a  href="leave.html" style="color: #f2f2f2;">Apply Leave
+      <a  href="timeline.html" style="color: #f2f2f2;">Timeline
+      </a>
+
+     </div>
+
+     <div class="logged-in" style="background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;margin-top: 6px;">
+      <a  href="leave.html" style="color: #f2f2f2;">Leave Request
       </a>
 
      </div>
@@ -127,6 +136,7 @@ async function getuserInfoRealtime(userID){
                         editProfile["whatsapp"].value = userInfo.whatsapp
                         editProfile["college"].value = userInfo.college
                         editProfile["department"].value = userInfo.department
+                        editProfile["status"].value = userInfo.status
 
                        
 
@@ -174,7 +184,8 @@ function updateUserProfile(e){
         phone:editProfile["phoneno"].value,
         whatsapp:editProfile["whatsapp"].value,
         college:editProfile["college"].value,
-        department:editProfile["department"].value
+        department:editProfile["department"].value,
+        status:editProfile["status"].value
 
     })
 
@@ -198,6 +209,7 @@ async function allUserDetails(){
             <td>${info.whatsapp}</td>
             <td>${info.experience}</td>
             <td>${info.college}</td>
+            <td>${info.status}</td>
           </tr>
            `
     })
@@ -227,6 +239,8 @@ function updateattendance(event){
 
 
 
+//suggestions
+
 function sendMessage(event){
   event.preventDefault()
   var message = document.getElementById('msg').value
@@ -234,11 +248,14 @@ function sendMessage(event){
 
   var setWithMerge = userRef.set({
     message:message
-  }).then(()=>{
+  },{ merge: false}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
   });
 }
+
+
+
 
 //Leave apply
 
@@ -269,6 +286,18 @@ document.getElementById('extraForm').reset();
 
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
