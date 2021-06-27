@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attendance</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    
+    
+    
+    
+    
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, select { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      margin-top: 50px;
+      padding: 3px;
+      }
+
+      textarea {
+        width: 100%;
+        color: whitesmoke;
+        height: 140px;
+      padding: 7px 0;
+      border-radius: 3px;
+      border: 1px solid rgb(230, 230, 230);
+      background: transparent;
+      }
+
+
+      select {
+      padding: 7px 0;
+      border-radius: 3px;
+      margin-top: 5px;
+      border: 1px solid rgb(230, 230, 230);
+      background: transparent;
+      }
+      select, table {
+      width: 100%;
+      }
+ 
+      .btn-block {
+      margin-top: 30px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #5793D1;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+
+        /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    /* Add a color to the active/current link */
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+</style>
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+
+
+/*Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(207, 207, 207);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(185, 185, 185);
+}
+
+</style>
+  </head>
+  <body style="background-color: rgb(41, 41, 41)">
+
+    <div class="topnav" style="width: 100%;height: 51px;">
+        <img src="logoonly.png" style="width: 190px;margin-top: 4.5px;margin-left: 10px;">
+
+        </div>
+
+        <div style="background: #5793D1;padding: 1px;">
+            <h2 style="text-align: center;color: #fff;font-weight: 500;">Timeline</h2>
+        </div>
+
+        <section style="margin-top: -15px;">
+            <h3 style="text-align: center;background-color: #fff;padding: 5px;">Month of July 2021</h3>
+
+            <div class="timeline" style="margin-top: -16px;">
+                <div class="container left">
+                  <div class="content">
+                    <p>5 broad ideas to be uploaded every week in the form of write-up & 2 short ideas to be uploaded every week in the form of video (Short Reel).</p>
+                  </div>
+                </div>
+                <div class="container right">
+                  <div class="content">
+                    <p>Webinar/IG live to be held on every <span style="font-weight: 600;">2nd & 4th week</span>. Speakers to be provided by the PR department and Events department to conduct the session (Designing of posters, spreding of the word, sending emails, reminding the attendees). Assistance to be taken by the PR dept. & the Design dept. and some other department if required.</p>
+                  </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                      <p>Competitions will be held on every <span style="font-weight: 600;">3rd week</span>  by the Events department.</p>
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                      <h2>Details:</h2>
+                      <p>An IGTV video to be uploaded on every <span style="font-weight: 600;">1st week (On 1st July on the occassion of Doctors' Day).</span>  </p>
+                    </div>
+                  </div>
+                  <div class="container left">
+                    <div class="content">
+               
+                      <p>On <span style="font-weight: 600;">9th July & 23rd July</span> webinar/IG live session to be conducted (Topics will be decided later). </p>
+                    </div>
+                  </div>
+                  <div class="container right">
+                    <div class="content">
+                  
+                      <p>Competition to be held on <span style="font-weight: 600;">17th July or 31st July</span>  (to be decided by the Events department).</p>
+                    </div>
+                  </div>
+
+                  <div class="container left">
+                    <div class="content">
+                  
+                      <p><span style="font-weight: 600;">Events department</span> and <span style="font-weight: 600;">PR department</span> can choose to coordinate with one another to conduct the above mentioned events & might also choose to switch activities.</p>
+                    </div>
+                  </div>
+              </div>
+
+
+        </section>
+
+        
+
+
+       
+
+
+
+  </body>
+</html>
