@@ -76,6 +76,20 @@ async function getuserInfoRealtime(userID){
                           Department :  ${userInfo.department}<br>
                           College :  ${userInfo.college}</div>
                         </div>
+                        
+                        
+                        <div class="container-fluid" style="background-color: white;padding:3px;margin-top:5px">
+
+                        <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
+                       <div style="text-align:left;padding-left:5px;padding-right:5px">
+                        <ul>
+                        <li>* Today is the last date to fill the declaration form.</li>
+                        <li>* Meeting at 7 PM IST (27/06/2021)</li>
+                        </ul>
+                        </div>
+                       
+                        
+                        </div>
 
 
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
