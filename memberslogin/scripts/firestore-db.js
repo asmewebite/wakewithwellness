@@ -86,8 +86,7 @@ async function getuserInfoRealtime(userID){
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
-                        <li>* Today is the last date to fill the declaration form.</li>
-                        <li>* Meeting at 7 PM IST (27/06/2021)</li>
+                     
                         </ul>
                         </div>
                        
