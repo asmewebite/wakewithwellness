@@ -42,7 +42,7 @@
   
             
 </head>
-<body  style="background-color: rgb(41, 41, 41);overflow: hidden;">
+<body  style="background-color: rgb(41, 41, 41);overflow: hidden;" oncontextmenu="return false">
 
   <div class="topnav" style="width: 100%;">
     <img src="logoonly.png" style="width: 160px;float: left;padding: 10px;">
@@ -167,6 +167,34 @@
 </script>
 <script src="./scripts/auth.js"></script>
 <script src="./scripts/firestore-db.js" ></script>
+    
+    
+    
+    <script>
+    
+  document.onkeydown=function(e)
+  {
+    if (event.keyCode == 123) 
+    {
+      return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+    {
+      return false;
+    }
+
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+    {
+      return false;
+    }
+
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+    {
+      return false;
+    }
+  }
+
+</script>
 
 
 
