@@ -87,6 +87,7 @@ async function getuserInfoRealtime(userID){
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
                         <li>* Registrations open for Events Department<br>  <a href="https://forms.gle/1eptxigt51QRZgry7">Click here</a>.</li>
+                        <li>* Agreement form <a href="../agreement.html"> Click here</a>.</li>
                      
                         </ul>
                         </div>
