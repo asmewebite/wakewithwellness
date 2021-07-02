@@ -33,7 +33,7 @@ function renderMembers(doc){
 }
 
 
-db.collection('users').get().then((snapshot)=>{
+db.collection('users').orderBy('name').get().then((snapshot)=>{
     snapshot.docs.forEach(doc => {
         renderMembers(doc);
     })
