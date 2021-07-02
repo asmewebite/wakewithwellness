@@ -85,7 +85,8 @@
                         <th scope="col">Email</th>
                         <th scope="col">Contact</th>
                         <th scope="col">Whatsapp</th>
-                        <th scope="col">Department</th>
+                        <th scope="col">Department1</th>
+                        <th scope="col">Department2</th>
                         <th scope="col">College</th>
                         <th scope="col">Qualification</th>
                         <th scope="col">Experience</th>
@@ -157,11 +158,12 @@
                         var contact = CurrentRecord.val().contact;
                         var whatsapp = CurrentRecord.val().whatsapp;
                         var department = CurrentRecord.val().department;
+                        var department2 = CurrentRecord.val().department2;
                         var college = CurrentRecord.val().college;
                         var qualification = CurrentRecord.val().qualifications;
                         var experience = CurrentRecord.val().experience;
                         var state = CurrentRecord.val().state;
-                        AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state);
+                        AddItemsToTable(name,email,contact,whatsapp,department,department2,college,qualification,experience,state);
 
                     }
                 );
@@ -173,7 +175,7 @@
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,email,contact,whatsapp,department,college,qualification,experience,state){
+        function AddItemsToTable(name,email,contact,whatsapp,department,department2,college,qualification,experience,state){
             var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td1 = document.createElement('td');
@@ -186,6 +188,7 @@
             var td8 = document.createElement('td');
             var td9 = document.createElement('td');
             var td10 = document.createElement('td');
+            var td11 = document.createElement('td');
             
             td1.innerHTML = ++stdNo;
             td2.innerHTML = name;
@@ -193,10 +196,11 @@
             td4.innerHTML = contact;
             td5.innerHTML = whatsapp;
             td6.innerHTML = department;
-            td7.innerHTML = college;
-            td8.innerHTML = qualification;
-            td9.innerHTML = experience;
-            td10.innerHTML = state;
+            td7.innerHTML = department2;
+            td8.innerHTML = college;
+            td9.innerHTML = qualification;
+            td10.innerHTML = experience;
+            td11.innerHTML = state;
             trow.appendChild(td1); 
             trow.appendChild(td2); 
             trow.appendChild(td3); 
@@ -207,6 +211,7 @@
             trow.appendChild(td8); 
             trow.appendChild(td9);
             trow.appendChild(td10); 
+            trow.appendChild(td11); 
             
             tbody.appendChild(trow);
             
