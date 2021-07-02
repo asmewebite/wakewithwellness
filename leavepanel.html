@@ -85,6 +85,7 @@
                         <th scope="col">Reason</th>
                         <th scope="col">From</th>
                         <th scope="col">To</th>
+                        <th scope="col">Status</th>
                         
 
                   
@@ -153,8 +154,9 @@
                         var reason = CurrentRecord.val().reason;
                         var from = CurrentRecord.val().from;
                         var to = CurrentRecord.val().to;
+                        var status = CurrentRecord.val().status;
                   
-                        AddItemsToTable(name,reason,from,to);
+                        AddItemsToTable(name,reason,from,to,status);
 
                     }
                 );
@@ -166,7 +168,7 @@
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,reason,from,to){
+        function AddItemsToTable(name,reason,from,to,status){
             var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td1 = document.createElement('td');
@@ -174,6 +176,7 @@
             var td3 = document.createElement('td');
             var td4 = document.createElement('td');
             var td5 = document.createElement('td');
+            var td6 = document.createElement('td');
           
             
             td1.innerHTML = ++stdNo;
@@ -181,12 +184,14 @@
             td3.innerHTML = reason;
             td4.innerHTML = from;
             td5.innerHTML = to;
+            td6.innerHTML = status;
          
             trow.appendChild(td1); 
             trow.appendChild(td2); 
             trow.appendChild(td3); 
             trow.appendChild(td4); 
             trow.appendChild(td5); 
+            trow.appendChild(td6); 
             
             
             tbody.appendChild(trow);
