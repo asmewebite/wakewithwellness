@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blogs</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <style>
+    .alert{
+    text-align: center;
+    padding: 10px;
+    background:#79c879;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+     /*Scrollbar*/
+   /* width */
+   ::-webkit-scrollbar {
+     width: 10px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: #2e2e2e00;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: rgb(207, 207, 207);
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: rgb(185, 185, 185);
+   }
+   
+    </style>
+
+    <style>
+     body{
+    background-color: #f4f7f6;
+    margin-top:20px;
+}
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.card .body {
+    color: #444;
+    padding: 20px;
+    font-weight: 400;
+}
+.card .header {
+    color: #444;
+    padding: 20px;
+    position: relative;
+    box-shadow: none;
+}
+.single_post {
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease
+}
+
+.single_post .body {
+    padding: 30px
+}
+
+.single_post .img-post {
+    position: relative;
+    overflow: hidden;
+    max-height: 510px;
+    margin-bottom: 30px
+}
+
+.single_post .img-post>img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: -webkit-transform .4s ease, opacity .4s ease;
+    transition: transform .4s ease, opacity .4s ease;
+    max-width: 100%;
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01)
+}
+
+.single_post .img-post:hover img {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    opacity: .7;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    
+}
+
+.single_post .img-post:hover .social_share {
+    display: block
+}
+
+.single_post .footer {
+    padding: 0 30px 30px 30px
+}
+
+.single_post .footer .actions {
+    display: inline-block
+}
+
+.single_post .footer .stats {
+    cursor: default;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    
+    margin: 0;
+    line-height: 35px
+}
+
+.single_post .footer .stats li {
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    margin: 0 0 0 2em;
+    padding: 0 0 0 2em;
+    text-transform: uppercase;
+    font-size: 13px
+}
+
+.single_post .footer .stats li a {
+    color: #777
+}
+
+.single_post .footer .stats li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0
+}
+
+.single_post h3 {
+    font-size: 20px;
+    text-transform: uppercase
+}
+
+.single_post h3 a {
+    color: #242424;
+    text-decoration: none
+}
+
+.single_post p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    margin: 0
+}
+
+.single_post .blockquote p {
+    margin-top: 0 !important
+}
+
+.single_post .meta {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.single_post .meta li {
+    display: inline-block;
+    margin-right: 15px
+}
+
+.single_post .meta li a {
+    font-style: italic;
+    color: #959595;
+    text-decoration: none;
+    font-size: 12px
+}
+
+.single_post .meta li a i {
+    margin-right: 6px;
+    font-size: 12px
+}
+
+.single_post2 {
+    overflow: hidden
+}
+
+.single_post2 .content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+    position: relative
+}
+
+.single_post2 .content .actions_sidebar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px
+}
+
+.single_post2 .content .actions_sidebar a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 0;
+    text-align: center;
+    border-right: 1px solid #e4eaec
+}
+
+.single_post2 .content .title {
+    font-weight: 100
+}
+
+.single_post2 .content .text {
+    font-size: 15px
+}
+
+.right-box .categories-clouds li {
+    display: inline-block;
+    margin-bottom: 5px
+}
+
+.right-box .categories-clouds li a {
+    display: block;
+    border: 1px solid;
+    padding: 6px 10px;
+    border-radius: 3px
+}
+
+.right-box .instagram-plugin {
+    overflow: hidden
+}
+
+.right-box .instagram-plugin li {
+    float: left;
+    overflow: hidden;
+    border: 1px solid #fff
+}
+
+
+
+@media (max-width: 640px) {
+    .blog-page .left-box .single-comment-box>ul>li {
+        padding: 25px 0
+    }
+    .blog-page .left-box .single-comment-box ul li .icon-box {
+        display: inline-block
+    }
+    .blog-page .left-box .single-comment-box ul li .text-box {
+        display: block;
+        padding-left: 0;
+        margin-top: 10px
+    }
+    .blog-page .single_post .footer .stats {
+        float: none;
+        margin-top: 10px
+    }
+    .blog-page .single_post .body,
+    .blog-page .single_post .footer {
+        padding: 30px
+    }
+}
+    </style>
+   
+
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      
+      <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="AboutUs.html">About Us</a></li>
+                  <li><a href="team.html">Team</a></li>
+                </ul>
+         </li>
+         <li><a class="nav-link scrollto " href="index.html">Blog</a></li>
+         <li><a class="nav-link scrollto " href="index.html">Contact</a></li>
+         <li class="dropdown"><a href="#"><span style="color: rgb(255, 136, 0);">Login</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="memberslogin/main.html">Member</a></li>
+            <li><a href="adminpanel.html">Admin</a></li>
+          </ul>
+        </li>
+            
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+   
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Blogs</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    
+
+<section>
+
+  <div id="main-content" class="blog-page">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-8 col-md-12 left-box">
+                <div class="card single_post">
+                    <div class="body">
+                        <div class="img-post">
+                            <img class="d-block img-fluid" src="assets/img/blog1.jpg" alt="First slide">
+                        </div>
+                        <h3><a href="blog1.html">Agonies vested in progress</a></h3>
+                        <p>Sumi gasped for breath as she gulped the water down her throat. The chilled air conditioned room and a cool dawn couldn't halt her generously forging sweat. As she recalled her dreaded nightmare, she dwelt in actuality, hoping to broaden the thin line of divide between her dream and reality. Swallowing down her hypertension pill, she had a clash of thoughts between overwhelming hopelessness illuminated by her nightmare and a tinge of hope from the will to bring a change which was interrupted by the ring of her phone. She quickly gathered herself and answered the call- “Hello, Dr. Sumi here.” a few seconds of silence which was broken by a ‘ yes I will rush’.</p>
+                    </div>
+                    <div class="footer">
+                        <div class="actions">
+                            <a href="blog1.html" class="btn btn-outline-secondary">Continue Reading</a>
+                        </div>
+                        <ul class="stats" hidden>
+                            <li><a href="javascript:void(0);">General</a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-heart">28</a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-comment">128</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card single_post">
+                    <div class="body">
+                        <div class="img-post">
+                            <img class="d-block img-fluid" src="assets/img/blog2.jpg" alt="">
+                        </div>
+                        <h3><a href="blog-details.html">THE PERFECT DIET</a></h3>
+                        <p>Early to bed and early to rise,<br>
+                            May make you wise and fit;<br>
+                            But if you yearn to be, fine and healthy,<br>
+                            Let your diet be perfect and lit.<br><br>
+
+                            Why not to embark the morning,<br>
+                            With a glass of water, warm;<br>
+                            Boosting the functioning of your body,<br>
+                            Thus, engendering to you, no harm...<br><br></p>
+                    </div>
+                    <div class="footer">
+                        <div class="actions">
+                            <a href="blog2.html" class="btn btn-outline-secondary">Continue Reading</a>
+                        </div>
+                      
+                    </div>
+                </div>
+
+               
+
+                
+                                        
+                          
+            </div>
+            <div class="col-lg-4 col-md-12 right-box">
+                
+
+
+                
+              
+                <div class="card">
+                    <div class="header">
+                        <h2>Instagram Posts</h2>                        
+                    </div>
+                    <div class="body widget popular-post">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="single_post">
+                                
+                                    <div class="img-post">
+                                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CQxR2ycNNwY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CQxR2ycNNwY/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CQxR2ycNNwY/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Wake With Wellness (@wakewithwellness)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>                                        
+                                    </div>                                            
+                                </div>
+                                <div class="single_post">
+                                
+                                    <div class="img-post">
+                                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/tv/CQyZK1xDLOr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/tv/CQyZK1xDLOr/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/tv/CQyZK1xDLOr/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Wake With Wellness (@wakewithwellness)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+            
+                    <div class="body widget">
+                        <ul class="list-unstyled instagram-plugin m-b-0">
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/211338724_129409705972131_3387439501119251235_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=a26aad&_nc_ohc=PwG0Fo9W1GIAX8brHo-&_nc_ht=scontent.fgau1-1.fna&oh=9eea7dcc7a723e4df03798058face042&oe=60E567F4" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/p960x960/208956334_129017602678008_3901448296397145418_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=a26aad&_nc_ohc=n0BR1U-KSZQAX9DFVhu&_nc_ht=scontent.fgau1-2.fna&tp=6&oh=55a6dee9f7a0a756daf5a0492626f169&oe=60E50A5B" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/p960x960/205003430_126334966279605_7910180984369013180_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=a26aad&_nc_ohc=nZPFVAZ43Q8AX_epQCs&_nc_ht=scontent.fgau1-1.fna&tp=6&oh=3ae121caadc50ab563f259b78f245868&oe=60E4FD86" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/p960x960/202426927_122822996630802_2842121782741079623_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=a26aad&_nc_ohc=VxQvodZraUsAX_tJMDU&_nc_ht=scontent.fgau1-1.fna&tp=6&oh=77975181896ec40df60dfa27dcb29da6&oe=60E4EC76" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/p960x960/200437517_121486600097775_5713196574498074079_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=a26aad&_nc_ohc=wyrF0GGKk9AAX_U6E-N&tn=B8FxxZY-f9OV8i5t&_nc_ht=scontent.fgau1-2.fna&tp=6&oh=7d22857a3a2d1214af1c72146a2f423a&oe=60E521F0" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/p960x960/197321678_119148946998207_3169337161935299483_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=a26aad&_nc_ohc=lBmo0zr7QiwAX8gA8uS&_nc_ht=scontent.fgau1-2.fna&tp=6&oh=dd9a84bc30bcf0d7ee4df6c8b328d9d6&oe=60E5B890" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/p960x960/195426428_118823500364085_5637943471699313116_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=a26aad&_nc_ohc=BdxkxeAkPIIAX9BV0Bl&_nc_ht=scontent.fgau1-2.fna&tp=6&oh=db65e73c99ab9bdb2e34d249d71b0fa4&oe=60E5C1C8" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-2.fna.fbcdn.net/v/t1.6435-9/p960x960/189906664_117028910543544_8392095500993022712_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=a26aad&_nc_ohc=aJk9MQSNvS4AX_tC45t&_nc_ht=scontent.fgau1-2.fna&tp=6&oh=f31d0f66ea2036e110562987fc747889&oe=60E5B17E" alt="image description"></a></li>
+                            <li><a><img style="width: 80px;" src="https://scontent.fgau1-1.fna.fbcdn.net/v/t1.6435-9/p960x960/189206228_114991234080645_3492541007673829881_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=a26aad&_nc_ohc=o2XB6vondM0AX_il6TW&_nc_ht=scontent.fgau1-1.fna&tp=6&oh=7ad0e4ece51a4c6a8fbf30f58fac2c2d&oe=60E476C3" alt="image description"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</section>
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>WakeWithWellness</h3>
+              <p>
+                Assam, India<br><br>
+                <strong>Phone:</strong> +91-6385334226<br>
+                <strong>Email:</strong> wakewithwellness@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Departments</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Curation Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Editorial Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Marketing Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Events Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Design Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            <div class="alert">Feedback sent</div>
+            <form id="feedbacks" > 
+              <div class="form-group" >
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;background-color: #5793D1;" id="submit" class="btn btn-primary" >Submit</button>
+            </form>  
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>WakeWithWellness</span></strong>. All Rights Reserved
+      </div>
+  
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    
+    document.onkeydown=function(e)
+    {
+      if (event.keyCode == 123) 
+      {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+      {
+        return false;
+      }
+    }
+  
+  </script>
+
+</body>
+
+</html>
