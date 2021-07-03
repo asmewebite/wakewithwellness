@@ -1,13 +1,4 @@
-/**
-* Template Name: Gp - v4.3.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -729,6 +720,31 @@ section {
   border-color: #ffc451;
   color: #151515;
 }
+
+
+
+/*BLOGGGGGGG*/
+
+
+.bta {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/blog.png") fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.bta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bta p {
+  color: #fff;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Portfolio
