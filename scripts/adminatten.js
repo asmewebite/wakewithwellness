@@ -7,6 +7,7 @@ const attendancelist1 = document.querySelector('#July1');
 function renderAtten1(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
+    let dept = document.createElement('span');
     let July1 = document.createElement('span');
     let July1f = document.createElement('span');
   
@@ -14,12 +15,14 @@ function renderAtten1(doc){
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
     July1.textContent = doc.data().July1;
     July1f.textContent = doc.data().July1f;
   
 
 
     li.appendChild(name);
+    li.appendChild(dept);
     li.appendChild(July1);
     li.appendChild(July1f);
     
@@ -46,6 +49,7 @@ const attendancelist2 = document.querySelector('#July2');
 function renderAtten2(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
+    let dept = document.createElement('span');
     let July2 = document.createElement('span');
     let July2f = document.createElement('span');
   
@@ -53,12 +57,14 @@ function renderAtten2(doc){
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
     July2.textContent = doc.data().July2;
     July2f.textContent = doc.data().July2f;
   
 
 
     li.appendChild(name);
+    li.appendChild(dept);
     li.appendChild(July2);
     li.appendChild(July2f);
     
@@ -84,6 +90,7 @@ const attendancelist3 = document.querySelector('#July3');
 function renderAtten3(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
+    let dept = document.createElement('span');
     let July3 = document.createElement('span');
     let July3f = document.createElement('span');
   
@@ -91,12 +98,14 @@ function renderAtten3(doc){
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
     July3.textContent = doc.data().July3;
     July3f.textContent = doc.data().July3f;
   
 
 
     li.appendChild(name);
+    li.appendChild(dept);
     li.appendChild(July3);
     li.appendChild(July3f);
     
@@ -124,6 +133,7 @@ const attendancelist4 = document.querySelector('#July4');
 function renderAtten4(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
+    let dept = document.createElement('span');
     let July4 = document.createElement('span');
     let July4f = document.createElement('span');
   
@@ -131,12 +141,14 @@ function renderAtten4(doc){
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
     July4.textContent = doc.data().July4;
     July4f.textContent = doc.data().July4f;
   
 
 
     li.appendChild(name);
+    li.appendChild(dept);
     li.appendChild(July4);
     li.appendChild(July4f);
     
