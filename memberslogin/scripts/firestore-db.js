@@ -77,6 +77,8 @@ async function getuserInfoRealtime(userID){
                           Department :  ${userInfo.department}<br>
                           College :  ${userInfo.college}</div>
                           
+                          <div onclick="location.href=edtprofile.html'" style="float:right;background-color:white;padding:5px;border-radius:8px;font-size:12px;cursor:pointer">Edit profile</div>
+                          
                         </div>
                         <div style="color:white;text-align:left;margin-left:10px">
                           Leave status : ${userInfo.status}</div>
