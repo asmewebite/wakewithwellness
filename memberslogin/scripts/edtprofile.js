@@ -25,13 +25,15 @@ function submitForm(e){
   var email = getInputVal('Email');
   var contact = getInputVal('Contact');
   var whatsapp = getInputVal('Whatsapp');
+  var Department1 = getInputVal('Department1');
   var college = getInputVal('College');
+  var Department2 = getInputVal('Department2');
 
   
 
 
   // Save message
-  saveData(name, email, contact, whatsapp,college);
+  saveData(name, email, contact, whatsapp,Department1,college,Department2);
 
 
  // Show alert
@@ -48,13 +50,15 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(name, email, contact, whatsapp,college){
+function saveData(name, email, contact, whatsapp,Department1,college,Department2){
   var newDataRef = dataRef.push();
   newDataRef.set({
     name: name,
     email:email,
     contact:contact,
     whatsapp:whatsapp,
-    college:college
+    Department1:Department1,
+    college:college,
+    Department2:Department2
   });
 }
