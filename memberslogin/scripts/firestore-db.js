@@ -12,6 +12,7 @@ function createUserCollection(user){
        phone:"",
        whatsapp:"",
        department:"",
+       department2:"",
        college:"",
        status:""
    })
@@ -74,9 +75,10 @@ async function getuserInfoRealtime(userID){
                           <div class="collection-item"  style="color:rgb(219, 219, 219)"> E-mail :  ${userInfo.email}<br>
                           Contact no :  ${userInfo.phone}<br>
                           Whatsapp no :  ${userInfo.whatsapp}<br>
-                          Department :  ${userInfo.department}<br>
+                          Department :  ${userInfo.department} ;<br>
+                          Preference II :  ${userInfo.department2}<br>
                           College :  ${userInfo.college}</div>
-                          
+
                           <button onclick="location.href='edtprofile.html'" style="float:right;background-color:white;border:none;padding:5px;border-radius:8px;font-size:12px;cursor:pointer">Edit profile</button>
                           
                         </div>
@@ -88,9 +90,7 @@ async function getuserInfoRealtime(userID){
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
-                        <li>* Registrations for Events Department<br><a href="https://forms.gle/1eptxigt51QRZgry7">Click here</a>.</li>
                         <li>* Post your attendance by 10th July 2021 without fail</li>
-                     
                         </ul>
                         </div>
                        
@@ -99,12 +99,13 @@ async function getuserInfoRealtime(userID){
 
 
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
+
                         <button class="logged-in" onclick="location.href='message.html'" style="color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">Suggestions</button>
                         <button class="logged-in" onclick="location.href='attendanceform.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">Attendance</button>
                         <button class="logged-in" onclick="location.href='timeline.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">Timeline</button>
                         <button class="logged-in" onclick="location.href='leave.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 40px;">Leave Request</button>
                         </div>
-                       `
+                        `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
                         editProfile["phoneno"].value = userInfo.phone
@@ -226,18 +227,6 @@ function sendMessage(event){
 
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
