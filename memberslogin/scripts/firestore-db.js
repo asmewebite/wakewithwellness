@@ -76,7 +76,7 @@ async function getuserInfoRealtime(userID){
                           Contact no :  ${userInfo.phone}<br>
                           Whatsapp no :  ${userInfo.whatsapp}<br>
                           Department :  ${userInfo.department} ;<br>
-                          Preference II :  ${userInfo.department2}<br>
+                          Dept. Preference II :  ${userInfo.department2}<br>
                           College :  ${userInfo.college}</div>
 
                           <button onclick="location.href='edtprofile.html'" style="float:right;background-color:white;border:none;padding:5px;border-radius:8px;font-size:12px;cursor:pointer">Edit profile</button>
