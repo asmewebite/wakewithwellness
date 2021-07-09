@@ -7,6 +7,7 @@ function renderMembers(doc){
     let phone = document.createElement('span');
     let whatsapp = document.createElement('span');
     let department = document.createElement('span');
+    let department2 = document.createElement('span');
   
 
 
@@ -16,6 +17,7 @@ function renderMembers(doc){
     phone.textContent = doc.data().phone;
     whatsapp.textContent = doc.data().whatsapp;
     department.textContent = doc.data().department;
+    department2.textContent = doc.data().department2;
 
   
 
@@ -25,6 +27,7 @@ function renderMembers(doc){
     li.appendChild(phone);
     li.appendChild(whatsapp);
     li.appendChild(department);
+    li.appendChild(department2);
     
   
 
