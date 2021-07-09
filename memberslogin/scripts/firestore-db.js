@@ -91,6 +91,7 @@ async function getuserInfoRealtime(userID){
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
                         <li>* Post your attendance by 10th July 2021 without fail</li>
+                        <li>* You can add your department 2nd preference on <span style="color:blue">Edit profile</span?</li>
                         </ul>
                         </div>
                        
