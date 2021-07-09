@@ -89,6 +89,7 @@
                         <th scope="col">Whatsapp</th>
                         <th scope="col">Alt No.</th>
                         <th scope="col">Department</th>
+                        <th scope="col">Department 2</th>
                         <th scope="col">College</th> 
                         <th scope="col">Agreement</th> 
 
@@ -155,11 +156,12 @@
                         var whatsapp = CurrentRecord.val().Whatsapp;
                         var alternate = CurrentRecord.val().Alternate;
                         var department = CurrentRecord.val().Department;
+                        var department2 = CurrentRecord.val().Department2;
                         var college = CurrentRecord.val().College;
                         var Checkbox1 = CurrentRecord.val().Checkbox1;
                         
                         
-                        AddItemsToTable(name,email,contact,whatsapp,alternate,department,college,Checkbox1);
+                        AddItemsToTable(name,email,contact,whatsapp,alternate,department,department2,college,Checkbox1);
 
                     }
                 );
@@ -171,7 +173,7 @@
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,email,contact,whatsapp,alternate,department,college,Checkbox1){
+        function AddItemsToTable(name,email,contact,whatsapp,alternate,department,department2,college,Checkbox1){
             var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td1 = document.createElement('td');
@@ -183,6 +185,7 @@
             var td7 = document.createElement('td');
             var td8 = document.createElement('td');
             var td9 = document.createElement('td');
+            var td10 = document.createElement('td');
      
            
             td1.innerHTML = ++stdNo;
@@ -192,8 +195,9 @@
             td5.innerHTML = whatsapp;
             td6.innerHTML = alternate;
             td7.innerHTML = department;
-            td8.innerHTML = college;
-            td9.innerHTML = Checkbox1;
+            td8.innerHTML = department2;
+            td9.innerHTML = college;
+            td10.innerHTML = Checkbox1;
             
             trow.appendChild(td1); 
             trow.appendChild(td2); 
@@ -204,6 +208,7 @@
             trow.appendChild(td7); 
             trow.appendChild(td8); 
             trow.appendChild(td9);
+            trow.appendChild(td10);
   
             
             
