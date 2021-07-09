@@ -30,6 +30,7 @@ function submitForm(e){
   var Alternate = getInputVal('Alternate');
   var College = getInputVal('College');
   var Department = getInputVal('Department');
+  var Department2 = getInputVal('Department2');
   var Checkbox1 = getInputVal('Checkbox1');
   var Checkbox2= getInputVal('Checkbox2');
   var Checkbox3 = getInputVal('Checkbox3');
@@ -41,7 +42,7 @@ function submitForm(e){
 
 
   // Save message
-  saveData(Membername, Email, Contact, Whatsapp, Alternate, College, Department, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7);
+  saveData(Membername, Email, Contact, Whatsapp, Alternate, College, Department,Department2, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7);
 
 
  // Show alert
@@ -62,7 +63,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(Membername, Email, Contact, Whatsapp, Alternate, College, Department, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7){
+function saveData(Membername, Email, Contact, Whatsapp, Alternate, College, Department,Department2, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7){
   var newDataRef = dataRef.push();
   newDataRef.set({
     Membername: Membername,
@@ -72,6 +73,7 @@ function saveData(Membername, Email, Contact, Whatsapp, Alternate, College, Depa
     Alternate:Alternate,
     College:College,
     Department:Department,
+    Department2:Department2,
     Checkbox1:Checkbox1,
     Checkbox2:Checkbox2,
     Checkbox3:Checkbox3,
