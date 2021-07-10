@@ -91,7 +91,7 @@ async function getuserInfoRealtime(userID){
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
                         <li>* Post your attendance by 10th July 2021 without fail</li>
-                        <li>* Agreement form for the new recruits <a href="../agreement.html"> Click here</a></li>
+                        
                         </ul>
                         </div>
                        
