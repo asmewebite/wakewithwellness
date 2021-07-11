@@ -27,7 +27,10 @@ function renderMembers(doc){
 }
 
 
-db.collection('membermsg').get().then((snapshot)=>{
+
+
+
+db.collection('membermsg').orderBy('timestamp').get().then((snapshot)=>{
     snapshot.docs.forEach(doc => {
         renderMembers(doc);
     })
