@@ -46,6 +46,16 @@
       background: transparent;
       }
 
+      input[type=text] {
+        width: 100%;
+        color: whitesmoke;
+        height: 30px;
+      padding: 7px 0;
+      border-radius: 3px;
+      border: 1px solid rgb(230, 230, 230);
+      background: transparent;
+      }
+
 
       select {
       padding: 7px 0;
@@ -145,7 +155,11 @@
         <hr>
         <h4 style="color: beige;font-weight: 200;">Send your suggestions and feedbacks to the board</h4>
         <label>Message : </label>
-        <textarea id="msg"  style="padding: 1px;"  required></textarea>
+        <textarea id="msg"  style="padding: 2px;"  required></textarea>
+
+
+        <label>Name : </label>
+        <input type="text" id="name" style="padding: 2px;" placeholder="(Optional)">
         
          <div class="alert">Message sent</div>
         <div class="btn-block">
