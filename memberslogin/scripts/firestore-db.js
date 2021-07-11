@@ -224,7 +224,8 @@ function sendMessage(event){
   var name = document.getElementById('name').value
   var userRef = firebase.firestore().collection('membermsg').add({
     message:message,
-    name:name
+    name:name,
+     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
   }).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
