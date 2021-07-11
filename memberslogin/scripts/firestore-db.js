@@ -221,8 +221,10 @@ function updateattendance(event){
 function sendMessage(event){
   event.preventDefault()
   var message = document.getElementById('msg').value
-  var userRef = firebase.firestore().collection('membermsg').doc(firebase.auth().currentUser.uid).collection('msgs').add({
-    message:message
+  var name = document.getElementById('name').value
+  var userRef = firebase.firestore().collection('membermsg').add({
+    message:message,
+    name:name
   }).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
