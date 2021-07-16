@@ -208,11 +208,26 @@ function updateattendance(event){
   var setWithMerge = userRef.set({
     July2:July2,
     July2f:July2f
+
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
 
+     // Show alert
+ document.querySelector('.alert').style.display = 'block';
+
+ // Hide alert after 3 seconds
+ setTimeout(function(){
+   document.querySelector('.alert').style.display = 'none';
+ },3000);
+
+ // Clear form
+ document.getElementById('attendanceform').reset();
+
+    
+
   });
 }
+
 
 
 
