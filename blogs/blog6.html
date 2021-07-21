@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>বৃক্ক ৰোগৰ কিছু তথ্য আৰু একান্ত অনুভৱ</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .alert{
+    text-align: center;
+    padding: 10px;
+    background:#79c879;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+     /*Scrollbar*/
+   /* width */
+   ::-webkit-scrollbar {
+     width: 10px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: #2e2e2e00;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: rgb(207, 207, 207);
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: rgb(185, 185, 185);
+   }
+
+
+
+
+   body{margin-top:20px;}
+.blog-listing {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+/* Blog 
+---------------------*/
+.blog-grid {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.blog-grid .blog-img {
+  position: relative;
+}
+.blog-grid .blog-img .date {
+  position: absolute;
+  background: #fc5356;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+.blog-grid .blog-img .date span {
+  font-size: 22px;
+  display: block;
+  line-height: 22px;
+  font-weight: 700;
+}
+.blog-grid .blog-img .date label {
+  font-size: 14px;
+  margin: 0;
+}
+.blog-grid .blog-info {
+  padding: 20px;
+}
+.blog-grid .blog-info h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.blog-grid .blog-info h5 a {
+  color: #20247b;
+}
+.blog-grid .blog-info p {
+  margin: 0;
+}
+.blog-grid .blog-info .btn-bar {
+  margin-top: 20px;
+}
+
+
+/* Blog Sidebar
+-------------------*/
+.blog-aside .widget {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.blog-aside .widget-body {
+  padding: 15px;
+}
+.blog-aside .widget-title {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.blog-aside .widget-title h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fc5356;
+  margin: 0;
+}
+.blog-aside .widget-author .media {
+  margin-bottom: 15px;
+}
+.blog-aside .widget-author p {
+  font-size: 16px;
+  margin: 0;
+}
+.blog-aside .widget-author .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.blog-aside .widget-author h6 {
+  font-weight: 600;
+  color: #20247b;
+  font-size: 22px;
+  margin: 0;
+  padding-left: 20px;
+}
+.blog-aside .post-aside {
+  margin-bottom: 15px;
+}
+.blog-aside .post-aside .post-aside-title h5 {
+  margin: 0;
+}
+.blog-aside .post-aside .post-aside-title a {
+  font-size: 18px;
+  color: #20247b;
+  font-weight: 600;
+}
+.blog-aside .post-aside .post-aside-meta {
+  padding-bottom: 10px;
+}
+.blog-aside .post-aside .post-aside-meta a {
+  color: #6F8BA4;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+.blog-aside .latest-post-aside + .latest-post-aside {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.blog-aside .latest-post-aside .lpa-right {
+  width: 90px;
+}
+.blog-aside .latest-post-aside .lpa-right img {
+  border-radius: 3px;
+}
+.blog-aside .latest-post-aside .lpa-left {
+  padding-right: 15px;
+}
+.blog-aside .latest-post-aside .lpa-title h5 {
+  margin: 0;
+  font-size: 15px;
+}
+.blog-aside .latest-post-aside .lpa-title a {
+  color: #20247b;
+  font-weight: 600;
+}
+.blog-aside .latest-post-aside .lpa-meta a {
+  color: #6F8BA4;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.tag-cloud a {
+  padding: 4px 15px;
+  font-size: 13px;
+  color: #ffffff;
+  background: #20247b;
+  border-radius: 3px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.tag-cloud a:hover {
+  background: #fc5356;
+}
+
+.blog-single {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.article {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 15px;
+  margin: 15px 0 30px;
+}
+.article .article-title {
+  padding: 15px 0 20px;
+}
+.article .article-title h6 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.article .article-title h6 a {
+  text-transform: uppercase;
+  color: #fc5356;
+  border-bottom: 1px solid #fc5356;
+}
+.article .article-title h2 {
+  color: #20247b;
+  font-weight: 600;
+}
+.article .article-title .media {
+  padding-top: 15px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 20px;
+}
+.article .article-title .media .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.article .article-title .media .media-body {
+  padding-left: 8px;
+}
+.article .article-title .media .media-body label {
+  font-weight: 600;
+  color: #fc5356;
+  margin: 0;
+}
+.article .article-title .media .media-body span {
+  display: block;
+  font-size: 12px;
+}
+.article .article-content h1,
+.article .article-content h2,
+.article .article-content h3,
+.article .article-content h4,
+.article .article-content h5,
+.article .article-content h6 {
+  color: #20247b;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.article .article-content blockquote {
+  max-width: 600px;
+  padding: 15px 0 30px 0;
+  margin: 0;
+}
+.article .article-content blockquote p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fc5356;
+  margin: 0;
+}
+.article .article-content blockquote .blockquote-footer {
+  color: #20247b;
+  font-size: 16px;
+}
+.article .article-content blockquote .blockquote-footer cite {
+  font-weight: 600;
+}
+.article .tag-cloud {
+  padding-top: 10px;
+}
+
+
+img {
+    max-width: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+
+@media (max-width: 767px) {
+  .contact-form .send {
+    margin-bottom: 20px;
+  }
+}
+
+.section-title h2 {
+    font-weight: 700;
+    color: #20247b;
+    font-size: 45px;
+    margin: 0 0 15px;
+    border-left: 5px solid #fc5356;
+    padding-left: 15px;
+}
+.section-title {
+    padding-bottom: 45px;
+}
+.contact-form .send {
+    margin-top: 20px;
+}
+.px-btn {
+    padding: 0 50px 0 20px;
+    line-height: 60px;
+    position: relative;
+    display: inline-block;
+    color: #20247b;
+    background: none;
+    border: none;
+}
+.px-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid rgba(252, 83, 86, 0.6);
+    border-right: 1px solid transparent;
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    width: 60px;
+    height: 60px;
+}
+.px-btn .arrow {
+    width: 13px;
+    height: 2px;
+    background: currentColor;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 25px;
+}
+.px-btn .arrow:after {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: 0;
+    display: inline-block;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+   
+    </style>
+
+ 
+</head>
+
+<body oncontextmenu="return false">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      
+      <a  class="logo me-auto me-lg-0"><img src="../assets/img/logoonly.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+        
+                  <li><a class="nav-link scrollto " href="../AboutUs.html">About Us</a></li>
+                  <li><a class="nav-link scrollto " href="../team.html">Team</a></li>
+       
+         <li><a class="nav-link scrollto " href="../Blogs.html">Blog</a></li>
+         <li><a class="nav-link scrollto " href="../ContactUs.html">Contact</a></li>
+         <li class="dropdown"><a href="#"><span style="color: rgb(255, 136, 0);">Login</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="../memberslogin/main.html">Member</a></li>
+            <li><a href="../adminpanel.html">Admin</a></li>
+          </ul>
+        </li>
+            
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <ol>
+            <li><a href="../Blogs.html">Blogs</a></li>
+            <li>The mechanics...</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <section id="bta" class="bta">
+      <div class="container" data-aos="zoom-in">
+  
+        <div class="text-center">
+          <h3>BLOGS</h3>
+          <p>Our blogs </p>
+      
+        </div>
+  
+      </div>
+    </section><!-- End Bta Section -->
+
+    <div class="blog-single gray-bg">
+      <div class="container">
+          <div class="row align-items-start">
+              <div class="col-lg-8 m-15px-tb">
+                  <article class="article">
+                      <div class="article-img">
+                          <img src="https://preferredvasculargroup.com/wp-content/uploads/2020/03/Preferred-Vascular-Group_Kidney-Failure-1024x536.jpeg" title="" alt="">
+                      </div>
+                      <div class="article-title">
+                          <h2>বৃক্ক ৰোগৰ কিছু তথ্য আৰু একান্ত অনুভৱ</h2>
+                          <p style="margin-left: 10px;">নিবেদিতা বড়া সন্দিকৈ <Span style="color: #d1a442;">( ধেমাজি উচ্চতৰ মাধ্যমিক বালিকা বিদ্যালয় বিষয় শিক্ষয়িত্রী )</Span></p>
+                       
+                      </div>
+                      <div class="entry-content"  style="text-align: justify;">
+                        <p>....হঠাতে জীৱনলৈ বিপর্যয় নামি আহিল। কি কৰোঁ... কি নকৰোঁ । মোৰ নিকটতমৰ দুয়োটা বৃক্কই <span style="font-weight: 600;">(Kidney)</span> বিকল হ'ল। তাকে৷ ভাৰৰ ভুল ঔষধৰ বাবে। হে 
+                            ভগৱান... কি কৰোঁ... চকুৰ পানীৰে বাট নেদেখি মই খেপিয়াই ফুৰিছিলো অ'ত ত'ত - জীৱনৰ এরা নির্মম আঘাত মোক্ষম আঘাত। তিল তিলকৈ শেষ হৈ 
+                            গ'ল জীৱনৰ ৰঙীণ সপোন। অথচ সপোন ভাঙিলেও জীৱনৰ ছন্দ হেৰাই যাবলৈ নিদি ঢাপলি মেলিছিলো শুৱাহাটীলৈ.... গুৱাহাটীত চিকিৎসা কৰি সুফল নোপোৱাত 
+                            গুৱাহাটী চিকিৎসা মহাবিদ্যালয়ৰ সহযোগী অধ্যাপক ডাঃ মঞ্জুৰী শৰ্মাৰ পৰামৰ্শ আৰু দিহামতে চেন্নাইৰ এপ'ল হস্পিতেলৰ ডাঃ ৰাজীর এ. আমিগিৰিৰ তত্ত্বাবধানত 
+                            অৰুৰী বিভাগত ভৰ্তি কৰিলো। সেই সময়ৰ কথা – স্মৃতিৰ পেৰাত এনেভাৱে সংৰক্ষণ কৰি ৰাখিছো এই মুহূর্ত দেয়া প্ৰকাশ কৰা নিষ্প্রয়োজন। এই ছেগতে আমাৰ 
+                            দুৰ্জিাৰ সময়ত সহায়ৰ হাত আগবঢ়োৱা সুহদসকলক প্রণাম আৰু শ্ৰদ্ধা তথ্য ধন্যবাদ জনালো। একান্ত অভিজ্ঞতাৰ ভিত্তিত এই লেখা প্ৰস্তুত কৰা হৈছে কোনো সদাশয় 
+                            ব্যক্তিৰ বিঞ্চিত সহায় হ'লে পৰম কৃতাৰ্থ হ'ম।</p>
+                         <p>বৃক্ক যাক ইংৰাজীত কিনী <span style="font-weight: 600;">(Kidney)</span> বুলি কোৱা হয় সেয়া মানৱ শৰীৰৰ এনে এটা অংগ - যিটোৱে আমাক জীয়াই থকাত অৰিহনা যোগায় আহিছে। আমাৰ শৰীৰত 
+                             দুটা বৃক্ক থাকে। ই লেচেৰা মাহৰ গুটিৰ দৰে আকৃতিৰ আৰু মানুহৰ হাতৰ মুঠিটোৰ সমান। মাংসপেশী আৰু কামিহাড়ৰ মাজ আৰুত হৈ থকা বৃক্ক পেটৰ মাজভাগৰ 
+                             পিছ অংশত অৱস্থিত। মানৱ শৰীৰত বৃক্কৰ প্ৰধান কাম হৈছে তেজত জনা হোবা টক্সিন আৰু অলাগতিয়াল পানীবোৰ নিৰ্গত কৰা আমাৰ তেজ বৃক্ক ধমনীৰে প্ৰবেশ 
+                             কৰি নেঞ্জত সোমায় বৃদ্ধৰ কাৰ্যকৰী আশই হৈছে নেছন। এই নেয়নসমুহে চেকনিৰ কাম কৰে। বুঝত সাধাৰণতে অসংখ্য নেফ্রন থাকে। নেজনবোৰৰ জৰিয়তে বুদ্ধই
+                              তেজ পৰিশোধন কৰে আৰু দেহৰ পৰা আবর্জনা, অতিৰিক্ত তৰল পদাৰ্থবোৰ মুৰা প্ৰাৱ হিচাপে দেহৰ পৰা বাহিৰ হয়। এই মূত্ৰ বুৰ মাজভাগত  <span style="font-weight: 600;">(Medulla)</span> জমা 
+                              হৈ বৃক্ক নলীৰে মুত্রাশয়ত জমা হৈ থাকে। সময়ে সময়ে প্ৰস্ৰাৱ হৈ মুজানলীৰে বাহিৰ হয়। পৰিশোধিত তেজ বৃক্কৰ শিৰাৰে পুনৰ দেহলৈ উভতি যায়। প্ৰস্ৰাৱ বা মুত্ৰ
+                               তৈয়াৰ হোৱাতো মানুহৰ দেহৰ অত্যন্ত লাগতিয়াল ব্যবস্থা। এজন সুস্থ মানুহৰ দৈনিক এক লিটাৰৰ পৰা দুই লিটাৰ পর্যন্ত মূত্ৰ তৈয়াৰ হয়। বৃক্কই তেজ পৰিশোধন 
+                               কৰাৰ উপৰিও মানুহৰ অন্যান্য বছতো প্রয়োজনীয় কার্য নিয়গুণ কৰে। সাধাৰণতে বৃৰুই প্রতিদিনে প্রায় ২০০ লিটাৰ তেজ পৰিশোধন কৰি পৰিষ্কাৰ কৰে। এই 
+                               পৰিমান ২০/২১ বাণ্টি তেজৰ সমান। বৃৰুই অন্যান্য কাম কৰাৰ উপৰিও মানুহৰ ৰক্তচাপ নিয়ন্ত্রণ কৰে, লোহিত ৰক্ত কনিকা তৈয়াৰ কৰি তেজত হিম'মোবিনৰ 
+                               পৰিমান সঠিককৈ ৰখাৰ উপৰিও ই শৰীৰত কেলচিয়াম আৰু যত ফৰাচৰ ৰাসায়নিক পৰিবৰ্তনত সহায় কৰি হাড়ৰ গঠন আৰু কাৰ্য নিয়ন্ত্ৰণ কৰে। বৃক্ক সঁচাকৈয়ে 
+                               শৰীৰৰ এক আচৰিত অংগ – যিয়ে দেহৰ অত্যাবশকীয় কাম সমাধা কৰে। যদি কোনো কাৰণত এটা বৃদ্ধ নষ্ট হৈ যায় নাইবা উলিয়াই পেলোৱা হয় তেতিয়া অন্যটা 
+                               বৃই সকলো কার্য সম্পন্ন কৰে। যেতিয়া বৃতৰ ৮০% তকৈ অধিক 'কলা' নগ্ন হয় তেতিয়া কাৰ্য কৰিবলৈ অপাৰগতা আহি পৰে। স্বৰূপাৰ্থত বৃক্ক বিকল হৈ পৰে। এনে 
+                               সময়তে চিকিৎসাৰ জৰুৰী অকেজন আহি পৰে। বৃক্কৰ বিকল অৱস্থা তথা ৰোগ নিৰ্ণয় কৰিবলৈ বিভিন্ন ধৰণৰ পৰীক্ষা-নিৰীক্ষাৰ প্ৰয়োজন সাধাৰণতে তেজত থকা ইউৰিয়া 
+                               ক্রিয়েটিনিনৰ পৰিমান নির্ণয় কৰি বৃক্কৰ বিকল অৱস্থা ধৰা পেলোৱাত সহায়ক হয়। এজন সুস্থ মানহৰ তেজত সাধাৰণতে ইউৰিয়াৰ পৰিমান ২০-৪০ মিঃগ্রাঃ শতাংশ আৰু
+                                ক্রিয়েটিনিন পৰিমান ০.৫-১, ১-৫ মিঃগ্রাঃ শতাংশ থাকে।</p> 
+
+                         <p>বৃক্কৰ বিকল দুই ধৰণৰ –<br>
+
+                            <span style="margin-left: 30px;">১/ হঠাৎ হোৱা বিকল অৱস্থা</span><br>
+
+                            <span style="margin-left: 30px;">২/ দীর্ঘদিনীয়া বৃক্কৰ বিকল অৱস্থা</span><br><br><br>
+
+                            <span style="font-weight: 800;">১/ হঠাৎ হোৱা বিকল অৱস্থাঃ</span><br>
+
+                            সাধাৰণতে হঠাতে হোৱা ৰোগ বা ভিতৰত হোৱা ৰোগৰ বাবে নতুবা ঔষধৰ পাৰ্শ্বক্রিয়া নতুবা অত্যাধিক বিষ নির্মূলৰ <span style="font-weight: 600;">(pain killer)</span> বাবে সেৱন কৰা ঔষধৰ বাবে বৃক্ক বিকল হ’ব পাৰে। এনে ক্ষেত্ৰত উচিত সময়ত উচিত চিকিৎসা গ্ৰহণ কৰিলে পুনৰ বৃক্ক সুস্থ অৱস্থালৈ ঘূৰি যোৱাৰ পূৰামাত্ৰাই সম্ভাৱনা থাকে।
+                            <br><br>
+                            <span style="font-weight: 800;">২/ দীর্ঘদিনীয়া বৃক্কৰ বিকল অৱস্থাঃ</span><br>
+
+                            আমাৰ দেশত সাধাৰণতে দীর্ঘদিনীয়া বৃক্কৰ বিকল অৱস্থা কৰিব পৰা ৰোগসমূহ হ'ল –<br>
+
+                            <span style="margin-left: 50px;">১/ <span style="font-weight: 600;">Choonic Gomenulo nephrities,</span></span><br>
+
+                            <span style="margin-left: 50px;">২/ দীর্ঘদিনীয়া উচ্চ ৰক্তচাপ,</span><br>
+    
+                            <span style="margin-left: 50px;">৩/ দীর্ঘদিনীয়া বহুমূত্ৰ ৰোগ,</span><br>
+    
+                            <span style="margin-left: 50px;">8/ সঘনাই হোৱা বৃক্কৰ সংক্ৰমন ৰোগ,</span><br>
+    
+    ‌                       <span style="margin-left: 50px;">৫/ বৃক্কৰ পাথৰজনিত ৰোগ আদি।।</span><br><br>
+
+                             বৃক্ক ৰোগৰ চিকিৎসা বিশ্বত দুই ধৰণে কৰা হয় –</span>   <br>
+
+                             <span style="margin-left: 30px;">১/ ডায়েলেইছিচ বা পৰিশোধন প্ৰক্ৰিয়া</span><br>
+
+                             <span style="margin-left: 30px;">২/ বৃক্ক সংস্থাপন।</span><br><br>
+
+                              ডায়েলেইছিচ (Dialysis) দই প্ৰকাৰৰ -</span> <br>
+
+                              <span style="margin-left: 30px;">১/ হিমোডায়েলেইছিচ অৰ্থাৎ তেজ পৰিশোধন প্রক্রিয়া</span><br>
+
+                              <span style="margin-left: 30px;">২/ পেৰিটেনিয়েল ডায়েলেইছিচ অর্থাৎ পেটৰ পৰা পৰিশোধন কৰা প্রক্রিয়া।</span><br><br>
+
+                              তেজ পৰিশোধন প্ৰক্ৰিয়াটো সম্পন্ন কৰিবলৈ যিটো যন্ত্ৰৰ প্ৰয়োজন তাক তেজ পৰিশোধন যন্ত্ৰ বোলা হয়। শৰীৰৰ পৰা যন্ত্ৰটোলৈ তেজ
+                               চলাচল কৰিবলৈ শৰীৰত কিছুমান শিৰাৰ সৈতে পথ সংযোগ কৰিবলগীয়া হয়। যেনে –<br>
+                               <p style="margin-left: 20px;">
+
+                              ছাবক্লেভিয়ান কেথেটৰ <span style="font-weight: 600;" >(Sub Clavian Catheter)</span><br>
+
+                              <span style="margin-left: 30px;">১/ ফিষ্টুলা (Fistula)</span><br>
+
+                                    <span style="margin-left: 30px;">২/ ছাণ্ট (Shunt)</span></p>
+
+                            দীঘদিনীয়া বৃক্কৰ বিকল হোৱা ৰোগীসকলৰ ক্ষেত্ৰত সফল বৃক্ক সংস্থাপনেই উত্তম মাধ্যম। সকলো 
+                            ৰোগীৰ বৃক্ক সংস্থাপনৰ বাবে উপযুক্ত নহ'ব পাৰে। বৃক্ক সংস্থাপনৰ বাবে চিকিৎসকে কিছুমান যাৱতীয় পৰীক্ষা নিৰীক্ষা কৰি ৰোগীৰ বৃক্ক সংস্থাপন উপযুক্ততাৰ 
+                            বাবে সিদ্ধান্ত গ্রহণ কৰে। বৃক্ক সংস্থাপন প্রক্রিয়াটো এক অনন্য প্রক্রিয়া। এগৰাকী সুস্থ মানুহৰ পৰা বৃক্ক আনি ৰোগীৰ পেটত সংস্থাপন কৰা কাৰ্য জটিল কর্ম 
+                            যদিও চিকিৎসকসকলে অধিক নিয়াৰিকৈ সমাপন কৰে। ৰোগীৰ নিজৰ বিকল হোৱা দুয়োটা বৃক্ক তেনেকৈ ৰাখি অন্য বৃক্ক সংস্পপিত কৰা হয়। আজীৱন ৰোগীগৰাকীয়ে 
+                            সংস্থাপিত বৃক্ক সুন্দৰকৈ ৰাখিবলৈ দৈনিক প্রতিষেধক ঔষধ লোৱাটো একান্ত বাঞ্ছনীয়। ঔষধ সেৱন কৰা জৰুৰী ব্যৱস্থাটোক কোৱা হয় <span style="font-weight: 600;" >Immun osupressive drugs</span> | 
+                            এই <span style="font-weight: 600;" >Immuano</span> লোৱা ঔষধ দুটিমানৰ নাম – <span style="font-weight: 600;" >Cyclosporin, Tacrolimus, My cophonalate Mefetail, Cyclosporin, Predmisolone</span> আদি। এই ঔষধ প্রত্যেকজন 
+                            ৰোগীয়ে চিকিৎসকৰ পৰামৰ্শমতে বৃক্ক সংস্থাপনৰ পিছত নিয়মীয়াকৈ লব লাগে। ঔষধবোৰ শক্তিশালী। এই ঔষধবোৰ তেওঁলোকৰ <span style="font-weight: 600;" >Natural Immunity</span> টো দূৰ্বল কৰি 
+                            পেলায়। বিশেষকৈ <span style="font-weight: 600;" >Pneumonia, Virus Infection</span> যেনে: <span style="font-weight: 600;" >Cytomegalovirus hepatitis B, hepatitis C</span> আদি সংক্রামণ ৰোগবিলাকে অতি সহজে তেওঁলোকক 
+                            আক্ৰমণ কৰিব পাৰে। সেয়েহে এই ঔষধবোৰ লৈ থকা সময়ত বহুতো সংক্রামণ ৰোগ হ’ব পাৰে – গতিকে ৰোগীয়ে নিজেই সাৱধান হোৱাটো অত্যন্ত প্রয়োজন। ৰোগীয়ে 
+                            সদায়ে পৰিস্কাৰ পৰিচন্ন তথা সুষম আহাৰ গ্ৰহণ কৰিব লাগে। অস্বাস্থ্যকৰ থকা ঠাই, অস্বাস্থ্যকৰ খাদ্য আৰু অস্বাস্থ্যকৰ পানী সেৱনৰ পৰা বিৰত থাকিব লাগে। বৃক্ক গ্ৰহণ
+                            কৰা ৰোগীয়ে মনত ৰখা ভাল – তেওঁ অন্যৰ বৃক্ক লৈ আছে – সেয়েহে সাৱধানে থকাতো বাঞ্ছনীয়। বৃক্ক দান দিয়া ৰোগীৰ কোনোধৰণৰ জটিলতা নাথাকে। তেওঁক বিভিন্ন
+                            ধৰণৰ পৰীক্ষা নিৰীক্ষাৰ অন্ততহে বৃক্ক দানৰ বাবে প্ৰস্তুত কৰা হয়। গতিকে ৰোগীগৰাকীয়ে চিকিৎসালয়ৰ পৰা আঁতৰি আহিলেও চিকিৎসকৰ পৰামৰ্শ মানি চলিলে জীৱন 
+                            সুন্দৰ হৈ পৰিব। গতানুগতিক কর্মসূচীৰ মাজত সোমাই পৰিও বহুলোকক সংসাৰ যাত্ৰা কৰা দেখা যায়। অৱশ্যে যদিহে দৈনিক প্ৰস্ৰাৱৰ পৰিমান কমি গ'লে অথবা 
+                            ৰোগীয়ে ৪৮ ঘণ্টা বা তাতোধিক জ্বৰত ভোগিলে পনৰ তেজৰ পৰীক্ষা বিশেষকৈ ইউৰিয়া ক্রিয়েটিনিন, হিমগ্লোবিন, শ্বেতক্ত কনিকা আৰু প্ৰস্ৰাৱ পৰীক্ষা কৰি থাকিব লাগে আৰু চিকিৎসকৰ পৰামৰ্শ লব লাগে। খাদ্য আৰু খাদ্য খোৱাৰ পৰিমান :<br><br>
+
+                           <span style="font-weight: 800;" >খাদ্য আৰু খাদ্য খোৱাৰ পৰিমান :</span><br>
+                           সাধাৰণতে খাদ্যৰ তালিকা এগৰাকী খাদ্য বিশেষজ্ঞ <span style="font-weight: 600;" >(Dietition)</span> ৰ জৰিয়তে আলোচনা কৰা যুগুত যদিও সাধাৰণতে -<br>
+                           <span style="font-weight: 800;" >শুই উঠাৰ পিছত :</span><br>
+
+                           <span style="font-weight: 800;margin-left: 20px;">পুৱা ৬.০০ বজাঃ</span> চাহ / কফি একাপ (চেনী নোহোৱাকৈ)<br><br>
+
+                           <span style="font-weight: 800;" >পুৱাৰ জলপান :</span><br>
+
+                           <span style="font-weight: 800;margin-left: 20px;">পুৱা ৮.৩০ বজাঃ</span> ৰুটি (তিনিখন তেল নোহোৱা), পাচলি ডালিয়া (আধা কাপ), ভাত (ডেৰ কাপ), পাচলি
+
+                            (ডেৰ কাপ)<br><br>
+
+
+
+
+                            <span style="font-weight: 800;" >দুপৰীয়া (মধ্যম ভাগ) :</span><br>
+
+                            <span style="font-weight: 800;margin-left: 20px;">১০.৩০ বজাঃ </span>একাপ চাহ (আধা চামুচ চেনীৰে সৈতে), মেৰী গ’ল্ড নতুবা ডাইজেষ্টি মেৰী গ’ল্ড (এখন/ দুখন) <br><br>
+                            <span style="font-weight: 800;" >দুপৰীয়া আহাৰ ১.০০ বজাঃ</span><br>
+
+                            <span style="margin-left: 30px;">১/ দাইল, মাংস (মুর্গী ৫০ গ্রাম), মাছ (৫০ গ্রাম), কণী (বগা অংশ এটা)</span><br>
+
+                            <span style="margin-left: 30px;">২/ সেউজীয়া পাচলিৰ লগতে চালাড (সিদ্ধ কৰা)</span><br>
+
+                            <span style="margin-left: 30px;">৩/ অলপ ফলমূল</span><br>
+
+                            <span style="margin-left: 30px;">8/ ভাত কমকৈ/ ৰুটী</span><br><br>
+
+
+
+                            <span style="font-weight: 800;" >আবেলিৰ চাহ ৪.০০ বজাঃ</span><br>
+
+                            <span style="margin-left: 30px;">১/ চাহ/ কফি (চেনী নোহোৱাকৈ)<br>
+
+                            <span style="margin-left: 30px;">২/ সিদ্ধ চানা/ মণ্ড আদি (আধা কাপ)<br>
+
+                            <span style="margin-left: 90px;"> নাইবা<br>
+                                <span style="margin-left: 50px;">মেৰীগ’ল্ড বিস্কুট/ এৰো’ৰট বিস্কুট<br><br>
+
+
+
+                            <span style="font-weight: 800;" >নিশাৰ আহাৰ ৮.০০/৯.০০ বজাঃ </span><br>
+
+                            <span style="margin-left: 30px;">পুৱাৰ আহাৰ/ জলপানৰ দৰে,</span><br>
+
+                            <span style="margin-left: 30px;">পাৰিলে শোৱাৰ সময়ত আধাকাপ গাখীৰ</span><br><br>
+
+
+
+                            <span style="font-weight: 800;" > বিশেষ উল্লেখযোগ্য :</span><br>
+
+                                   <span style="margin-left: 30px;font-weight: 600;"> 1 Cup: 150 ml. capacity</span><br>
+
+                                    <span style="margin-left: 30px;font-weight: 600;"> 1 glass 200 ml. capacity</span><br>
+
+                                    <span style="margin-left: 30px;font-weight: 600;"> 1 teaspoon : 5 gm</span><br>
+
+                                    <span style="margin-left: 30px;"> (এই খাদ্যৰ তালিকা চেন্নাই এপ’ল হস্পিতেলৰ খাদ্য বিশেষজ্ঞই দিয়া তালিকা। এই তালিকা ৰোগী চাই
+
+                                    ঠাইভেদে হীন ভেঢ়িও হ’ব পাৰে।)</span><br><br>
+
+
+
+
+                            <span style="font-weight: 800;" >বৃক্ক দান মহৎ দান :</span><br>
+
+                            <span style="margin-left: 30px;">যি গৰাকীয়ে নিজৰ এটা বৃক্ক অন্যক দান কৰে তেওঁক ড’নাৰ (Doner) বুলি কোৱা হয়। সাধাৰণতে তেজৰ সম্বন্ধ থকা মৃত (৪৮ ঘণ্টাৰ ভিতৰত দূৰ্ঘটনা 
+                                    জনিত) নতুবা তেজৰ সম্পৰ্ক নথকা জীৱিত মানুহৰ পৰা অথবা সদ্য মৃত মানুহৰ (Cadaver) পৰা বৃক্ক গ্ৰহণ কৰি ৰোগীৰ দেহত সংস্থাপন কৰা হয়। সাধাৰণতে 
+                                    তেজৰ সম্পৰ্ক থকা ব্যক্তিৰ পৰা বৃক্ক সংস্থাপন কৰিলে ৰোগীয়ে দীর্ঘজীৱন পোৱাৰ উপৰিও স্বাস্থ্য উন্নত হয় আৰু স্বাভাৱিক জীৱন-যাপন কৰিব পাৰে। অবিবাহিত 
+                                    সকলেও বিবাহবাৰু কৰিও সন্তান জন্ম দি সুন্দৰ গৃহস্থী কৰি জীৱনটো আনন্দময় কৰি তলিব পাৰে। বৃক্ক ৰোগীয়ে সাধাৰণতে মাক-দেউতাক, পুত্র-পুত্রী, 
+                                    ভায়েক-ভনীয়েক আদি যিকোনো এজনৰ পৰা চিকিৎসকৰ পৰামৰ্শমতে নতুবা অনেক পৰীক্ষা-নিৰীক্ষাৰ পিছত উপযুক্ত হ’লে গ্ৰহণ কৰিব পাৰে। বৃক্ক দাতাকো 
+                                    সুন্দৰকৈ বিভিন্নধৰণৰ পৰীক্ষা-নিৰীক্ষাৰ অন্তত বৃক্ক দান কৰিবলৈ অনুমতি দিয়া হয়। দাতা আৰু ৰোগীৰ মাজত বৃক্কৰ এই মিলক<span style="font-weight: 600;"> HLA </span>মিল বুলি কোৱা হয়, যাক 
+                                    ইংৰাজীত <span style="font-weight: 600;">Tissue matching or HLA Matching</span> বুলি কোৱা হয়। এটি বৃক্ক দান কৰিলেও দাতাৰ একো অসুবিধা নহয় — বৰঞ্চ স্বাচ্ছ্যন্দৰে জীৱন নিৰ্বাহ কৰিব পাৰে। 
+                                    অৱশ্যে বৃক্ক দান দিবলৈ হ'লে কিছুমান আদালতৰ আইনী প্রক্রিয়াও আছে। আপোনসকলৰ ক্ষেত্ৰত কিছু শিথিল যদিও পৰিচয়-পত্ৰ আৰু ৰোগী আৰু দাতাৰ যুগ্ম 
+                                    আলোকচিত্ৰৰ প্ৰয়োজন। (যিটো মোৰ ক্ষেত্ৰত হৈছিল।)</span><br>
+
+                            <span style="margin-left: 30px;">অন্যহাতে সদ্য মৃত ব্যক্তিৰ পৰাও বৃক্ক গ্ৰহণ কৰিব পাৰে ইয়াক <span style="font-weight: 600;">Cadaver doner</span> বুলি কোৱা হয়। <span style="font-weight: 600;">Cadaver doner</span> ৰ মগজুৰ মৃত্যু হ'লেও 
+                                বৃক্ক নতুবা অন্য অংগ ৪৮ ঘণ্টা ভিতৰত সংস্থাপন কৰিব পাৰে। সাধাৰণতে ডাঙৰ হস্পিতেল সমূহত <span style="font-weight: 600;">Cadaver</span> ৰ বাবে আগতীয়াকৈ নাম পঞ্জীয়নৰ ব্যৱস্থা আছে আৰু প্ৰয়োজন 
+                                সাপেক্ষে সময় সুবিধা হ'লে পৰিয়ালক সকাহ দিয়াৰ বাবে হস্পিতেল কর্তৃপক্ষই এনে উৎসৰ পৰা বৃক্ক যোগান ধৰি ৰোগী গৰাকীক আৰোগ্য কৰি তোলে। যদিহে <span style="font-weight: 600;">Cadaver Doner</span>
+                                  নাপায় তেতিয়া সম্পৰ্কীয় মাহী, পেহী, খুড়া, ভতিজা, ভায়েক আদিৰ পৰা লোৱাৰ ব্যৱস্থা কৰে। বৃক্ক সংস্থাপিত কৰাৰ পিছত ৰোগীসকলে এক নতুন জনম লাভ কৰে – যাৰ বাবে তেওঁলোকৰ জীৱন গতিময় হৈ পৰে।
+                                </span> <br>
+                                
+                            <span style="margin-left: 30px;">আমি মনত ৰখা উচিত – ৫০ বছৰৰ উৰ্দ্ধৰ সকলো ব্যক্তিয়ে মাহত এবাৰকৈ হ'লেও <span style="font-weight: 600;">Blood Pressure, Blood Sugar, Serum Creatinine, Serum urea</span> আদি তেজৰ পৰীক্ষাসমূহ 
+                                কৰি থাকিবলৈ চিকিৎসকে পৰামর্শ দিয়ে। বৃক্ক ৰোগৰ পৰা হাত সাৰিবলৈ নিমখ, মিঠা, মাদকদ্রব্য, ধুমপান বৰ্জন কৰাৰ উপৰিও শৰীৰৰ ওজন নিয়ন্ত্ৰণ আৰু নিয়মিত ব্যায়াম, খোজকঢ়া আৰু প্ৰাণায়ম কৰিবলৈ চিকিৎসকে 
+                                পৰামৰ্শ আগবঢ়াই সুন্দৰ জীৱন-যাপন কৰিবলৈ অৰিহনা যোগায়। একান্ত অনুভৱঃ</span><br>
+
+                            <span style="margin-left: 30px;">চিকিৎসা শাস্ত্ৰৰ মতে<span style="font-weight: 800;"> বৃক্ক দান মহৎ দান</span> - এই কথাষাৰকে গভীৰভাৱে হৃদয়ংগম কৰি ইং ৮ জুন ২০১১ চনত মোৰ নিকটতম আত্মীয়ক এটি বৃক্ক দান দি Doner নামেৰে এপ’ল 
+                                হস্পিতেলত ডাক্তৰৰ মাজত পৰিচিত হলো। আমাৰ বৃক্কৰ সম্পৰ্কে একো ধাৰণাই নাছিল। ৰোগীক ধেমাজিৰ দুগৰাকী ডাক্তৰে মাত্র ২ ঘণ্টা সময় হাতত আছে – গুৱাহাটীলৈ এতিয়াই লৈ যাওঁক বুলি কওঁতে দিশহাৰা হৈ 
+                                পৰিছিলো যদিও উন্নত মানসিকতাৰ বাবেই হয়তো বৃক্ক কি? ই কেনেকৈ সংৰোপন কৰা হয়? বৃক্ক দান দিলে উপকাৰ অপকাৰসমূহ <span style="font-weight: 600;">Internet</span> ৰ জৰিয়তে জনাৰ পিছত মই যেন 
+                                কার্যক্ষম হৈ পৰিছিলো। সূদীর্ঘ দিন ডায়েলেইছিচ কৰাৰ পিছত, বহু লোকৰ সৈতে আইনী কাকজ-পত্ৰ কৰাৰ পিছতো শেষ সময়ত দেহৰ <span style="font-weight: 600;">Tissue</span> ৰোগীৰ লগত নিমিলাৰ বাবে তেওঁলোকক
+                                 বিদায় দিবলগীয়া হৈছিল। তাৰপিছত <span style="font-weight: 600;">Cadaver</span> ৰ বাবে নাম পঞ্জীয়ন আৰু শেষত নিজে দিয়াৰ সিদ্ধান্ত লোৱাত চিকিৎসকৰ আদৰণীয় পদক্ষেপ আদিয়ে সময়বোৰ যদিও
+                                  দীঘলীয়া হৈছিল তথাপিও নিজে বৃক্ক দান কৰি গৌৰৱ অনুভৱ কৰাৰ লগতে চিকিৎসকৰ সৌহাদ্যপূর্ণ ব্যৱহাৰত পোহৰৰ মুখ দেখিছিলো। মোৰ চাৰ্জাৰী চিকিৎসক <span style="font-weight: 600;">Dr. R. Deepak</span> 
+                                  কে মোৰ লগত তেওঁৰ চেম্বাৰত <span style="font-weight: 600;">Councelling</span> কৰি মানসিক শক্তি যোগাইছিল। মই পেচাত এগৰাকী শিক্ষক তেওঁলোকে এই কথা জানিছিল আৰু ঘৰৰ ভিতৰুৱা খবৰ 
+                                  দুই-চাৰিটা জানিছিল সম্ভৱ। চেম্বাৰত মই প্ৰৱেশ কৰাৰ লগে লগে সৌজন্যপূৰ্ণভাৱে তেওঁ নিজৰ আসনৰ পৰা উঠি মোক প্রণাম জনাই আমনগ্ৰহণ কৰিবলৈ অনুৰোধ 
+                                  জনাই কৈছিল <span style="font-weight: 800;">আপুনি এগৰাকী শিক্ষক, মই আপোনাক শিক্ষক</span> হিচাপে প্ৰণাম জনাইছো। তেতিয়া মই কৈছিলো<span style="font-weight: 800;"> আমি সৰু শিক্ষক ডাক্তৰ,</span> ডাক্তৰে কৈছিল <span style="font-weight: 800;">মই মোৰ 
+                                  সন্তানক সদায়ে কওঁ</span> -আমি আজি <span style="font-weight: 800;">শিক্ষকসকলৰ বাবেহে ডাঙৰ মানুহ হ'ব পাৰিছো - গতিকে আপোনাক পুনৰ প্ৰণাম জনাইছো। - আপুনি মহান</span>। দ্বিতীয়তে <span style="font-weight: 800;"> প্রণাম 
+                                  জনাইছো - আপুনি এগৰাকী মাতৃ আপুনি মাতৃ - হৈও বৃক্ক দান দিবলৈ আগবাঢ়িছে - </span>আপোনাৰ এই মহানতাত<span style="font-weight: 800;"> দ্বিতীয়বাৰ পুনৰ প্ৰণাম জনাইছো </span> - ডাক্তৰৰ কথাত মই
+                                   আবেগিক হৈ পৰি কৈছিলো - <span style="font-weight: 800;">ডাক্তৰ, মোৰ বৰ ভয় লাগিছে,</span> তেতিয়া ডাঃ দীপকে কৈছিল – <span style="font-weight: 800;">আপুনি ভয় নকৰিব - মই আপোনাৰ বাবে ঘৰত ভগৱানৰ ওচৰত 
+                                   পূজা প্রার্থনা কৰি আহিম, আমি মাত্ৰ ইয়াত কেচীহে চলাম.....</span> সঁচাকৈয়ে ডাক্তৰসকলৰ উৎসাহপূৰ্ণ প্ৰেৰণা আৰু ভগৱানৰ আশীৰ্ষ নিৰ্মালী আৰু শুভাকাংখীসকলৰ 
+                                   শুভকামনাৰ বাবেহ আজি ৯ বছৰে বৃক্ক লওতা আৰু দিওতাই কৰ্মঠ হৈ জীয়াই আছো ৷ গতিকে বৃক্ক দান দি আতুৰক সহায় কৰাটো আমাৰ প্ৰত্যেকৰে কৰ্তব্য হোৱা 
+                                   উচিত।
+                                </span><br><br>
+
+
+                                <span style="font-weight: 800;" >তথ্যৰ উৎস :</span><br>
+
+                                <span style="margin-left: 30px;">চিকিৎসকসকলৰ সৈতে হোৱা কথোপকথন আৰু ইণ্টাৰনেট সেৱাৰ পৰা লোৱা তথ্য ।</span>
+
+
+                        </p>       
+        
+                        
+
+        
+                      </div>
+                     
+                    
+                  </article>
+                  
+              </div>
+              <div class="col-lg-4 m-15px-tb blog-aside">
+                  <!-- Author -->
+                  <div class="widget widget-author">
+                      <div class="widget-title">
+                          <h3>Author</h3>
+                      </div>
+                      <div class="widget-body">
+                          <div class="media align-items-center">
+                              <div class="avatar">
+                                  <img src="../assets/img/NH.jpeg" title="" alt="">
+                              </div>
+                              <div class="media-body">
+                                  <h6 style="margin-left: -20px;margin-top: 10px;">নিবেদিতা বড়া সন্দিকৈ</h6>
+                              </div>
+                          </div>
+                          <p style="text-align: justify;">....</p>
+                      </div>
+                  </div>
+                  <!-- End Author -->
+                  
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+
+    
+    </main><!-- End #main -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>WakeWithWellness</h3>
+              <p>
+                Assam, India<br><br>
+                <strong>Phone:</strong> +91-6385334226<br>
+                <strong>Email:</strong> wakewithwellness@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Departments</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">Curation Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">Editorial Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">Marketing Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">Events Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">Design Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../AboutUs.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../Blogs.html">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            <div class="alert">Feedback sent</div>
+            <form id="feedbacks" > 
+              <div class="form-group" >
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;background-color: #5793D1;" id="submit" class="btn btn-primary" >Submit</button>
+            </form>  
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>WakeWithWellness</span></strong>. All Rights Reserved
+      </div>
+  
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="../assets/js/main.js"></script>
+
+  <script>
+    
+    document.onkeydown=function(e)
+    {
+      if (event.keyCode == 123) 
+      {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+      {
+        return false;
+      }
+    }
+  
+  </script>
+  <!--Firebase-->
+    
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="../scripts/feedback.js"></script>
+
+</body>
+
+</html>
