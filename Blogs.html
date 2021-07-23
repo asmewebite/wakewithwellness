@@ -29,6 +29,37 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
   <style>
+    .container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+
+  color: #ffffff;
+  width: 100%;
+ 
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+
+
+
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+  </style>
+
+  <style>
     .alert{
     text-align: center;
     padding: 10px;
@@ -271,17 +302,18 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="index.html">Home</a></li>
-         
-           
-                  <li><a class="nav-link scrollto " href="AboutUs.html">About Us</a></li>
-                  <li><a class="nav-link scrollto " href="team.html">Team</a></li>
-  
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="AboutUs.html">About Us</a></li>
+                  <li><a href="team.html">Team</a></li>
+                </ul>
+         </li>
          <li><a class="nav-link scrollto " href="Blogs.html">Blog</a></li>
          <li><a class="nav-link scrollto " href="ContactUs.html">Contact</a></li>
          <li class="dropdown"><a href="#"><span style="color: rgb(255, 136, 0);">Login</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
             <li><a href="memberslogin/main.html">Member</a></li>
-            <li><a href="Adminpanel/adminpanel.html">Admin</a></li>
+            <li><a href="adminpanel.html">Admin</a></li>
           </ul>
         </li>
             
@@ -326,11 +358,30 @@
     </div>
   </section><!-- End Bta Section -->
 
-  <div id="main-content" class="blog-page" style="margin-top: -30px;">
+  <!-- Control buttons -->
+<div id="myBtnContainer" style="padding: 10px;">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('eng')"> English</button>
+  <button class="btn" onclick="filterSelection('assamese')"> Assamese</button>
+  
+  
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+
+  
+ 
+  
+</div>
+
+  <div id="main-content" class="blog-page" style="margin-top: 40px;">
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-8 col-md-12 left-box">
-              
+
+
+
+              <div class="filterDiv assamese">
               <div class="card single_post">
                 <div class="body">
                     
@@ -344,19 +395,19 @@
                   <p>হঠাতে জীৱনলৈ বিপর্যয় নামি আহিল। কি কৰোঁ... কি নকৰোঁ... । মোৰ নিকটতমৰ দুয়োটা বৃক্কই <span style="font-weight: 600;">(Kidney)</span> বিকল হ'ল। তাকে৷ ডাক্তৰৰ ভুল ঔষধৰ বাবে। হে 
                     ভগৱান... কি কৰোঁ... চকুৰ পানীৰে বাট নেদেখি মই খেপিয়াই ফুৰিছিলো অ'ত ত'ত - জীৱনৰ এয়া নির্মম আঘাত... মোক্ষম আঘাত। তিল তিলকৈ শেষ হৈ 
                     গ'ল জীৱনৰ ৰঙীণ সপোন। অথচ সপোন ভাঙিলেও জীৱনৰ ছন্দ হেৰাই যাবলৈ নিদি ঢাপলি মেলিছিলো শুৱাহাটীলৈ.... গুৱাহাটীত চিকিৎসা কৰি সুফল নোপোৱাত 
-                    গুৱাহাটী চিকিৎসা মহাবিদ্যালয়ৰ সহযোগী অধ্যাপক ডাঃ মঞ্জুৰী শৰ্মাৰ পৰামৰ্শ আৰু দিহামতে চেন্নাইৰ এপ'ল হস্পিতেলৰ ডাঃ ৰাজীৱ এ. আন্নিগিৰি তত্ত্ৱাৱধানত 
-                            জৰুৰী বিভাগত ভৰ্তি কৰিলো। সেই সময়ৰ কথা – স্মৃতিৰ পেৰাত...</p>
+                    গুৱাহাটী চিকিৎসা মহাবিদ্যালয়ৰ সহযোগী অধ্যাপক ডাঃ মঞ্জুৰী শৰ্মাৰ পৰামৰ্শ আৰু দিহামতে চেন্নাইৰ এপ'ল হস্পিতেলৰ ডাঃ ৰাজীৱ এ. আন্নিগিৰি তত্ত্ৱাৱধানত...</p>
                 </div>
                 <div class="footer">
                     <div class="actions">
                         <a href="blogs/blog6.html" class="btn btn-outline-secondary">Continue Reading</a>
                     </div>
+                  
                 </div>
             </div>
-              
-              
-              
-              
+            </div>
+
+
+            <div class="filterDiv eng">
               <div class="card single_post">
                 <div class="body">
                     
@@ -378,9 +429,10 @@
                   
                 </div>
             </div>
-              
-              
-              
+          </div>
+
+
+          <div class="filterDiv eng">
               <div class="card single_post">
                 <div class="body">
                     
@@ -394,6 +446,7 @@
                           Ravi: The Banyan tree isn't just a religious tree for devotees but also, a part of our extended family and our hearts. 
                           Ravi has been sown by Anni; my grandmother, two decades ago. Anni's soft hands would nurture Ravi everyday along with an 
                           exchange of serene conversation...</p>
+                  
                 </div>
                 <div class="footer">
                     <div class="actions">
@@ -402,36 +455,41 @@
                   
                 </div>
             </div>
-              
-              
-              
+            </div>
+
+
+
+            <div class="filterDiv eng">
               <div class="card single_post">
-                  <div class="body">
-                      
-                      <h3><a href="blogs/blog3.html">The Dumpster Girl</a></h3>
-                      <h4>Krishnakshi Majumdar</h4>
-                      <div class="img-post">
-                        <img class="d-block img-fluid" src="https://empowerment.space/wp-content/uploads/2019/02/Middle-school-bullying.jpg" alt="" >
-                    </div>
-                    <p>
-                      My name is Tori Morgenstern. And this is my incidents story.</p>
-                      <p style="text-align: justify;">
-                      So, yes as I already mentioned my name and I turn 17 this year. I study in 
-                      St. Peter’s High School. I am a straight studious A1 student . I wear 
-                      spectacles. I have won many quiz competitions, Olympiads etc. I like to 
-                      engage with studies and I am quite sincere towards it. I don’t like to party, 
-                      involved in gatherings and get-togethers , wear expensive fashionable... </p>
-                  </div>
-                  <div class="footer">
-                      <div class="actions">
-                          <a href="blogs/blog3.html" class="btn btn-outline-secondary">Continue Reading</a>
-                      </div>
+                <div class="body">
                     
+                    <h3><a href="blogs/blog3.html">The Dumpster Girl</a></h3>
+                    <h4>Krishnakshi Majumdar</h4>
+                    <div class="img-post">
+                      <img class="d-block img-fluid" src="https://empowerment.space/wp-content/uploads/2019/02/Middle-school-bullying.jpg" alt="">
                   </div>
-              </div>
-              
-              
-              
+                  <p>
+                    My name is Tori Morgenstern. And this is my incidents story.</p>
+                    <p>
+                    So, yes as I already mentioned my name and I turn 17 this year. I study in 
+                    St. Peter’s High School. I am a straight studious A1 student . I wear 
+                    spectacles. I have won many quiz competitions, Olympiads etc. I like to 
+                    engage with studies and I am quite sincere towards it. I don’t like to party, 
+                    involved in gatherings and get-togethers , wear expensive fashionable... </p>
+                </div>
+                <div class="footer">
+                    <div class="actions">
+                        <a href="blogs/blog3.html" class="btn btn-outline-secondary">Continue Reading</a>
+                    </div>
+                  
+                </div>
+            </div>
+            </div>
+
+
+
+
+            <div class="filterDiv eng">
                 <div class="card single_post">
                     <div class="body">
                         
@@ -440,7 +498,14 @@
                         <div class="img-post">
                           <img class="d-block img-fluid" src="assets/img/blog1.jpg" alt="First slide">
                       </div>
-                        <p style="text-align: justify;">Sumi gasped for breath as she gulped the water down her throat. The chilled air conditioned room and a cool dawn couldn't halt her generously forging sweat. As she recalled her dreaded nightmare, she dwelt in actuality, hoping to broaden the thin line of divide between her dream and reality. Swallowing down her hypertension pill, she had a clash of thoughts between overwhelming hopelessness illuminated by her nightmare and a tinge of hope from the will to bring a change which was interrupted by the ring of her phone. She quickly gathered herself and answered the call- “Hello, Dr. Sumi here.” a few seconds of silence which was broken by a ‘ yes I will rush’.</p>
+                        <p style="text-align: justify;">Sumi gasped for breath as she gulped the water down her throat. 
+                          The chilled air conditioned room and a cool dawn couldn't halt her generously forging sweat. 
+                          As she recalled her dreaded nightmare, she dwelt in actuality, hoping to broaden the thin line 
+                          of divide between her dream and reality. Swallowing down her hypertension pill, she had a clash 
+                          of thoughts between overwhelming hopelessness illuminated by her nightmare and a tinge of hope 
+                          from the will to bring a change which was interrupted by the ring of her phone. She quickly 
+                          gathered herself and answered the call- “Hello, Dr. Sumi here.” a few seconds of silence which 
+                          was broken by a ‘ yes I will rush’...</p>
                     </div>
                     <div class="footer">
                         <div class="actions">
@@ -453,7 +518,12 @@
                         </ul>
                     </div>
                 </div>
+</div>
 
+
+
+
+<div class="filterDiv eng">
                 <div class="card single_post">
                     <div class="body">
                         
@@ -478,17 +548,14 @@
                         </div>
                       
                     </div>
+                </div>   
                 </div>
-
-
-
-
+                
                 
 
-               
 
-                
-                                        
+
+
                           
             </div>
   
@@ -608,6 +675,56 @@
       }
     }
   
+  </script>
+
+  <script>
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
   </script>
   <!--Firebase-->
     
