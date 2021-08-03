@@ -90,7 +90,7 @@ async function getuserInfoRealtime(userID){
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
-                        
+                        <li>Attendence to be posted on 15th & 30th of every month</li>
 
                         
                         </ul>
