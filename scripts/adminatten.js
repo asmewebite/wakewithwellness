@@ -165,3 +165,103 @@ db.collection('attendance').get().then((snapshot)=>{
     })
 
 })
+
+
+
+
+
+
+
+
+
+//August 1
+
+
+const attendanceAug1 = document.querySelector('#August1');
+
+function renderAug1(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Aug1 = document.createElement('span');
+    let Aug1f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Aug1.textContent = doc.data().Aug1;
+    Aug1f.textContent = doc.data().Aug1f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Aug1);
+    li.appendChild(Aug1f);
+    
+  
+
+    attendanceAug1.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderAug1(doc);
+    })
+
+})
+
+
+
+
+
+//August 2
+
+
+const attendanceAug2 = document.querySelector('#August2');
+
+function renderAug2(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Aug2 = document.createElement('span');
+    let Aug2f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Aug2.textContent = doc.data().Aug2;
+    Aug2f.textContent = doc.data().Aug2f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Aug2);
+    li.appendChild(Aug2f);
+    
+  
+
+    attendanceAug2.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderAug2(doc);
+    })
+
+})
+
+
+
+
+
+
