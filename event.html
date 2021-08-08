@@ -123,6 +123,9 @@ input[type=submit]:hover {
   align-items: center;
     
 }
+
+
+
     </style>
 
 
@@ -164,13 +167,12 @@ input[type=submit]:hover {
 
 
     <section style="margin-top: 12px;">
-      <div style="background-color: #79c879;padding: 10px;">
-      <h4 style="text-align: center;font-weight: 400;">A session on</h4>
-      <h2 style="text-align: center;font-weight: 700;">Mental Health - Sprucing Up Our Souls</h2>
-      <h6 style="text-align: center;margin-right: 20px;">Date : <span style="color: #ffffff;">30th July, 2021</span> </h6>
-      <h6 style="text-align: center;margin-right: 20px;">Timing : <span style="color: #ffffff;">6:00 PM</span></h6>
-        <p style="text-align: center;color: #f10e0e;font-weight: 600;">Free Registration for all</p>
-
+      
+      <div style="background: url('https://res.cloudinary.com/hamstech/images/v1617970625/Hamstech%20App/photography-school-1/photography-school-1.jpeg');padding: 10px;">
+        <h4 style="text-align: center;font-weight: 400;color: white;">Photography Competition</h4>
+      <h2 style="text-align: center;font-weight: 700;color: white;">Imbibing Nature for Wellness</h2>
+      <h6 style="text-align: center;margin-right: 20px;font-size: 14px;color: rgb(168, 168, 168);">Organized by : <span style="color: hsl(0, 4%, 91%);font-weight: bold;">WakeWithWellness & ECO Club (NIT Silchar)</span> </h6>
+      <p style="text-align: center;color: #f10e0e;font-weight: 500;">Free Registration for all</p>
     
     </div> 
   
@@ -192,8 +194,9 @@ input[type=submit]:hover {
           <input type="email" id="Email" name="email" placeholder="Your email.." required>
 
           <input type="tel" id="Contact" name="phone" placeholder="Contact no.." required>
+        
          
-      
+          <input type="file" onchange="uploadFile()" id="files" name="files[]" multiple />
       
           <input type="submit" value="Register">
 
@@ -282,6 +285,7 @@ input[type=submit]:hover {
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
 
 
