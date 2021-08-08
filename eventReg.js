@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 function uploadFile(){
       
   // Created a Storage Reference with root dir
-  var storageRef = firebase.storage('submissions').ref('url');
+  var storageRef = firebase.storage().ref();
   // Get the file from DOM
   var file = document.getElementById("files").files[0];
   console.log(file);
