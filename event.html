@@ -196,13 +196,13 @@ input[type=submit]:hover {
           <input type="text" id="Qualification" name="qualification" placeholder="Your qualification.." required>
 
           <input type="tel" id="Contact" name="phone" placeholder="Contact no.." required>
-          <input type="text" id="Caption" name="caption" placeholder="Caption.." required>
-        
+    
+        <textarea style="height: 70px;" maxlength="350" class="container" id="Caption" name="caption" placeholder="Caption.." required></textarea>
          
-          <input type="file" id="files" multiple /><br /><br />
+          <input type="file" id="files" accept=".png, .jpg, .jpeg" required/><br />
           
             <p id="uploading"></p>
-            <progress value="0" max="100" id="progress"></progress>
+            <progress class="container" value="0" max="100" id="progress"></progress>
             </div>
           <p style="font-size: 12px;color: #f10e0e;">* Image should be less than 10MB (.jpg/.png/.jpeg)</p>
       
