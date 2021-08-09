@@ -64,7 +64,7 @@ function submitForm(e){
   // Hide alert after 3 seconds
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
-  },15000);
+  },3000);
 
 
  // Clear form
