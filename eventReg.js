@@ -1,4 +1,4 @@
- // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyAF1DAJ7WFv8-BLO6NuDavi2S4ZdINW3Jw",
   authDomain: "wakewithwellness-fcdb9.firebaseapp.com",
@@ -13,25 +13,23 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-//function to save file
-function uploadFile(){
-      
-  // Created a Storage Reference with root dir
-  var storageRef = firebase.storage().ref();
-  // Get the file from DOM
-  var file = document.getElementById("files").files[0];
-  console.log(file);
-  
-  //dynamically set reference to the file name
-  var thisRef = storageRef.child(file.name);
+var uploader = document.getElementById('uploader');
+  var fileButton = document.getElementById('fileButton');
+  fileButton.addEventListener('change', function(e){
+  var file = e.target.files[0];
+  var storageRef = firebase.storage().ref('img/'+file.name);
+  var task = storageRef.put(file);
+  task.on('state_changed', function progress(snapshot) {
+    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+    uploader.value = percentage;
 
-  //put request upload file to firebase storage
-  thisRef.put(file).then(function(snapshot) {
-     alert("File Uploaded Succesfully")
-     console.log('Uploaded a blob or file!');
+  }, function error(err) {
+
+
+  },function complete() {
+
   });
-}
-
+});  
 
 // Reference messages collection
 var dataRef = firebase.database().ref('EventReg');
@@ -62,6 +60,11 @@ function submitForm(e){
 
  // Show alert
  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },15000);
 
 
  // Clear form
