@@ -1,5 +1,5 @@
  // Your web app's Firebase configuration
- var firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyAF1DAJ7WFv8-BLO6NuDavi2S4ZdINW3Jw",
   authDomain: "wakewithwellness-fcdb9.firebaseapp.com",
   databaseURL: "https://wakewithwellness-fcdb9-default-rtdb.firebaseio.com",
@@ -27,12 +27,10 @@ function uploadFile(){
 
   //put request upload file to firebase storage
   thisRef.put(file).then(function(snapshot) {
-     alert("File Uploaded")
+     alert("File Uploaded Succesfully")
      console.log('Uploaded a blob or file!');
   });
 }
-
-
 
 
 // Reference messages collection
@@ -48,7 +46,10 @@ function submitForm(e){
   // Get values
   var name = getInputVal('name');
   var email = getInputVal('Email');
+  var college = getInputVal('College');
+  var qualification = getInputVal('Qualification');
   var contact = getInputVal('Contact');
+  var caption = getInputVal('Caption');
   var image = getInputVal('files');
 
 
@@ -56,7 +57,7 @@ function submitForm(e){
 
 
   // Save message
-  saveData(name, email, contact,image);
+  saveData(name, email, college, qualification, contact, caption, image);
 
 
  // Show alert
@@ -65,7 +66,7 @@ function submitForm(e){
   // Hide alert after 3 seconds
   setTimeout(function(){
     document.querySelector('.alert').style.display = 'none';
-  },4000);
+  },15000);
 
 
  // Clear form
@@ -78,12 +79,15 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(name, email, contact,image){
+function saveData(name, email, college, qualification, contact, caption, image){
   var newDataRef = dataRef.push();
   newDataRef.set({
     name: name,
     email:email,
+    college:college,
+    qualification:qualification,
     contact:contact,
+    caption:caption,
     image:image
   });
 }
