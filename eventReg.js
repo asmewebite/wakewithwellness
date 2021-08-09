@@ -13,24 +13,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-var uploader = document.getElementById('uploader');
-  var fileButton = document.getElementById('fileButton');
-  fileButton.addEventListener('change', function(e){
-  var file = e.target.files[0];
-  var storageRef = firebase.storage().ref('img/'+file.name);
-  var task = storageRef.put(file);
-  task.on('state_changed', function progress(snapshot) {
-    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
-    uploader.value = percentage;
-
-  }, function error(err) {
-
-
-  },function complete() {
-
-  });
-});  
-
 // Reference messages collection
 var dataRef = firebase.database().ref('EventReg');
 
@@ -58,15 +40,6 @@ function submitForm(e){
   saveData(name, email, college, qualification, contact, caption, image);
 
 
- // Show alert
- document.querySelector('.alert').style.display = 'block';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
-
-
  // Clear form
  document.getElementById('reg').reset();
 }
@@ -89,3 +62,65 @@ function saveData(name, email, college, qualification, contact, caption, image){
     image:image
   });
 }
+
+
+
+var files = [];
+document.getElementById("files").addEventListener("change", function(e) {
+  files = e.target.files;
+  for (let i = 0; i < files.length; i++) {
+    console.log(files[i]);
+  }
+});
+
+document.getElementById("send").addEventListener("click", function() {
+  //checks if files are selected
+  if (files.length != 0) {
+    //Loops through all the selected files
+    for (let i = 0; i < files.length; i++) {
+      //create a storage reference
+      var storage = firebase.storage().ref(files[i].name);
+
+      //upload file
+      var upload = storage.put(files[i]);
+
+      //update progress bar
+      upload.on(
+        "state_changed",
+        function progress(snapshot) {
+          var percentage =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          document.getElementById("progress").value = percentage;
+        },
+
+        function error() {
+          alert("error uploading file");
+        },
+
+        function complete() {
+          document.getElementById(
+            "uploading"
+          ).innerHTML += `${files[i].name} upoaded <br />`;
+        }
+      );
+    }
+  } else {
+    alert("No file chosen");
+  }
+});
+
+function getFileUrl(filename) {
+  //create a storage reference
+  var storage = firebase.storage().ref(filename);
+
+  //get file url
+  storage
+    .getDownloadURL()
+    .then(function(url) {
+      console.log(url);
+    })
+    .catch(function(error) {
+      console.log("error encountered");
+    });
+}
+
