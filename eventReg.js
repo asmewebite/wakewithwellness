@@ -36,9 +36,8 @@ function submitForm(e){
   
 
 
-  // Save message
-  saveData(name, email, college, qualification, contact, caption, image);
-
+// Save message
+saveData(name, email, college, qualification, contact, caption, image);
 
  // Clear form
  document.getElementById('reg').reset();
@@ -90,7 +89,9 @@ document.getElementById("send").addEventListener("click", function() {
         function progress(snapshot) {
           var percentage =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            document.getElementById("progress").style.display = 'block';
           document.getElementById("progress").value = percentage;
+          document.getElementById("progresstext").style.display = 'block';
         },
 
         function error() {
@@ -100,7 +101,8 @@ document.getElementById("send").addEventListener("click", function() {
         function complete() {
           document.getElementById(
             "uploading"
-          ).innerHTML += `${files[i].name} upoaded <br />`;
+          ).innerHTML += `${files[i].name} uploaded successfully<br />`;
+          document.getElementById("progresstext").style.display = 'none';
         }
       );
     }
@@ -123,4 +125,3 @@ function getFileUrl(filename) {
       console.log("error encountered");
     });
 }
-
