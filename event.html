@@ -33,11 +33,10 @@
     .alert{
     text-align: center;
     padding: 10px;
-    background:#79c879;
-    color: white;
+    color: rgb(82, 80, 80);
     margin-bottom: 10px;
     margin-top: 10px;
-    display: none;
+ 
   }
 
      /*Scrollbar*/
@@ -124,9 +123,7 @@ input[type=submit]:hover {
     
 }
 
-
-
-    </style>
+</style>
 
 
 
@@ -183,6 +180,9 @@ input[type=submit]:hover {
           
 
           <h4 style="text-align: center;">Registrations</h4>
+          <input type="file" id="files" accept=".png, .jpg, .jpeg" required/><br />
+          
+            
 
           <form id="reg">
 
@@ -199,22 +199,19 @@ input[type=submit]:hover {
     
         <textarea style="height: 70px;" maxlength="350" class="container" id="Caption" name="caption" placeholder="Caption.." required></textarea>
          
-          <input type="file" id="files" accept=".png, .jpg, .jpeg" required/><br />
           
-            <p id="uploading"></p>
-            <progress class="container" value="0" max="100" id="progress"></progress>
             
-            <p style="font-size: 12px;color: #f10e0e;">* Image should be less than 10MB (.jpg/.png/.jpeg)</p>
-      
-  
-      
+            <p style="font-size: 12px;color: #f10e0e;">* Image should be less than 10MB (.jpg/.png/.jpeg)</p>     
           <input class="container" id="send" type="submit" value="Register">
-            </div>
+            
           
 
 
 
         </form>
+        <p style="text-align: center;margin-top: 10px;color: rgb(122, 122, 122);display: none;" id="progresstext">Please wait...</p>
+        <p style="margin-top: 10px;font-size: 13px;color: rgb(33, 163, 7);font-weight: 600;" id="uploading"></p>
+            <progress style="display: none;" class="container" value="0" max="100" id="progress"></progress></div>
       </div>
       </div>
         </div>
