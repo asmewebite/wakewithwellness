@@ -202,13 +202,13 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var Aug1 = document.getElementById('attend').value
-  var Aug1f = document.getElementById('work').value
+  var Aug2 = document.getElementById('attend').value
+  var Aug2f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Aug1:Aug1,
-    Aug1f:Aug1f
+    Aug2:Aug2,
+    Aug2f:Aug2f
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -219,7 +219,7 @@ function updateattendance(event){
  // Hide alert after 3 seconds
  setTimeout(function(){
    document.querySelector('.alert').style.display = 'none';
- },3000);
+ },5000);
 
  // Clear form
  document.getElementById('attendanceform').reset();
@@ -228,6 +228,7 @@ function updateattendance(event){
 
   });
 }
+
 
 
 
