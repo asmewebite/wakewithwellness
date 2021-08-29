@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Event Registrations</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <style>
+    .alert{
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      background:#79c879;
+      color: white;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: none;
+    }
+
+     /*Scrollbar*/
+   /* width */
+   ::-webkit-scrollbar {
+     width: 10px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: #2e2e2e00;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: rgb(207, 207, 207);
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: rgb(185, 185, 185);
+   }
+   
+    </style>
+    <style>
+
+input[type=text], select {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+input[type=tel], select {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+
+input[type=email], select {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #5793D1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #5793D1;
+}
+
+/* Add a background color and some padding around the form */
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  max-width: 900px;
+  align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+ 
+</head>
+
+<body oncontextmenu="return false">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      
+      <a class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+         
+                
+                  <li><a class="nav-link scrollto " href="AboutUs.html">About Us</a></li>
+                  <li><a class="nav-link scrollto " href="team.html">Team</a></li>
+                
+       
+         <li><a class="nav-link scrollto " href="Blogs.html">Blog</a></li>
+         <li><a class="nav-link scrollto " href="ContactUs.html">Contact</a></li>
+     
+            
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+    <section style="margin-top: 12px;">
+      
+      <div style="background: rgb(29, 24, 24);padding: 10px;">
+        <h4 style="text-align: center;font-weight: 400;color: white;">Crossword Puzzle</h4>
+      <h2 style="text-align: center;font-weight: 700;color: rgb(218, 221, 18);">Unscrambling Wellness</h2>
+      <h6 style="text-align: center;margin-right: 20px;font-size: 14px;color: rgb(168, 168, 168);">Organized by : <span style="color: hsl(0, 4%, 91%);font-weight: bold;">WakeWithWellness</span> </h6>
+      <p style="text-align: center;color: rgb(255, 255, 255);"><span style="color: rgb(160, 160, 160);">Date : </span> 29th August 2021; <span style="color: rgb(160, 160, 160);">Timing :</span> 7:00PM - 8:00PM</p>
+
+    
+    </div> 
+  
+        <div class="row d-flex justify-content-center" style="margin-top: 9px;">
+          <div class="col-md-6">
+            <div class="container1">
+          
+          
+
+          <h4 style="text-align: center;">Feedback form</h4><br>
+          
+
+          <form id="Feedbackform">
+
+            
+   
+          <input type="text" id="name" name="name" placeholder="Full Name.." required>
+      
+          <input type="email" id="Email" name="email" placeholder="Your email.." required>
+         
+          <label>How did you hear about this event?</label>
+          <select name="select" id="select1">
+               <option value="" disabled selected>Select</option>
+               <option value="Friends">Friends</option>
+               <option value="Members of WakeWithWellness">Members of WakeWithWellness</option>
+               <option value="Others">Others</option>
+             </select>
+         
+
+
+          <label>What did you find most useful or enjoyable?</label>
+          <input type="text" id="fill1" name="fill1" required>
+
+
+          <label>Overall, how entertaining was the event?</label>
+          <select class="rating_scale" style="margin-bottom: 20px;padding: 5px;" id="select2">
+            <option value="" disabled selected>Rating</option>
+               <option name="A1" value="1"/><span>1</span>
+         
+               <label style="margin-left: 15px;">
+               <option name="A2" value="2"/><span>2</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="A3" value="3"/><span>3</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="A4" value="4"/><span>4</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="A5" value="5"/><span>5</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="A6" value="6"/><span>6</span>
+               </label>
+               <label style="margin-left: 15px;"></label>
+               <option name="A7" value="7"/><span>7</span>
+           
+            
+               <option name="A8" value="8"/><span>8</span>
+           
+              
+               <option name="A9" value="9"/><span>9</span>
+           
+              
+               <option  type="radio" name="A10" value="10"/><span>10</span>
+           
+          </select>
+
+
+          <label>Would you recommend a similar event from WakeWithWellness to your friends?</label>
+          <select name="select" id="select3">
+               <option value="" disabled selected>Select</option>
+               <option value="Yes">Yes</option>
+               <option value="No">No</option>
+             </select>
+
+
+             <label>How satisfied you were with the presenters?</label>
+             <select class="rating_scale" style="margin-bottom: 20px;padding: 5px;" id="select4">
+              <option value="" disabled selected>Rating</option>
+               <option name="B1" value="1"/><span>1</span>
+              
+               <label style="margin-left: 15px;">
+               <option name="B2" value="2"/><span>2</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B3" value="3"/><span>3</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B4" value="4"/><span>4</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B5" value="5"/><span>5</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B6" value="6"/><span>6</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B7" value="7"/><span>7</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B8" value="8"/><span>8</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option name="B9" value="9"/><span>9</span>
+               </label>
+               <label style="margin-left: 15px;">
+               <option  name="B10" value="10"/><span>10</span>
+               </label>
+             </select>
+
+          <label>If you are running the event, what would you have done differently?</label>
+          <input type="text" id="fill2" name="fill2" required>
+
+
+          <label>Any suggestions regarding topics of the events or future events you will like to attend organized by us?</label>
+          <input type="text" id="fill3" name="fill3" required>
+
+
+
+          
+          <div class="alert">Submitted successfully</div>
+          <input class="container" type="submit" id="submit" value="Submit">     
+         
+            
+          
+
+
+
+        </form>
+       
+      </div>
+      </div>
+        </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>WakeWithWellness</h3>
+              <p>
+                Assam, India<br><br>
+                <strong>Phone:</strong> +91-6385334226<br>
+                <strong>Email:</strong> wakewithwellness@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Departments</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Curation Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Editorial Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Marketing Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Events Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">Design Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blogs</a></li>
+            </ul>
+          </div>
+
+         
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>WakeWithWellness</span></strong>. All Rights Reserved
+      </div>
+  
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+
+
+
+<script src="feedbackform.js"></script>
+
+
+
+  <script>
+    
+    document.onkeydown=function(e)
+    {
+      if (event.keyCode == 123) 
+      {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+      {
+        return false;
+      }
+    }
+  
+  </script>
+
+
+
+</body>
+
+</html>
