@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 
 // Reference messages collection
-var dataRef = firebase.database().ref('crossword');
+var dataRef = firebase.database().ref('Nutritions');
 
 // Listen for form submit
 document.getElementById('reg').addEventListener('submit', submitForm);
