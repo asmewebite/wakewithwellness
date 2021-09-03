@@ -141,7 +141,7 @@
         //GET ALL DATA
 
         function SelectAllData(){
-            firebase.database().ref('crossword').once('value',
+            firebase.database().ref('Nutritions').once('value',
             function(AllRecords){
                 AllRecords.forEach(
                     function(CurrentRecord){
