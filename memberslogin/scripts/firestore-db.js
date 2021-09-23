@@ -202,13 +202,13 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var Sept1 = document.getElementById('attend').value
-  var Sept1f = document.getElementById('work').value
+  var Sept2 = document.getElementById('attend').value
+  var Sept2f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Sept1:Sept1,
-    Sept1f:Sept1f
+    Sept2:Sept2,
+    Sept2f:Sept2f
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -228,6 +228,7 @@ function updateattendance(event){
 
   });
 }
+
 
 
 
