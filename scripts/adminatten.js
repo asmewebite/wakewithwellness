@@ -352,6 +352,96 @@ db.collection('attendance').get().then((snapshot)=>{
 
 
 
+//October 1
+
+
+const attendanceOct1 = document.querySelector('#October1');
+
+function renderOct1(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Oct1 = document.createElement('span');
+    let Oct1f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Oct1.textContent = doc.data().Oct1;
+    Oct1f.textContent = doc.data().Oct1f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Oct1);
+    li.appendChild(Oct1f);
+    
+  
+
+    attendanceOct1.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderOct1(doc);
+    })
+
+})
+
+
+
+
+
+//October 2
+
+
+const attendanceOct2 = document.querySelector('#October2');
+
+function renderOct2(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Oct2 = document.createElement('span');
+    let Oct2f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Oct2.textContent = doc.data().Oct2;
+    Oct2f.textContent = doc.data().Oct2f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Oct2);
+    li.appendChild(Oct2f);
+    
+  
+
+    attendanceOct2.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderOct2(doc);
+    })
+
+})
+
+
+
+
+
 
 
 
