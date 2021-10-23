@@ -13,7 +13,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Reference messages collection
-var dataRef = firebase.database().ref('joinus');
+var dataRef = firebase.database().ref('winterInternship');
 
 // Listen for form submit
 document.getElementById('registrations').addEventListener('submit', submitForm);
@@ -33,14 +33,14 @@ function submitForm(e){
   var pincode = getInputVal('Pincode');
   var country = getInputVal('Country');
   var department = getInputVal('Department');
-  var department2 = getInputVal('Department2');
+
   var experience = getInputVal('Experience');
   var checkbox = getInputVal('Checkbox');
   
 
 
   // Save message
-  saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department,department2, experience, checkbox);
+  saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department, experience, checkbox);
 
 
  // Show alert
@@ -61,7 +61,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department,department2, experience, checkbox){
+function saveData(name, email, contact, whatsapp, qualifications, college, state, pincode, country, department, experience, checkbox){
   var newDataRef = dataRef.push();
   newDataRef.set({
     name: name,
@@ -74,7 +74,6 @@ function saveData(name, email, contact, whatsapp, qualifications, college, state
     pincode:pincode,
     country:country,
     department:department,
-    department2:department2,
     experience:experience,
     checkbox:checkbox
   });
