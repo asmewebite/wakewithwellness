@@ -90,7 +90,7 @@ async function getuserInfoRealtime(userID){
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
-                        <li>* Post attendance on or before 15th October 2021 without fail</li>
+                        <li>* Post attendance on or before 31th October 2021 without fail</li>
 
                         
                         </ul>
