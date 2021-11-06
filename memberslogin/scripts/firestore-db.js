@@ -90,7 +90,7 @@ async function getuserInfoRealtime(userID){
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
                         <ul>
-                        <li>* Post attendance on or before 31th October 2021 without fail</li>
+                        <li>* Post attendance on or before 15th November 2021 without fail</li>
 
                         
                         </ul>
@@ -202,13 +202,13 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var Oct2= document.getElementById('attend').value
-  var Oct2f = document.getElementById('work').value
+  var Nov1 = document.getElementById('attend').value
+  var Nov1f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Oct2:Oct2,
-    Oct2f:Oct2f
+    Nov1:Nov1,
+    Nov1f:Nov1f
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -223,8 +223,6 @@ function updateattendance(event){
 
  // Clear form
  document.getElementById('attendanceform').reset();
-
-    
 
   });
 }
