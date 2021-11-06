@@ -441,6 +441,95 @@ db.collection('attendance').get().then((snapshot)=>{
 
 
 
+//November 1
+
+
+const attendanceNov1 = document.querySelector('#November1');
+
+function renderNov1(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Nov1 = document.createElement('span');
+    let Nov1f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Nov1.textContent = doc.data().Nov1;
+    Nov1f.textContent = doc.data().Nov1f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Nov1);
+    li.appendChild(Nov1f);
+    
+  
+
+    attendanceNov1.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderNov1(doc);
+    })
+
+})
+
+
+
+
+
+//November 2
+
+
+const attendanceNov2 = document.querySelector('#November2');
+
+function renderNov2(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Nov2 = document.createElement('span');
+    let Nov2f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Nov2.textContent = doc.data().Nov2;
+    Nov2f.textContent = doc.data().Nov2f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Nov2);
+    li.appendChild(Nov2f);
+    
+  
+
+    attendanceNov2.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderNov2(doc);
+    })
+
+})
+
+
+
+
 
 
 
