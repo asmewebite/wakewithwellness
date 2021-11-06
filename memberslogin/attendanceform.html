@@ -150,9 +150,9 @@
       <form onsubmit="updateattendance(event)" id="attendanceform">
         <h1 style="color: aliceblue;text-align: center;">Weekly attendance</h1>
         <hr>
-        <h4 style="color: beige;font-weight: 200;">I post my attendance for the <span style="font-weight: bold;">Second half of October</span><br><span style="font-size: 14px;color: tomato;">15/10/2021 - 31/10/2021</span></h4>
+        <h4 style="color: beige;font-weight: 200;">I post my attendance for the <span style="font-weight: bold;">First half of October</span><br><span style="font-size: 14px;color: tomato;">01/11/2021 - 15/11/2021</span></h4>
         <label>Works</label>
-      <textarea id="work" maxlength="300" style="padding: 1px;"  disabled></textarea>
+      <textarea id="work" maxlength="300" style="padding: 1px;"  required></textarea>
         
         <select id="attend" style="color: whitesmoke;font-weight: 600;">
           <option style="color: rgb(5, 216, 33);font-weight: 600;" value="Present">Present</option>
@@ -160,7 +160,7 @@
         </select>
               <div class="alert">Attendance posted successfully</div>
         <div class="btn-block">
-          <button id="send" type="submit" disabled>Post</button>    
+          <button id="send" type="submit">Post</button>    
         </div>
       </form>
     </div>
@@ -200,7 +200,7 @@
 
 <script>
   // Set the date we're counting down to
-  var countDownDate = new Date("October 31, 2021 22:00:00").getTime();
+  var countDownDate = new Date("November 15, 2021 22:00:00").getTime();
   
   // Update the count down every 1 second
   var x = setInterval(function() {
