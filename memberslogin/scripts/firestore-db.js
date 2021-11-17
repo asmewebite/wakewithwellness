@@ -9,6 +9,7 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
+      regno:"",
        phone:"",
        whatsapp:"",
        department:"",
@@ -73,6 +74,7 @@ async function getuserInfoRealtime(userID){
                        <div class="userdee" style="background-color:#5793D1;text-align: left;width: 100%;padding: 10px">
                           <div class="collection-item"><h5 style="color:white">${userInfo.name}</h5></div>
                           <div class="collection-item"  style="color:rgb(219, 219, 219)"> E-mail : <span style="font-weight:bolder"> ${userInfo.email}</span><br>
+                            Registration no : <span style="font-weight:bolder"> ${userInfo.regno}</span><br>
                           Contact no : <span style="font-weight:bolder"> ${userInfo.phone}</span><br>
                           Whatsapp no : <span style="font-weight:bolder"> ${userInfo.whatsapp}</span><br>
                           Department : <span style="font-weight:bolder"> ${userInfo.department}</span> ;<br>
