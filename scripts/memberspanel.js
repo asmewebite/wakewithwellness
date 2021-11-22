@@ -3,6 +3,7 @@ const Memberslist = document.querySelector('#members');
 function renderMembers(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
+    let regno = document.createElement('span');
     let email = document.createElement('span');
     let phone = document.createElement('span');
     let whatsapp = document.createElement('span');
@@ -13,6 +14,7 @@ function renderMembers(doc){
 
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
+    regno.textContent = doc.data().regno;
     email.textContent = doc.data().email;
     phone.textContent = doc.data().phone;
     whatsapp.textContent = doc.data().whatsapp;
@@ -23,6 +25,7 @@ function renderMembers(doc){
 
 
     li.appendChild(name);
+    li.appendChild(regno);
     li.appendChild(email);
     li.appendChild(phone);
     li.appendChild(whatsapp);
@@ -42,3 +45,6 @@ db.collection('users').orderBy('name').get().then((snapshot)=>{
     })
 
 })
+
+
+
