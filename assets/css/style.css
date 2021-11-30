@@ -628,10 +628,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
+.services .container-fluid {
   text-align: center;
   border: 1px solid #ebebeb;
-  padding: 80px 20px;
+  padding: 10px 10px;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
