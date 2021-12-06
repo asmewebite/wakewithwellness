@@ -9,9 +9,11 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
+       regno:"",
        phone:"",
        whatsapp:"",
        department:"",
+   
        college:"",
        status:""
    })
@@ -72,13 +74,14 @@ async function getuserInfoRealtime(userID){
                         <div class="userdee" style="background-color:#5793D1;text-align: left;width: 100%;padding: 10px">
                           <div class="collection-item"><h5 style="color:white">${userInfo.name}</h5></div>
                           <div class="collection-item"  style="color:rgb(219, 219, 219)"> E-mail : <span style="font-weight:bolder"> ${userInfo.email}</span><br>
-            
+    
                           Contact no : <span style="font-weight:bolder"> ${userInfo.phone}</span><br>
                           Whatsapp no : <span style="font-weight:bolder"> ${userInfo.whatsapp}</span><br>
                           Department : <span style="font-weight:bolder"> ${userInfo.department}</span> ;<br>
+                      
                           College : <span style="font-weight:bolder"> ${userInfo.college}</span></div>
 
-                          <button onclick="location.href='edtprofile.html'" style="float:right;background-color:white;border:none;padding:5px;border-radius:8px;font-size:12px;cursor:pointer">Edit profile</button>
+                          
                           
                         </div>
                         <div style="color:white;text-align:left;margin-left:10px">
@@ -94,10 +97,9 @@ async function getuserInfoRealtime(userID){
 
                         <ul>
                         
-                        <li>Attendence to be posted on 15th & 30th of every month</li>
+                        <li>* Attendence to be posted on 15th & 30th of every month</li>
 
-                        <li>* Agreement form for the new recruits <a href="../agreement.html"> Click here</a></li>
-                        </ul>
+ 
 
 
 
@@ -113,8 +115,6 @@ async function getuserInfoRealtime(userID){
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
                         <button class="logged-in" onclick="location.href='attendanceform.html'" style="color: #f2f2f2;background-color: rgb(4, 206, 64);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 60px;margin-top: 6px;">Attendance</button>
                         <button class="logged-in" onclick="location.href='message.html'" style="color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Suggestions</button>
-                        
-                        <button class="logged-in" onclick="location.href='timeline.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Timeline</button>
                         <button class="logged-in" onclick="location.href='leave.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Leave Request</button>
                         </div>
                         `
@@ -254,6 +254,8 @@ function sendMessage(event){
 
   });
 }
+
+
 
 
 
