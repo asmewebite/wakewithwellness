@@ -97,8 +97,7 @@ async function getuserInfoRealtime(userID){
 
                         <ul>
                         
-                        <li>* Attendence to be posted on 15th & 30th of every month</li>
-
+                       <li>* Attendence to be posted every week</li>
  
 
 
