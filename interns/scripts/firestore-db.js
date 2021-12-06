@@ -212,13 +212,13 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var Nov1 = document.getElementById('attend').value
-  var Nov1f = document.getElementById('work').value
+  var Dec1 = document.getElementById('attend').value
+  var Dec1f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Nov1:Nov1,
-    Nov1f:Nov1f
+    Dec1:Dec1,
+    Dec1f:Dec1f
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -245,7 +245,7 @@ function sendMessage(event){
   event.preventDefault()
   var message = document.getElementById('msg').value
   var name = document.getElementById('name').value
-  var userRef = firebase.firestore().collection('membermsg').add({
+  var userRef = firebase.firestore().collection('internmsg').add({
     message:message,
     name:name,
     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
