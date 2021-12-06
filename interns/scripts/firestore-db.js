@@ -9,11 +9,9 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
-       regno:"",
        phone:"",
        whatsapp:"",
        department:"",
-       department2:"",
        college:"",
        status:""
    })
@@ -74,11 +72,10 @@ async function getuserInfoRealtime(userID){
                         <div class="userdee" style="background-color:#5793D1;text-align: left;width: 100%;padding: 10px">
                           <div class="collection-item"><h5 style="color:white">${userInfo.name}</h5></div>
                           <div class="collection-item"  style="color:rgb(219, 219, 219)"> E-mail : <span style="font-weight:bolder"> ${userInfo.email}</span><br>
-                          Registration no : <span style="font-weight:bolder"> ${userInfo.regno}</span><br>
+            
                           Contact no : <span style="font-weight:bolder"> ${userInfo.phone}</span><br>
                           Whatsapp no : <span style="font-weight:bolder"> ${userInfo.whatsapp}</span><br>
                           Department : <span style="font-weight:bolder"> ${userInfo.department}</span> ;<br>
-                          Preference II : <span style="font-weight:bolder"> ${userInfo.department2}</span><br>
                           College : <span style="font-weight:bolder"> ${userInfo.college}</span></div>
 
                           <button onclick="location.href='edtprofile.html'" style="float:right;background-color:white;border:none;padding:5px;border-radius:8px;font-size:12px;cursor:pointer">Edit profile</button>
