@@ -107,7 +107,7 @@ async function getuserInfoRealtime(userID){
                         <button class="logged-in" onclick="location.href='attendanceform.html'" style="color: #f2f2f2;background-color: rgb(4, 206, 64);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 60px;margin-top: 6px;">Attendance</button>
                         <button class="logged-in" onclick="location.href='message.html'" style="color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Suggestions</button>
                         
-                        <button class="logged-in" onclick="location.href='timeline.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Timeline</button>
+                      
                         <button class="logged-in" onclick="location.href='leave.html'" style="margin-top:2px;color:white;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top:5px">Leave Request</button>
                         </div>
                         `
