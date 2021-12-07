@@ -97,9 +97,9 @@ async function getuserInfoRealtime(userID){
 
                         <ul>
                         
-                       <li>* Attendence to be posted every week</li>
+                       <li>* Attendence to be posted before 12th December 2021 without fail</li>
  
-
+                       <li>* Design Interns to fill the form:<a href="https://forms.gle/RJXZJamjXAmvfGWr8"> Click here</a></li>
 
 
 
