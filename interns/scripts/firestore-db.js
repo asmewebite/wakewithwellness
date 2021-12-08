@@ -15,7 +15,9 @@ function createUserCollection(user){
        department:"",
    
        college:"",
-       status:""
+       status:"",
+       task:"",
+       date:""
    })
 }
 
@@ -38,18 +40,14 @@ async function getuserInfo(userID){
     }else{
         userDetails.innerHTML = `
         <div class="container">
-
       
         <h4 style="color: yellow;margin-top:120px">'Interns login only'</h4></div>
-
         <div class="container" style="margin-top:50px">
           
-
           <p style="color:white">Be a part of this welfare operation by undertaking the pledge to serve people and generation.<br>
           Looking forward towards the growth of an incredible community</p>
           <p></p>
           
-
   </div>
   <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:70px;cursor: pointer">
   <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px;width:200px">Login</a></div>
@@ -80,35 +78,34 @@ async function getuserInfoRealtime(userID){
                           Department : <span style="font-weight:bolder"> ${userInfo.department}</span> ;<br>
                       
                           College : <span style="font-weight:bolder"> ${userInfo.college}</span></div>
-
                           
                           
                         </div>
                         <div style="color:white;text-align:left;margin-left:10px">
                           Leave status : ${userInfo.status}</div>
 
-                        <div class="container-fluid" style="background-color: white;padding:3px;margin-top:5px">
 
+                        <div class="container-fluid" style="background-color: white;padding:3px;margin-top:5px">
                         <h6 style="color: #5793D1;font-weight:500;padding:5px;text-align: center;">Notifications</h6>
                        <div style="text-align:left;padding-left:5px;padding-right:5px">
-
                        
-
-
                         <ol>
                         
                        <li> Attendence to be posted before 12th December 2021 without fail</li>
  
                        <li> Design Interns to fill the form:<a href="https://forms.gle/RJXZJamjXAmvfGWr8"> Click here</a></li>
-
-
 </ol>
+                        </div>
+                        </div>
+
+                        <div style="padding:10px;background-color:gainsboro;border-style: double;border-color: black;font-size:16px;">
+                        Task : <span style="font-weight:bolder"> ${userInfo.task}</span><br>
+                        <div style="font-size:12px;text-align:right;color:red;margin-top:7px">
+                        Last Date : <span style="font-weight:bolder"> ${userInfo.date}</span><br>
+                        </div>
+                        </div>
 
 
-                        </div>
-                       
-                        
-                        </div>
 
 
                         <div class="container-fluid" style="padding: 10px;margin-top: 30px;text-align: center;">
@@ -136,18 +133,14 @@ async function getuserInfoRealtime(userID){
     }else{
         userDetails.innerHTML = `
         <div class="container">
-
       
         <h4 style="color: yellow;margin-top:120px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"">'Interns login only'</h4></div>
-
         <div class="container" style="margin-top:50px">
           
-
           <p style="color:white">Be a part of this welfare operation by undertaking the pledge to serve people and generation.<br>
           Looking forward towards the growth of an incredible community</p>
           <p></p>
           
-
   </div>
   <div class="container" style="width:200px;background-color:#5793D1;padding:8px;border-radius: 8px;margin-top:70px;cursor: pointer">
   <a class="modal-trigger" href="#modal2" id="loginli" style="color:white;padding:8px;width:200px">Login</a></div>
@@ -253,28 +246,3 @@ function sendMessage(event){
 
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
