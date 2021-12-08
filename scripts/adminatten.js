@@ -550,8 +550,8 @@ function renderDec1(doc){
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     dept.textContent = doc.data().dept;
-    Dec1.textContent = doc.data().Nov1;
-    Dec1f.textContent = doc.data().Nov1f;
+    Dec1.textContent = doc.data().Dec1;
+    Dec1f.textContent = doc.data().Dec1f;
   
 
 
@@ -595,8 +595,8 @@ function renderDec2(doc){
     li.setAttribute('data-id',doc.id);
     name.textContent = doc.data().name;
     dept.textContent = doc.data().dept;
-    Dec2.textContent = doc.data().Nov2;
-    Dec2f.textContent = doc.data().Nov2f;
+    Dec2.textContent = doc.data().Dec2;
+    Dec2f.textContent = doc.data().Dec2f;
   
 
 
