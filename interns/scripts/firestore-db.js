@@ -18,6 +18,7 @@ function createUserCollection(user){
        status:"",
        taskno:"",
        task:"",
+       labeldate:"",
        date:""
    })
 }
@@ -102,7 +103,7 @@ async function getuserInfoRealtime(userID){
                         <div style="padding:10px;background-color:gainsboro;border-style: double;border-color: black;font-size:16px;">
                         ${userInfo.taskno} : <span style="font-weight:bolder"> ${userInfo.task}</span><br>
                         <div style="font-size:12px;text-align:right;color:red;margin-top:7px">
-                        Last Date : <span style="font-weight:bolder"> ${userInfo.date}</span><br>
+                        ${userInfo.labeldate} <span style="font-weight:bolder"> ${userInfo.date}</span><br>
                         </div>
                         </div>
 
