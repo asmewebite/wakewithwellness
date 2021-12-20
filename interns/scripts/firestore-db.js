@@ -93,7 +93,7 @@ async function getuserInfoRealtime(userID){
                        
                         <ol>
                         
-                       <li> Attendence to be posted before 12th December 2021 without fail</li>
+                       <li> Attendence to be posted before 26th December 2021 without fail</li>
  
                     
 </ol>
@@ -206,13 +206,13 @@ async function allUserDetails(){
 
 function updateattendance(event){
   event.preventDefault()
-  var Dec2 = document.getElementById('attend').value
-  var Dec2f = document.getElementById('work').value
+  var Dec3 = document.getElementById('attend').value
+  var Dec3f = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Dec2:Dec2,
-    Dec2f:Dec2f
+    Dec3:Dec3,
+    Dec3f:Dec3f
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
