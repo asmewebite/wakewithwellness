@@ -113,7 +113,7 @@ async function getuserInfoRealtime(userID){
                        
 
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="main.html"><i class="fa fa-user"></i> <span>Home</span></a>
                         </li>
 
                         <li >
