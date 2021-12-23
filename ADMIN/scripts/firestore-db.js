@@ -147,13 +147,7 @@ async function getuserInfoRealtime(userID){
 
         <div class="page-wrapper">
         <div class="content">
-            <div class="row">
-                <div class="col-sm-7 col-6">
-                    <h4 class="page-title" style="float:left;font-weight:500;margin-top:-10px;color:white">My Profile</h4>
-                </div>
-
-               
-            </div>
+           
             <div class="card-box profile-header" style="background-color: white">
                 <div class="row">
                     <div class="col-md-12">
