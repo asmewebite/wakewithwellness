@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Leaves</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="index.html" class="logo">
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+              
+              
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Profile">
+							<span class="status online"></span></span>
+                        <span>Profile</span>
+                    </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<a class="dropdown-item" href="login.html">Logout</a>
+					</div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+
+                       
+
+                        <li>
+                            <a href="index.html"><i class="fa fa-user"></i> <span>Home</span></a>
+                        </li>
+
+                        <li>
+							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+						</li>
+				
+						<li class="submenu">
+							<a><i class="fa fa-user"></i> <span> Members </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Members List</a></li>
+								<li><a href="attendance.html">Attendance</a></li>
+                                <li class="active"><a href="leaves.html">Leaves</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="payments.html">Payments</a></li>
+							</ul>
+						</li>
+				
+					
+                      
+                        <li>
+                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
+                        </li>
+              
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Leave Application</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="leaveform">
+               
+        
+                <input type="text" id="name" style="height: 30px;width: 100%;border-radius: 5px;padding:4px;background-color: #ddd;border: 1px solid rgb(230, 230, 230);" placeholder="Name" required><br><br>
+                <textarea id="reason" maxlength="300"  required placeholder="Reason" style="width: 100%;
+                color: black;height: 140px;padding: 3px 3px;border-radius: 3px;background-color: #ddd;border: 1px solid rgb(230, 230, 230);"></textarea><br>
+        
+        
+                <label style="color: rgb(94, 94, 94);">From :</label><br>
+                   <input type="date" id="from" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
+                <label style="color: rgb(94, 94, 94);">To :</label>   <br>
+                  <input type="date" id="to" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
+        <select id="status" style="display: none;">
+            <option value="pending">Pending</option>
+        </select>
+                 <div class="alert" style="text-align: center;padding: 10px;border-radius: 5px;
+                    background:#79c879;color: white;margin-bottom: 10px;margin-top: 10px;display: none;">Leave request sent.Please wait for approval</div>
+                <div class="btn-block" style="margin-top: 20px;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button id="send" type="submit" class="btn btn-primary">Apply</button>    
+                </div>
+              </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-8 col-6">
+                        <h4 class="page-title">Leave Request</h4>
+                    </div>
+                    
+                    <div class="col-sm-4 col-6 text-right m-b-30">
+                        <button type="button" class="btn btn-primary btn-rounded float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                            <i class="fa fa-plus"></i> Add Leave
+                          </button>
+                    
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table custom-table" id="myTable" style="color: rgb(34, 34, 34);text-align: center;">
+                                <thead>
+                                    <tr> 
+                                    <th scope="col">SNo.</th> 
+                                    <th scope="col">Name.</th>
+                                    <th scope="col">From</th>
+                                    <th scope="col">To</th>
+                                    <th scope="col">Status</th>
+                                    
+            
+                              
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody1">
+                                   
+            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+		
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+      <script>
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+          authDomain: "members-76725.firebaseapp.com",
+          projectId: "members-76725",
+          storageBucket: "members-76725.appspot.com",
+          messagingSenderId: "734645197873",
+          appId: "1:734645197873:web:808127fdb4d643d4d24910",
+          measurementId: "G-7LYZ3R48GT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+
+
+
+
+        //GET ALL DATA
+
+        function SelectAllData(){
+            firebase.database().ref('leaverequest').once('value',
+            function(AllRecords){
+                AllRecords.forEach(
+                    function(CurrentRecord){
+                        var name = CurrentRecord.val().name;
+                 
+                        var from = CurrentRecord.val().from;
+                        var to = CurrentRecord.val().to;
+                        var status = CurrentRecord.val().status;
+                  
+                        AddItemsToTable(name,from,to,status);
+
+                    }
+                );
+
+            });
+        }
+
+        window.onload = SelectAllData;
+
+        //Filling the table
+        var stdNo = 0;
+        function AddItemsToTable(name,from,to,status){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+   
+          
+            
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = name;
+     
+            td3.innerHTML = from;
+            td4.innerHTML = to;
+            td5.innerHTML = status;
+         
+            trow.appendChild(td1); 
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            trow.appendChild(td4); 
+            trow.appendChild(td5); 
+      
+            
+            
+            tbody.appendChild(trow);
+            
+        }
+
+
+  </script>
+
+  <script>
+      // Reference messages collection
+var dataRef = firebase.database().ref('leaverequest');
+
+// Listen for form submit
+document.getElementById('leaveform').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var name = getInputVal('name');
+  var reason = getInputVal('reason');
+  var from = getInputVal('from');
+  var to = getInputVal('to');
+  var status =getInputVal('status');
+
+
+  
+
+
+  // Save message
+  saveData(name, reason, from, to, status);
+
+
+ // Show alert
+ document.querySelector('.alert').style.display = 'block';
+
+ // Hide alert after 3 seconds
+ setTimeout(function(){
+   document.querySelector('.alert').style.display = 'none';
+ },3000);
+
+ // Clear form
+ document.getElementById('leaveform').reset();
+}
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveData(name, reason, from, to, status){
+  var newDataRef = dataRef.push();
+  newDataRef.set({
+    name: name,
+    reason:reason,
+    from:from,
+    to:to,
+    status:status
+  });
+}
+
+  </script>
+</body>
+
+</html>
