@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blogs</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <style>
+    .container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+
+  color: #ffffff;
+  width: 100%;
+ 
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+
+
+
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+  </style>
+
+  <style>
+    .alert{
+    text-align: center;
+    padding: 10px;
+    background:#79c879;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none;
+  }
+
+     /*Scrollbar*/
+   /* width */
+   ::-webkit-scrollbar {
+     width: 10px;
+   }
+   
+   /* Track */
+   ::-webkit-scrollbar-track {
+     background: #2e2e2e00;
+   }
+   
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+     background: rgb(207, 207, 207);
+   }
+   
+   /* Handle on hover */
+   ::-webkit-scrollbar-thumb:hover {
+     background: rgb(185, 185, 185);
+   }
+   
+    </style>
+
+    <style>
+     body{
+    background-color: #f4f7f6;
+    
+}
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.card .body {
+    color: #444;
+    padding: 10px;
+    font-weight: 400;
+}
+.card .header {
+    color: #444;
+    padding: 10px;
+    position: relative;
+    box-shadow: none;
+}
+.single_post {
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease
+}
+
+.single_post .body {
+    padding: 10px
+}
+
+.single_post .img-post {
+    position: relative;
+    overflow: hidden;
+    max-height: 510px;
+    margin-bottom: 30px
+}
+
+.single_post .img-post>img {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: -webkit-transform .4s ease, opacity .4s ease;
+    transition: transform .4s ease, opacity .4s ease;
+    max-width: 100%;
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01)
+}
+
+.single_post .img-post:hover img {
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    opacity: .7;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    
+}
+
+.single_post .img-post:hover .social_share {
+    display: block
+}
+
+.single_post .footer {
+    padding: 0 30px 30px 30px
+}
+
+.single_post .footer .actions {
+    display: inline-block
+}
+
+.single_post .footer .stats {
+    cursor: default;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    
+    margin: 0;
+    line-height: 35px
+}
+
+.single_post .footer .stats li {
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 1;
+    margin: 0 0 0 2em;
+    padding: 0 0 0 2em;
+    text-transform: uppercase;
+    font-size: 13px
+}
+
+.single_post .footer .stats li a {
+    color: #777
+}
+
+.single_post .footer .stats li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0
+}
+
+.single_post h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #5793D1;
+}
+.single_post h4 {
+    font-size: 15px;
+}
+
+.single_post h3 a {
+    color: #242424;
+    text-decoration: none;
+    color: #5793D1;
+    
+
+}
+
+.single_post p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    margin: 0
+}
+
+.single_post .blockquote p {
+    margin-top: 0 !important
+}
+
+.single_post .meta {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.single_post .meta li {
+    display: inline-block;
+    margin-right: 15px
+}
+
+.single_post .meta li a {
+    font-style: italic;
+    color: #959595;
+    text-decoration: none;
+    font-size: 12px
+}
+
+.single_post .meta li a i {
+    margin-right: 6px;
+    font-size: 12px
+}
+
+.single_post2 {
+    overflow: hidden
+}
+
+.single_post2 .content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+    position: relative
+}
+
+.single_post2 .content .actions_sidebar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px
+}
+
+.single_post2 .content .actions_sidebar a {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 0;
+    text-align: center;
+    border-right: 1px solid #e4eaec
+}
+
+
+
+
+    </style>
+   
+
+ 
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      
+      <a href="" class="logo me-auto me-lg-0"><img src="assets/img/logoonly.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+         
+                
+                  <li><a class="nav-link scrollto " href="AboutUs.html">About Us</a></li>
+                  <li><a class="nav-link scrollto " href="team.html">Team</a></li>
+         
+         <li><a class="nav-link scrollto " href="Blogs.html">Blog</a></li>
+         <li><a class="nav-link scrollto " href="ContactUs.html">Contact</a></li>
+     
+            
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+   
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li>Blogs</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+  
+<section style="margin-top: -60px;">
+
+  <section id="bta" class="bta">
+    <div class="container" data-aos="zoom-in">
+
+      <div class="text-center">
+        <h3>BLOGS</h3>
+        <p>Our blogs </p>
+    
+      </div>
+
+    </div>
+  </section><!-- End Bta Section -->
+
+
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="content container">
+     <div class="row">
+           <!-- Control buttons -->
+<div style="margin-top: 30px;">
+     
+     
+   </div>
+         
+     </div>
+     <div class="row">
+     
+         <div class="col-sm-6 col-md-6 col-lg-4">
+             <div class="blog grid-blog">
+                 <div class="blog-image">
+                     <a href="blog-blogs/blog7.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F7.png?alt=media&token=56375757-d668-4a66-9ba5-ddf2f2536806" alt=""></a>
+                 </div>
+                 <div class="blog-content">
+                     <h3 class="blog-title"><a href="blogs/blog7.html">DECODING MENTAL HEALTH: THE PANDEMIC VERSION</a></h3>
+                    
+                     <p style="font-style: italic;color: #5793D1;">Meraki - An article writing competition</p>
+                   
+                    <p style="text-align: justify;margin-top: -3px;">The coronavirus pandemic unleashed extraordinary ways of life on every person on this globe. With an entirely new disease unheard of, came a string of unpredictable events that disrupted every activity of human civilization till date; barely an aspect untouched by the pandemic waves. With so much happening at a quick pace, the world outside the human body came to a sudden standstill. 
+                         But the human mind did not. It began witnessing an assortment of complex emotions- both existent and emerging...</p>
+                     <a href="blogs/blog7.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                     <div class="blog-info clearfix">
+                         <div class="post-left">
+                             <ul>
+                                 <li><a href="#."><i class="fa fa-calendar"></i> <span>August 6, 2021</span></a></li>
+                             </ul>
+                         </div>
+                         <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>122</a></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+   
+
+
+     
+         <div class="col-sm-6 col-md-6 col-lg-4">
+             <div class="blog grid-blog">
+                 <div class="blog-image">
+                     <a href="blogs/blog5.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F5.jpg?alt=media&token=097bcc66-c5f7-401b-897e-e80bd97f0bdf" alt=""></a>
+                 </div>
+                 <div class="blog-content">
+                     <h3 class="blog-title"><a href="blogs/blog5.html">THE MECHANICS OF DESIRE</a></h3>
+                     <p style="font-style: italic;color: #5793D1;">Bhargab Deka</p>
+                     <p style="margin-top: 21px;">Do you dream? Everyone does…isn’t it?</p>
+                     <p style="text-align: justify;margin-top: -6px;">But I am not talking about those dreams that you dreamt during your sleep. Those are just memory revisions of 
+                         your brain. I am talking about your desires! Yes, in a real sense dream is nothing but a desire. You desire to 
+                         be an actor, to be a doctor, to be a topper in the class, to be a scientist, to be a rich countryman, to be a 
+                         famous entrepreneur…endlessly it goes on! It is the desire that makes you do all the activities of life...</p>
+                     <a href="blogs/blog5.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                     <div class="blog-info clearfix">
+                         <div class="post-left">
+                             <ul>
+                                 <li><a href="#."><i class="fa fa-calendar"></i> <span>July 20, 2021</span></a></li>
+                             </ul>
+                         </div>
+                         <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>152</a></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+  
+
+         <div class="col-sm-6 col-md-6 col-lg-4">
+             <div class="blog grid-blog">
+                 <div class="blog-image">
+                     <a href="blogs/blog4.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F4.jpg?alt=media&token=be47fa92-2b9e-435a-a153-99196e35d557" alt=""></a>
+                 </div>
+                 <div class="blog-content">
+                     <h3 class="blog-title"><a href="blogs/blog4.html">STRINGS OF CLUSTERED EMOTIONS</a></h3>
+                     <p style="font-style: italic;color: #5793D1;">Sanjushree Bharadwaj</p>
+                     <p style="text-align: justify;margin-top: 23px;">Shining through the windows of dew drops on the leaves and birds chirping in and around marks the fragrance of Ravi. 
+                         Ravi: The Banyan tree isn't just a religious tree for devotees but also, a part of our extended family and our hearts. 
+                         Ravi has been sown by Anni; my grandmother, two decades ago. Anni's soft hands would nurture Ravi everyday along with an 
+                         exchange of serene conversation of love.<br>As seasons flied by; Ravi grew-up into a toddler, and so did Gauri; Gauri my sister. Every morning I woke-up...</p>
+                     <a style="margin-top: 10px;" href="blogs/blog4.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                     <div class="blog-info clearfix">
+                         <div class="post-left">
+                             <ul>
+                                 <li><a href="#."><i class="fa fa-calendar"></i> <span>July 15, 2021</span></a></li>
+                             </ul>
+                         </div>
+                         <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>162</a></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+         <div class="col-sm-6 col-md-6 col-lg-4">
+             <div class="blog grid-blog">
+                 <div class="blog-image">
+                     <a href="blogs/blog3.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F3.jpg?alt=media&token=9682e281-966b-4e1c-9d59-4eb2ec8b2075" alt=""></a>
+                 </div>
+                 <div class="blog-content">
+                     <h3 class="blog-title"><a href="blogs/blog3.html">THE DUMPSTER GIRL</a></h3>
+                     <p style="font-style: italic;color: #5793D1;">Krishnakshi Mazumdar</p>
+                     <p style="margin-top: 24px;">My name is Tori Morgenstern. And this is my incidents story.</p>
+                     <p style="text-align: justify;margin-top: -1px;">So, yes as I already mentioned my name and I turn 17 this year. I study in St. Peter’s High School. I am a straight studious A1 student . I wear spectacles. I have won many quiz competitions, Olympiads etc. I like to engage with studies and I am quite sincere towards it. I don’t like to party, involved in gatherings and get-togethers , wear expensive fashionable clothes and do dozens of makeup to stand out confidentially. On weekends I like to spend my time peacefully...</p>
+                     <a href="blogs/blog3.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                     <div class="blog-info clearfix">
+                         <div class="post-left">
+                             <ul>
+                                 <li><a href="#."><i class="fa fa-calendar"></i> <span>July 10, 2021</span></a></li>
+                             </ul>
+                         </div>
+                         <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>154</a></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+         
+
+
+
+      <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="blog grid-blog">
+              <div class="blog-image">
+                  <a href="blogs/blog6.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F6.jpeg?alt=media&token=3afff36c-ba80-4ec3-884c-853e7cdf9258" alt=""></a>
+              </div>
+              <div class="blog-content">
+                  <h3 class="blog-title"><a href="blogs/blog6.html">বৃক্ক ৰোগৰ কিছু তথ্য আৰু একান্ত অনুভৱ </a></h3>
+                  <p style="font-style: italic;color: #5793D1;">নিবেদিতা বড়া সন্দিকৈ</p>
+                  <p style="text-align: justify">হঠাতে জীৱনলৈ বিপর্যয় নামি আহিল। কি কৰোঁ... কি নকৰোঁ... । মোৰ নিকটতমৰ দুয়োটা বৃক্কই <span style="font-weight: 600;">(Kidney)</span> বিকল হ'ল। তাকে৷ ডাক্তৰৰ ভুল ঔষধৰ বাবে। হে 
+                    ভগৱান... কি কৰোঁ... চকুৰ পানীৰে বাট নেদেখি মই খেপিয়াই ফুৰিছিলো অ'ত ত'ত - জীৱনৰ এয়া নির্মম আঘাত... মোক্ষম আঘাত। তিল তিলকৈ শেষ হৈ 
+                    গ'ল জীৱনৰ ৰঙীণ সপোন। অথচ সপোন ভাঙিলেও জীৱনৰ ছন্দ হেৰাই যাবলৈ নিদি ঢাপলি মেলিছিলো শুৱাহাটীলৈ.... গুৱাহাটীত চিকিৎসা কৰি সুফল নোপোৱাত 
+                    গুৱাহাটী চিকিৎসা মহাবিদ্যালয়ৰ সহযোগী অধ্যাপক ডাঃ মঞ্জুৰী শৰ্মাৰ পৰামৰ্শ আৰু দিহামতে চেন্নাইৰ এপ'ল হস্পিতেলৰ ডাঃ ৰাজীৱ এ. আন্নিগিৰি তত্ত্ৱাৱধানত...</p>
+                    <a href="blogs/blog6.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                    <div class="blog-info clearfix">
+                        <div class="post-left">
+                            <ul>
+                                <li><a href="#."><i class="fa fa-calendar"></i> <span>July 6, 2021</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>142</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="blog grid-blog">
+              <div class="blog-image">
+                  <a href="blogs/blog1.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F1.jpg?alt=media&token=9dbb137c-6cac-4f00-bafb-30de3e80af17" alt=""></a>
+              </div>
+              <div class="blog-content">
+                  <h3 class="blog-title"><a href="blogs/blog1.html">AGONIES VESTED IN PROGRESS</a></h3>
+                  <p style="font-style: italic;color: #5793D1;">Kritanjali Kalita</p>
+                  <p style="text-align: justify">Sumi gasped for breath as she gulped the water down her throat. 
+                    The chilled air conditioned room and a cool dawn couldn't halt her generously forging sweat. 
+                    As she recalled her dreaded nightmare, she dwelt in actuality, hoping to broaden the thin line 
+                    of divide between her dream and reality. Swallowing down her hypertension pill, she had a clash 
+                    of thoughts between overwhelming hopelessness illuminated by her nightmare and a tinge of hope 
+                    from the will to bring a change which was interrupted by the ring of her phone. She quickly 
+                    gathered herself and answered...</p>
+                  <a href="blogs/blog1.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                  <div class="blog-info clearfix">
+                      <div class="post-left">
+                          <ul>
+                              <li><a href="#."><i class="fa fa-calendar"></i> <span>July 5, 2017</span></a></li>
+                          </ul>
+                      </div>
+                      <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>106</a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="blog grid-blog">
+              <div class="blog-image">
+                  <a href="blogs/blog2.html"><img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F2.jpg?alt=media&token=1352bf12-c9b9-40af-800c-6876c7245e8e" alt=""></a>
+              </div>
+              <div class="blog-content">
+                  <h3 class="blog-title"><a href="blogs/blog2.html">THE PERFECT DIET</a></h3>
+                  <p style="font-style: italic;color: #5793D1;">Upashana Talukdar</p>
+                  <p>Early to bed and early to rise,<br>
+                    May make you wise and fit;<br>
+                    But if you yearn to be, fine and healthy,<br>
+                    Let your diet be perfect and lit.<br><br>
+
+                    Why not to embark the morning,<br>
+                    With a glass of water, warm;<br>
+                    Boosting the functioning of your body,<br>
+                    Thus, engendering to you, no harm...<br><br></p>
+                  <a href="blogs/blog2.html" class="read-more"><i class="fa fa-long-arrow-right"></i> Read More</a>
+                  <div class="blog-info clearfix">
+                      <div class="post-left">
+                          <ul>
+                              <li><a href="#."><i class="fa fa-calendar"></i> <span>July 1, 2017</span></a></li>
+                          </ul>
+                      </div>
+                      <div class="post-right"> <a href="#."><i class="fa fa-eye"></i>112</a></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+  
+  
+       </div>
+   </div>
+    
+   
+    
+  </div>
+          
+
+
+                          
+          
+  
+      
+
+
+</section>
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>WakeWithWellness</h3>
+              <p>
+                Assam, India<br><br>
+                <strong>Phone:</strong> +91-6385334226<br>
+                <strong>Email:</strong> wakewithwellness@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/wakewwellness?s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://instagram.com/wakewithwellness?utm_medium=copy_link" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/wake-with-wellness" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Departments</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">Curation Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">Editorial Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">Marketing Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">Events Department</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">Design Department</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="AboutUs.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Blogs.html">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Feedback</h4>
+            <div class="alert">Feedback sent</div>
+            <form id="feedbacks" > 
+              <div class="form-group" >
+                <textarea style="height: 100px;" name="Message" id="userMessage" class="form-control" required></textarea>
+              </div>
+            
+              <button style="margin-top: 10px;background-color: #5793D1;" id="submit" class="btn btn-primary" >Submit</button>
+            </form>  
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>WakeWithWellness</span></strong>. All Rights Reserved
+      </div>
+  
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    
+    document.onkeydown=function(e)
+    {
+      if (event.keyCode == 123) 
+      {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+      {
+        return false;
+      }
+    }
+  
+  </script>
+
+ 
+  <!--Firebase-->
+    
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="scripts/feedback.js"></script>
+
+</body>
+
+</html>
