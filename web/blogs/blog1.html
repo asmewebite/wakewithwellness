@@ -32,6 +32,8 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
   <style>
+
+    
     .alert{
     text-align: center;
     padding: 10px;
@@ -63,9 +65,7 @@
      background: rgb(185, 185, 185);
    }
 
-
-
-
+  
  
     </style>
 
@@ -117,7 +117,7 @@
 
       </div>
     </section><!-- End Breadcrumbs -->
-   
+
 
     <div class="page-wrapper container">
      <div class="content">
@@ -212,9 +212,9 @@
                          </div>
                      </div>
                  </div>
-                 <div class="widget post-widget">
+                 <div class="widget post-widget" >
                     <h5>Blogs</h5>
-                    <ul class="latest-posts">
+                    <ul class="latest-posts" >
                         <li>
                             <div class="post-thumb">
                                 <a href="blog6.html">
@@ -228,6 +228,10 @@
                                 <p><i aria-hidden="true" class="fa fa-calendar"></i> July 6, 2021</p>
                             </div>
                         </li>
+
+
+
+
                         <li>
                             <div class="post-thumb">
                                 <a href="blog2.html">
@@ -241,6 +245,9 @@
                                 <p><i aria-hidden="true" class="fa fa-calendar"></i> July 1, 2021</p>
                             </div>
                         </li>
+
+
+
                         <li>
                             <div class="post-thumb">
                                 <a href="blog3.html">
@@ -255,21 +262,78 @@
                             </div>
                         </li>
                       
-                        <li>
+
+
+                       
+
+                    </ul>
+
+
+
+                   <div><span id="dots"></span><div id="more" class="content" id="more" style="display: none;">
+                    <ul class="latest-posts">
+                      <li>
+                        <div class="post-thumb">
+                           
+                        </div>
+                       
+                    </li>
+
+
+                    <li>
+                      <div class="post-thumb">
+                          <a href="blog5.html">
+                              <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F5.jpg?alt=media&token=097bcc66-c5f7-401b-897e-e80bd97f0bdf" alt="">
+                          </a>
+                      </div>
+                      <div class="post-info">
+                          <h4>
+                                         <a href="blog5.html">THE MECHANICS OF DESIRE</a>
+                                    </h4>
+                          <p><i aria-hidden="true" class="fa fa-calendar"></i> July 20, 2021</p>
+                      </div>
+                  </li>
+
+
+                      <li>
                           <div class="post-thumb">
-                              <a href="blog5.html">
-                                  <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F5.jpg?alt=media&token=097bcc66-c5f7-401b-897e-e80bd97f0bdf" alt="">
+                              <a href="blog7.html">
+                                  <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F7.png?alt=media&token=56375757-d668-4a66-9ba5-ddf2f2536806" alt="">
                               </a>
                           </div>
                           <div class="post-info">
                               <h4>
-                                             <a href="blog5.html">THE MECHANICS OF DESIRE</a>
+                                             <a href="blog7.html">DECODING MENTAL HEALTH: THE PANDEMIC VERSION</a>
                                         </h4>
-                              <p><i aria-hidden="true" class="fa fa-calendar"></i> July 20, 2021</p>
+                              <p><i aria-hidden="true" class="fa fa-calendar"></i> August 6, 2021</p>
                           </div>
                       </li>
 
-                    </ul>
+
+                      <li>
+                          <div class="post-thumb">
+                              <a href="blog4.html">
+                                  <img class="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/members-76725.appspot.com/o/blogs%2F4.jpg?alt=media&token=be47fa92-2b9e-435a-a153-99196e35d557" alt="">
+                              </a>
+                          </div>
+                          <div class="post-info">
+                              <h4>
+                                             <a href="blog4-details.html">STRINGS OF CLUSTERED EMOTIONS</a>
+                                        </h4>
+                              <p><i aria-hidden="true" class="fa fa-calendar"></i> July 15, 2021</p>
+                          </div>
+                      </li>
+
+
+
+                     
+                    
+
+  
+
+                  </ul>
+                   </div></div>
+                   <button onclick="myFunction()" id="myBtn" style="background-color: white;border: none;margin-top: 10px;">See more</button>
                 </div>
               
              </aside>
@@ -361,6 +425,23 @@
   <script src="../assets/vendor/purecounter/purecounter.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <script>
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "See more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "See less";
+    moreText.style.display = "inline";
+  }
+}
+  </script>
   <script src="../assets/js/main.js"></script>
 
   <script>
