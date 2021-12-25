@@ -113,7 +113,7 @@ async function getuserInfoRealtime(userID){
                        
 
                         <li>
-                            <a href="main.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
 
                         <li >
@@ -138,7 +138,10 @@ async function getuserInfoRealtime(userID){
                             <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
                         </li>
 
-                      
+                        <li>
+                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
+                        </li>
+   
                     </ul>
                 </div>
             </div>
@@ -153,7 +156,7 @@ async function getuserInfoRealtime(userID){
         <div class="content">
             <div class="row">
                 <div class="col-sm-7 col-6">
-                    <h4 class="page-title" style="float:left;font-weight:500;margin-top:-10px">My Profile</h4>
+                    <h4 class="page-title" style="float:left;font-weight:500;">My Profile</h4>
                 </div>
 
                 <div class="col-sm-5 col-6 text-right m-b-30">
@@ -170,10 +173,11 @@ async function getuserInfoRealtime(userID){
                         <div class="profile-view">
                             <div class="profile-img-wrap" >
                                 <div class="profile-img">
-                                    <a href="#"><img src="../assets/img/user.png" alt=""></a>
+                                    <img id="proimg" class="square" src="./assets/noimage.png" alt="NoProfilePic">
+                                    
                                 </div>
                             </div>
-                            <div class="profile-basic" style="margin-top:50px">
+                            <div class="profile-basic">
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:left">
@@ -210,7 +214,12 @@ async function getuserInfoRealtime(userID){
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
+                                    
+                                    <button class="btn waves-effect #fbc02d yellow darken-2 modal-trigger" href="#modal3">edit details</button> 
+                                    <button class="btn waves-effect  primary  modal-trigger" href="#modal4">Profile Photo</button>   
+                               
+                               
+                                    </div>
                             </div>
                         </div>                        
                     </div>
@@ -279,12 +288,19 @@ async function getuserInfoRealtime(userID){
                         `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
+                        editProfile["regno"].value = userInfo.regno
                         editProfile["phoneno"].value = userInfo.phone
                         editProfile["whatsapp"].value = userInfo.whatsapp
-                        editProfile["college"].value = userInfo.college
                         editProfile["department"].value = userInfo.department
-                        editProfile["status"].value = userInfo.status
+                        editProfile["department2"].value = userInfo.department2
+                        editProfile["college"].value = userInfo.college
+                        editProfile["address"].value = userInfo.address
+                        editProfile["exp"].value = userInfo.exp
 
+
+                        if(firebase.auth().currentUser.photoURL){
+                            document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
+                        }
                       
 
                 }    
@@ -355,40 +371,52 @@ function updateUserProfile(e){
     userDocRef.update({
         name:editProfile["name"].value,
         email:editProfile["profileEmail"].value,
+        regno:editProfile["regno"].value,
         phone:editProfile["phoneno"].value,
         whatsapp:editProfile["whatsapp"].value,
-        college:editProfile["college"].value,
+        
         department:editProfile["department"].value,
-        status:editProfile["status"].value
+        department2:editProfile["department2"].value,
+        college:editProfile["college"].value,
+        address:editProfile["address"].value,
+        exp:editProfile["exp"].value
 
     })
 
     M.Modal.getInstance(myModel[2]).close()
 }
 
-
-
-
-
-async function allUserDetails(){
-  document.getElementById('table').style.display='table'
-  const userRef = await firebase.firestore().collection('users').get()  
-  userRef.docs.forEach(doc=>{
-           const info =   doc.data()
-           document.getElementById('tbody').innerHTML += `
-           <tr>
-            <td>${info.name}</td>
-            <td>${info.email}</td>
-            <td>${info.phone}</td>
-            <td>${info.whatsapp}</td>
-            <td>${info.experience}</td>
-            <td>${info.college}</td>
-            <td>${info.status}</td>
-          </tr>
-           `
-    })
- 
+function uploadImage(e){
+    console.log(e.target.files[0])
+    const uid = firebase.auth().currentUser.uid
+    const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`)
+    const uploadTask =  fileRef.put(e.target.files[0])
+    uploadTask.on('state_changed', 
+  (snapshot) => {
+    
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    if(progress=='100') alert('Profile picture uploaded')
+  }, 
+  (error) => {
+   console.log(error)
+  }, 
+  () => {
+    
+    uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+      console.log('File available at', downloadURL);
+      document.querySelector('#proimg').src = downloadURL
+      firebase.auth().currentUser.updateProfile({
+        photoURL: downloadURL
+      })
+    });
+  }
+);
 }
+
+
+
+
+
 
 
 
@@ -446,4 +474,8 @@ function sendMessage(event){
 
   });
 }
+
+
+
+
 
