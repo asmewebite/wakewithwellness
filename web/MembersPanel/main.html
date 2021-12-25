@@ -13,6 +13,28 @@
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
    
+
+    <style>
+      /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2e2e2e00;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(207, 207, 207);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(185, 185, 185);
+  }
+  </style>
   
             
 </head>
@@ -54,7 +76,7 @@
 
 
 
-      <!-- Modal -->
+      <!-- LoGOUT Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -85,35 +107,113 @@
   <div id="logindata"></div>
          
  
-    <!--edit profile -->
-  <div id="modal3" class="modal">
+    <!--edit profile details -->
+  <div id="modal3" class="modal" style="width: 100vh;height: auto;overflow-y: scroll;">
     <div class="modal-content">
       <h4 >Edit your details</h4>
+     
+      <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
+        <div class="form-group row">
+          <label class="col-form-label col-md-2">Name </label>
+          <div class="col-md-10">
+              <input type="text" name="name" class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-label col-md-2">Email ID </label>
+        <div class="col-md-10">
+            <input type="text" disabled name="profileEmail" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-form-label col-md-2">Registration ID </label>
+      <div class="col-md-10">
+          <input type="text" disabled name="regno" class="form-control">
+      </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-form-label col-md-2">Phone no. </label>
+    <div class="col-md-10">
+        <input type="text" name="phoneno" class="form-control">
+    </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Whatsapp no. </label>
+  <div class="col-md-10">
+      <input type="text" name="whatsapp" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Department I</label>
+  <div class="col-md-10">
+      <input type="text" disabled name="department" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Department II</label>
+  <div class="col-md-10">
+      <input type="text" name="department2" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">College </label>
+  <div class="col-md-10">
+      <input type="text" name="college" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Address </label>
+  <div class="col-md-10">
+      <input type="text" name="address" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Experience </label>
+  <div class="col-md-10">
+      <input type="text" name="exp" class="form-control">
+  </div>
+</div>
+
+
+  
+
+        <button class="btn waves-effect #fbc02d yellow darken-2"  type="submit">submit</button>   
+      </form>
+  
+    </div>
+  </div> 
+
+
+
+  <!--edit profile Picture -->
+  <div id="modal4" class="modal" style="width: 100vh;height: auto;overflow-y: scroll;">
+    <div class="modal-content">
+      <h4 >Update Profile Picture</h4>
+      <p style="color: red;font-style: italic;">File size must be less than 2MB</p>
       <div class="file-field input-field">
         <div class="btn #fbc02d yellow darken-2">
-          <span>File</span>
-          <input type="file" accept="image/*" onchange="uploadImage(event)" />
+          <span>Choose file</span>
+          <input type="file" id="filesizecheck" accept="image/*" onchange="uploadImage(event)" />
+         
         </div>
+        
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text">
         </div>
       </div>
-      <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
-        <input type="email" name="profileEmail" placeholder="email" />
-        <input type="text" name="name" placeholder="name" />
-        <input type="number" name="phoneno" placeholder="phoneno" />
-        <input type="number" name="whatsapp" placeholder="whatsapp" />
-        <input type="text" name="college" placeholder="College" />
-        <input type="text" name="department" placeholder="Department" />
-        <input type="text" name="status" placeholder="Status" />
-
-        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
-      </form>
+  <p style="color: red;font-style: italic;text-align: center;">Please wait till the profile picture is uploaded...</p>
   
-      
-     
     </div>
-  </div>
+  </div> 
 
 
   <div class="center">
