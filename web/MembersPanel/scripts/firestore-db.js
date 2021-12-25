@@ -41,7 +41,7 @@ async function getuserInfo(userID){
    }    
     }else{
       userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-    height: 43vh;margin-top:180px">
+      height: 43vh;margin-top:180px">
       
       <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
       <div id="form_header_container" style="width: 100%;
@@ -171,12 +171,12 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="profile-view">
-                            <div class="profile-img-wrap">
+                            <div class="profile-img-wrap" style="background-color:rgb(219, 219, 219);">
                                 <div class="profile-img">
-                                    <a href="#"><img class="avatar" src="../assets/img/user.jpg" alt=""></a>
+                                    <a href="#"><img src="../assets/img/user.png" alt=""></a>
                                 </div>
                             </div>
-                            <div class="profile-basic">
+                            <div class="profile-basic" style="margin-top:50px">
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:left">
