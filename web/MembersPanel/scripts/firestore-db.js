@@ -173,7 +173,7 @@ async function getuserInfoRealtime(userID){
                         <div class="profile-view">
                             <div class="profile-img-wrap" >
                                 <div class="profile-img">
-                                      <img id="proimg"  class="circle" src="../assets/user.png" alt="NoProfilePic">
+                                      <img id="proimg"  class="circle" src="../assets/user.png" alt="">
                                     
                                 </div>
                             </div>
