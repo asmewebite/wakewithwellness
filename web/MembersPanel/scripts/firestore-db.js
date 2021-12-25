@@ -113,7 +113,7 @@ async function getuserInfoRealtime(userID){
                        
 
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="main.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
 
                         <li >
@@ -138,10 +138,7 @@ async function getuserInfoRealtime(userID){
                             <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
                         </li>
 
-                        <li>
-                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
-                        </li>
-   
+                      
                     </ul>
                 </div>
             </div>
@@ -167,11 +164,11 @@ async function getuserInfoRealtime(userID){
     </button>
                 </div>
             </div>
-            <div class="card-box profile-header" style="background-color: rgb(219, 219, 219);">
+            <div class="card-box profile-header" style="box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.336);">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="profile-view">
-                            <div class="profile-img-wrap" style="background-color:rgb(219, 219, 219);">
+                            <div class="profile-img-wrap" >
                                 <div class="profile-img">
                                     <a href="#"><img src="../assets/img/user.png" alt=""></a>
                                 </div>
@@ -181,9 +178,9 @@ async function getuserInfoRealtime(userID){
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:left">
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
-                                            <div class="staff-id">Registration ID : <span style="font-weight:bolder">${userInfo.regno}</span></div>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department :</span> ${userInfo.department}</h4>
-                                            <h5 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department2 :</span> ${userInfo.department2}</h5>
+                                            <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
+                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
+                                            <h5 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department2 :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department2}</span></h5>
                                             
                                     
                                         </div>
@@ -449,26 +446,4 @@ function sendMessage(event){
 
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
