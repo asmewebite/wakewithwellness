@@ -41,7 +41,7 @@ async function getuserInfo(userID){
    }    
     }else{
       userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-      height: 50vh;margin-top:80px">
+    height: 43vh;margin-top:180px">
       
       <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
       <div id="form_header_container" style="width: 100%;
@@ -297,7 +297,7 @@ async function getuserInfoRealtime(userID){
 
     }else{
         userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-        height: 50vh;margin-top:80px">
+        height: 43vh;margin-top:180px">
         
         <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
         <div id="form_header_container" style="width: 100%;
