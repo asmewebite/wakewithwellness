@@ -161,6 +161,10 @@ async function getuserInfoRealtime(userID){
 
                 <div class="col-sm-5 col-6 text-right m-b-30">
                     <a href="activities.html" style="background-color:cornflowerblue;padding:10px;color:white;border">Dashboard</a>
+                    
+      <button type="button" style="margin-left:10px;" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+      <i class="fa fa-sign-out"></i>
+    </button>
                 </div>
             </div>
             <div class="card-box profile-header" style="background-color: rgb(219, 219, 219);">
