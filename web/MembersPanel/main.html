@@ -41,24 +41,25 @@
 
           <ul class="nav user-menu float-right" id="logoutli" style="display: none;">
             
-            <button type="button" style="float: right;margin-top: 6px;margin-right: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">LogOut</button>
+      
+
           </ul>
 
           <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-              <div class="dropdown-menu dropdown-menu-right" >
-                <button type="button" style="float: right;" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">LogOut</button>
-              </div>
+              
           </div>
       </div>
 
-      
-    <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+
+
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">LogOut</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Log Out</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -68,11 +69,13 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-danger" onclick="logout()">Confirm</button>
+        <button type="button" class="btn btn-danger" onclick="logout()" data-dismiss="modal">Confirm</button>
       </div>
     </div>
   </div>
 </div>
+      
+
 
 <div style="margin-top: 20px;"></div>
 
