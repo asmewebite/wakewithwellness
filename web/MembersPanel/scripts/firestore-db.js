@@ -171,13 +171,13 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="profile-view">
-                            <div class="profile-img-wrap" >
-                                <div class="profile-img">
-                                      <img id="proimg"  class="circle" src="../assets/user.png" alt="">
+                            <div class="profile-img-wrap" style="height:19vh;width:20vh" >
+                                <div class="profile-img" >
+                                    <img id="proimg"  class="circle" src="../assets/user.png" alt="">
                                     
                                 </div>
                             </div>
-                            <div class="profile-basic">
+                            <div class="profile-basic" style="matgin-top:20vh">
                                 <div class="row">
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:left">
@@ -474,8 +474,5 @@ function sendMessage(event){
 
   });
 }
-
-
-
 
 
