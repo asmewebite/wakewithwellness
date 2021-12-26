@@ -218,8 +218,10 @@ async function getuserInfoRealtime(userID){
            <button class="logged-in" onclick="location.href='../../leavepanel.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Leave requests</button>
            <button class="logged-in" onclick="location.href='feedbacks.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">General Feedbacks</button>
            <button class="logged-in" onclick="location.href='memFeedbacks.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Members Feedbacks</button>
-           <button class="logged-in" onclick="location.href='profileedit.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Profile Edit Request</button>
-        </div>
+          
+	  <button class="logged-in" onclick="location.href='profileedit.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Profile Edit Request</button>
+       <button class="logged-in" onclick="location.href='../../wwwstreams/index.html'" style="color: #f2f2f2;background-color: rgb(4, 206, 64);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 60px;margin-top: 6px;">WWW Stream</button>
+       </div>
         <div style="margin-top: 20px">
             <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;font-weight: bolder;">Interns Panel</h4>
         
