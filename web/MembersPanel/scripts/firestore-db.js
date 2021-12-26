@@ -16,8 +16,11 @@ function createUserCollection(user){
        department2:"",
        college:"",
        status:"",
+       blood:"",
        gender:"",
        address:"",
+       state:"",
+       pincode:"",
        exp:""
 
    })
@@ -183,8 +186,8 @@ async function getuserInfoRealtime(userID){
                                         <div class="profile-info-left" style="text-align:left">
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
                                             <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
-                                            <h5 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department2 :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department2}</span></h5>
+                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
+                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department II :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department2}</span></h4>
                                             
                                     
                                         </div>
@@ -206,8 +209,14 @@ async function getuserInfoRealtime(userID){
                                             
                                             <li>
                                                 <span class="title">Address:</span>
-                                                <span class="text">${userInfo.address}</span>
+                                                <span class="text">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span>
                                             </li>
+
+                                            <li>
+                                                <span class="title">Blood group:</span>
+                                                <span class="text">${userInfo.blood}</span>
+                                            </li>
+
                                             <li>
                                                 <span class="title">Gender:</span>
                                                 <span class="text">${userInfo.gender}</span>
@@ -215,8 +224,8 @@ async function getuserInfoRealtime(userID){
                                         </ul>
                                     </div>
                                     
-                                    <button class="btn waves-effect #fbc02d yellow darken-2 modal-trigger" href="#modal3">edit details</button> 
-                                    <button class="btn waves-effect  primary  modal-trigger" href="#modal4">Profile Photo</button>   
+                                    <button style="background-color: #5793D1;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;" class="modal-trigger" href="#modal3">Edit details</button> 
+                                    <button style="background-color: orange;margin-left:5px;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;" class="modal-trigger" href="#modal4">Profile Photo</button>   
                                
                                
                                     </div>
@@ -291,10 +300,13 @@ async function getuserInfoRealtime(userID){
                         editProfile["regno"].value = userInfo.regno
                         editProfile["phoneno"].value = userInfo.phone
                         editProfile["whatsapp"].value = userInfo.whatsapp
+                        editProfile["blood"].value = userInfo.blood
                         editProfile["department"].value = userInfo.department
                         editProfile["department2"].value = userInfo.department2
                         editProfile["college"].value = userInfo.college
                         editProfile["address"].value = userInfo.address
+                        editProfile["state"].value = userInfo.state
+                        editProfile["pincode"].value = userInfo.pincode
                         editProfile["exp"].value = userInfo.exp
 
 
@@ -374,16 +386,26 @@ function updateUserProfile(e){
         regno:editProfile["regno"].value,
         phone:editProfile["phoneno"].value,
         whatsapp:editProfile["whatsapp"].value,
-        
+        blood:editProfile["blood"].value,
         department:editProfile["department"].value,
         department2:editProfile["department2"].value,
         college:editProfile["college"].value,
         address:editProfile["address"].value,
+        state:editProfile["state"].value,
+        pincode:editProfile["pincode"].value,
         exp:editProfile["exp"].value
 
     })
+    document.querySelector('.alert').style.display = 'block';
 
-    M.Modal.getInstance(myModel[2]).close()
+    // Show alert
+document.querySelector('.alert').style.display = 'block';
+
+// Hide alert after 3 seconds
+setTimeout(function(){
+  document.querySelector('.alert').style.display = 'none';
+},3000);
+  
 }
 
 function uploadImage(e){
@@ -410,6 +432,9 @@ function uploadImage(e){
       })
     });
   }
+
+
+  
 );
 }
 
@@ -474,5 +499,30 @@ function sendMessage(event){
 
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
