@@ -174,12 +174,15 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="profile-view">
-                            <div class="profile-img-wrap" style="height:19vh;width:20vh" >
+                            <div class="profile-img-wrap" style="height:21vh;width:24vh" >
                                 <div class="profile-img" >
-                                    <img id="proimg"  class="circle" src="../assets/user.png" alt="">
-                                    
+                                    <img id="proimg"  class="circle" src="../assets/user.png" alt=""><br>
+ 
+                                    <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
                                 </div>
+                                
                             </div>
+                            
                             <div class="profile-basic" style="matgin-top:20vh">
                                 <div class="row">
                                     <div class="col-md-5">
@@ -224,8 +227,8 @@ async function getuserInfoRealtime(userID){
                                         </ul>
                                     </div>
                                     
-                                    <button style="background-color: #5793D1;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;" class="modal-trigger" href="#modal3">Edit details</button> 
-                                    <button style="background-color: orange;margin-left:5px;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;" class="modal-trigger" href="#modal4">Profile Photo</button>   
+                                    <button style="background-color: #5793D1;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3">Edit details</button> 
+         
                                
                                
                                     </div>
