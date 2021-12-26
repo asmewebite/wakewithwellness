@@ -176,7 +176,7 @@ async function getuserInfoRealtime(userID){
                         <div class="profile-view">
                             <div class="profile-img-wrap" style="height:21vh;width:24vh" >
                                 <div class="profile-img" >
-                                    <img id="proimg"  class="circle" src="../assets/user.png" alt=""><br>
+                                    <img id="proimg"  class="circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
  
                                     <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
                                 </div>
