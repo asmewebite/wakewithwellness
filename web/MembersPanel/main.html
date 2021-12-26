@@ -15,6 +15,21 @@
    
 
     <style>
+  .alert{
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        background:#79c879;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+  
+
+
+
+
       /* width */
   ::-webkit-scrollbar {
     width: 10px;
@@ -110,9 +125,10 @@
     <!--edit profile details -->
   <div id="modal3" class="modal" style="width: 100vh;height: auto;overflow-y: scroll;">
     <div class="modal-content">
-      <h4 >Edit your details</h4>
+      <h4 >Edit your details :</h4>
      
-      <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
+     
+      <form autocomplete="off" id="editProfile" style="margin-top: 30px;" onsubmit="updateUserProfile(event)">
         <div class="form-group row">
           <label class="col-form-label col-md-2">Name </label>
           <div class="col-md-10">
@@ -149,6 +165,13 @@
 </div>
 
 <div class="form-group row">
+  <label class="col-form-label col-md-2">Blood group </label>
+  <div class="col-md-10">
+      <input type="text" name="blood" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
   <label class="col-form-label col-md-2">Department I</label>
   <div class="col-md-10">
       <input type="text" disabled name="department" class="form-control">
@@ -177,16 +200,30 @@
 </div>
 
 <div class="form-group row">
+  <label class="col-form-label col-md-2">State </label>
+  <div class="col-md-10">
+      <input type="text" name="state" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Pincode </label>
+  <div class="col-md-10">
+      <input type="text" name="pincode" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
   <label class="col-form-label col-md-2">Experience </label>
   <div class="col-md-10">
       <input type="text" name="exp" class="form-control">
   </div>
 </div>
-
+<div class="alert">Updated successfully</div>
 
   
 
-        <button class="btn waves-effect #fbc02d yellow darken-2"  type="submit">submit</button>   
+        <button style="width: 100%;background-color: #5793D1;padding: 10px;border: none;cursor: pointer;color: white;"  type="submit">Update</button>   
       </form>
   
     </div>
@@ -202,14 +239,15 @@
       <div class="file-field input-field">
         <div class="btn #fbc02d yellow darken-2">
           <span>Choose file</span>
-          <input type="file" id="filesizecheck" accept="image/*" onchange="uploadImage(event)" />
+          <input type="file" id="file1" accept="image/*" onchange="uploadImage(event)" />
          
         </div>
         
         <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
+          <input class="file-path validate"  type="text">
         </div>
       </div>
+  
   <p style="color: red;font-style: italic;text-align: left;">Please wait till the profile picture is uploaded...</p>
   
     </div>
@@ -220,7 +258,7 @@
     <div class="userDetails"></div>
   </div>
          
- 
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
