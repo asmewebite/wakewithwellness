@@ -20,7 +20,7 @@ function createUserCollection(user){
        address:"",
        state:"",
        pincode:"",
-       exp:""
+      
 
    })
 }
@@ -269,26 +269,7 @@ async function getuserInfoRealtime(userID){
         
       </div>
 
-      <div class="card-box mb-0" style="text-align:left">
-      <h3 class="card-title">Experience</h3>
-      <div class="experience-box">
-          <ul class="experience-list">
-              <li>
-                  <div class="experience-user">
-                      <div class="before-circle"></div>
-                  </div>
-                  <div class="experience-content">
-                      <div class="timeline-content">
-                          <a class="name">${userInfo.exp}</a>
-                        
-                      </div>
-                  </div>
-              </li>
-             
-            
-          </ul>
-      </div>
-  </div>
+
     </div>
         </div>
                        
