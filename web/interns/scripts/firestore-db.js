@@ -13,7 +13,6 @@ function createUserCollection(user){
        phone:"",
        whatsapp:"",
        department:"",
-       department2:"",
        college:"",
        status:"",
        blood:"",
@@ -51,7 +50,7 @@ async function getuserInfo(userID){
       height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
       border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
           <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-          font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
+          font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> INTERNS PORTAL </h2>
       </div>
 
       <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
@@ -186,7 +185,7 @@ async function getuserInfoRealtime(userID){
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
                                             <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department II :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department2}</span></h4>
+                                           
                                             
                                     
                                         </div>
@@ -328,7 +327,7 @@ async function getuserInfoRealtime(userID){
         height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
         border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
             <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-            font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
+            font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> INTERNS PORTAL </h2>
         </div>
 
         <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
