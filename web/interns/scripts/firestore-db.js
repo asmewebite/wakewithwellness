@@ -13,6 +13,7 @@ function createUserCollection(user){
        phone:"",
        whatsapp:"",
        department:"",
+    
        college:"",
        status:"",
        blood:"",
@@ -20,7 +21,7 @@ function createUserCollection(user){
        address:"",
        state:"",
        pincode:"",
-      
+   
 
    })
 }
@@ -185,7 +186,7 @@ async function getuserInfoRealtime(userID){
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
                                             <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
-                                           
+ 
                                             
                                     
                                         </div>
@@ -281,13 +282,11 @@ async function getuserInfoRealtime(userID){
                         editProfile["whatsapp"].value = userInfo.whatsapp
                         editProfile["blood"].value = userInfo.blood
                         editProfile["department"].value = userInfo.department
-                        editProfile["department2"].value = userInfo.department2
                         editProfile["college"].value = userInfo.college
                         editProfile["address"].value = userInfo.address
                         editProfile["state"].value = userInfo.state
                         editProfile["pincode"].value = userInfo.pincode
-                        editProfile["exp"].value = userInfo.exp
-
+                  
 
                         if(firebase.auth().currentUser.photoURL){
                             document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
@@ -367,12 +366,10 @@ function updateUserProfile(e){
         whatsapp:editProfile["whatsapp"].value,
         blood:editProfile["blood"].value,
         department:editProfile["department"].value,
-        department2:editProfile["department2"].value,
         college:editProfile["college"].value,
         address:editProfile["address"].value,
         state:editProfile["state"].value,
         pincode:editProfile["pincode"].value,
-        exp:editProfile["exp"].value
 
     })
     document.querySelector('.alert').style.display = 'block';
