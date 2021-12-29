@@ -185,7 +185,7 @@ async function getuserInfoRealtime(userID){
                                         <div class="profile-info-left" style="text-align:left">
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
                                             <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
+                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
  
                                             
                                     
