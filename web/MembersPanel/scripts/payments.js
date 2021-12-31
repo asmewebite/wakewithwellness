@@ -157,6 +157,10 @@ async function getuserInfoRealtime(userID){
 
 <div class="page-wrapper">
             <div class="content">
+	     <div class="container-fluid" style="padding:15px;background-color:cornflowerblue;margin-bottom:15px">
+            <h3 class="user-name m-t-0 mb-0">${userInfo.name}<span style="font-weight:500;color:white;margin-left:12px;font-size:18px">${userInfo.regno}</span></h3>
+           
+            </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <h4 class="page-title">Payments</h4>
