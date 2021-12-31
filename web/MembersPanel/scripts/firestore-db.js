@@ -141,9 +141,7 @@ async function getuserInfoRealtime(userID){
                             <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
                         </li>
 
-                        <li>
-                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
-                        </li>
+                     
    
                     </ul>
                 </div>
