@@ -116,7 +116,7 @@ async function getuserInfoRealtime(userID){
                        
 
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="main.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
 
                         <li >
@@ -275,7 +275,7 @@ async function getuserInfoRealtime(userID){
       </div>
 
       <div class="card-box mb-0" style="text-align:left">
-      <h3 class="card-title">Experience</h3>
+      <h3 class="card-title">Experience (Prior Experience in working for a NGO/CBO)</h3>
       <div class="experience-box">
           <ul class="experience-list">
               <li>
