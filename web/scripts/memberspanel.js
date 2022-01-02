@@ -10,6 +10,10 @@ function renderMembers(doc){
     let department = document.createElement('span');
     let department2 = document.createElement('span');
     let college = document.createElement('span');
+    let address = document.createElement('span');
+    let state = document.createElement('span');
+    let pincode = document.createElement('span');
+    let exp = document.createElement('span');
   
 
 
@@ -22,6 +26,12 @@ function renderMembers(doc){
     department.textContent = doc.data().department;
     department2.textContent = doc.data().department2;
     college.textContent = doc.data().college;
+    address.textContent = doc.data().address;
+    state.textContent = doc.data().state;
+    pincode.textContent = doc.data().pincode;
+    exp.textContent = doc.data().exp;
+  
+
 
   
 
@@ -34,6 +44,10 @@ function renderMembers(doc){
     li.appendChild(department);
     li.appendChild(department2);
     li.appendChild(college);
+    li.appendChild(address);
+    li.appendChild(state);
+    li.appendChild(pincode);
+    li.appendChild(exp);
     
   
 
