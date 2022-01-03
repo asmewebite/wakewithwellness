@@ -13,12 +13,10 @@ function createUserCollection(user){
        phone:"",
        whatsapp:"",
        department:"",
-       department2:"",
        college:"",
-       status:"",
        gender:"",
        address:"",
-       exp:""
+     
 
    })
 }
@@ -120,17 +118,10 @@ async function getuserInfoRealtime(userID){
                         <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
                     </li>
                 
-                       
-                        <li>
-                        <a href="../MembersPanel/employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
-                       </li>
-
-                     
-                 
                       
 
                        <li>
-                       <a href="../MembersPanel/leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                       <a href="../../leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
 
                        
@@ -163,7 +154,7 @@ async function getuserInfoRealtime(userID){
                                         <div class="profile-info-left" style="text-align:left">
                                             <h3 class="user-name m-t-0 mb-0" >${userInfo.name}</h3>
                                             <div class="staff-id" style="margin-top:15px">Registration ID : <span style="font-weight:bold;color:red">${userInfo.regno}</span></div>
-                                            <h4 class="text-muted" style="margin-top:15px">Designation :<span style="font-weight:bold;color:red">${userInfo.department}</span> </h4>
+                                            <h4 class="text-muted" style="margin-top:15px">Designation :<span style="font-weight:bold;color:red"> ${userInfo.department}</span> </h4>
 
                                             
                                     
@@ -208,20 +199,13 @@ async function getuserInfoRealtime(userID){
                 <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;font-weight: bolder;">Members Panel</h4>
             
             <button class="logged-in" onclick="location.href='adminattendance.html'" style="color: #f2f2f2;background-color: rgb(4, 206, 64);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 60px;margin-top: 6px;">Attendance</button>
-            <button class="logged-in" onclick="location.href='Donation.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 12px;">Donation</button>
-        
             <button class="logged-in" onclick="location.href='recruitments.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Recruitments</button>
-            <button class="logged-in" onclick="location.href='idcard.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">ID Cards payments</button>
             <button class="logged-in" onclick="location.href='agreementpanel.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Agreements</button>
            <button class="logged-in" onclick="location.href='members.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Members</button>
            
            <button class="logged-in" onclick="location.href='../../leavepanel.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Leave requests</button>
-           <button class="logged-in" onclick="location.href='feedbacks.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">General Feedbacks</button>
-           <button class="logged-in" onclick="location.href='memFeedbacks.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Members Feedbacks</button>
-          
-	  <button class="logged-in" onclick="location.href='profileedit.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Profile Edit Request</button>
-       <button class="logged-in" onclick="location.href='../../wwwstreams/index.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 60px;margin-top: 6px;">WWW Stream</button>
-       </div>
+           <button class="logged-in" onclick="location.href='feedbacks.html'" style="color: #f2f2f2;background-color: rgb(73, 73, 73);cursor: pointer;padding: 10px;border-radius: 8px;text-align: center;box-shadow: 1px 3px 5px rgba(0,0,0,0.1);width: 100%;height: 50px;margin-top: 6px;">Feedbacks</button>
+           </div>
         <div style="margin-top: 20px">
             <h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: white;font-weight: bolder;">Interns Panel</h4>
         
@@ -411,26 +395,5 @@ function sendMessage(event){
 
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
