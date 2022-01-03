@@ -170,3 +170,177 @@ db.collection('attendance').get().then((snapshot)=>{
 })
 
 
+
+
+
+// 03/01/22-10/01/22
+
+const attendanceJan1 = document.querySelector('#Jan1');
+
+function renderJan1(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Jan1 = document.createElement('span');
+    let Jan1f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Jan1.textContent = doc.data().Jan1;
+    Jan1f.textContent = doc.data().Jan1f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Jan1);
+    li.appendChild(Jan1f);
+    
+  
+
+    attendanceJan1.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderJan1(doc);
+    })
+
+})
+
+
+
+
+
+
+// 11/01/22-17/01/22
+
+const attendanceJan2 = document.querySelector('#Jan2');
+
+function renderJan2(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Jan2 = document.createElement('span');
+    let Jan2f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Jan2.textContent = doc.data().Jan2;
+    Jan2f.textContent = doc.data().Jan2f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Jan2);
+    li.appendChild(Jan2f);
+    
+  
+
+    attendanceJan2.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderJan2(doc);
+    })
+
+})
+
+
+
+
+
+
+// 18/01/22-24/01/22
+
+const attendanceJan3 = document.querySelector('#Jan3');
+
+function renderJan3(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Jan3 = document.createElement('span');
+    let Jan3f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Jan3.textContent = doc.data().Jan3;
+    Jan3f.textContent = doc.data().Jan3f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Jan3);
+    li.appendChild(Jan3f);
+    
+  
+
+    attendanceJan3.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderJan3(doc);
+    })
+
+})
+
+
+
+// 25/01/22-31/01/22
+
+const attendanceJan4 = document.querySelector('#Jan4');
+
+function renderJan4(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let dept = document.createElement('span');
+    let Jan4 = document.createElement('span');
+    let Jan4f = document.createElement('span');
+  
+
+
+    li.setAttribute('data-id',doc.id);
+    name.textContent = doc.data().name;
+    dept.textContent = doc.data().dept;
+    Jan4.textContent = doc.data().Jan4;
+    Jan4f.textContent = doc.data().Jan4f;
+  
+
+
+    li.appendChild(name);
+    li.appendChild(dept);
+    li.appendChild(Jan4);
+    li.appendChild(Jan4f);
+    
+  
+
+    attendanceJan4.appendChild(li);
+
+}
+
+
+db.collection('attendance').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderJan4(doc);
+    })
+
+})
