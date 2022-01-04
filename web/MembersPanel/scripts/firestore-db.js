@@ -425,7 +425,10 @@ fileButton.addEventListener('change', function uploadImage(e) {
                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                if(progress=='100')     // Show alert
                document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
- 
+              // Hide alert after 10 seconds
+setTimeout(function(){
+    document.querySelector('.success').innerHTML=``;
+  },10000);
                uploader.value = progress;
               
                console.log('Upload is ' + progress + '% done');
