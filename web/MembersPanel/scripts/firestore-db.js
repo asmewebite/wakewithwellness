@@ -423,7 +423,7 @@ setTimeout(function(){
                uploader.value = progress;
               
                console.log('Upload is ' + progress + '% done');
-               document.querySelector('.prog').innerHTML=`${progress}%'`;
+               document.querySelector('.prog').innerHTML=`${progress}%`;
             
                switch (snapshot.state) {
                     case firebase.storage.TaskState.PAUSED: // or 'paused'
