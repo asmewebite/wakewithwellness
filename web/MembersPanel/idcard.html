@@ -53,6 +53,7 @@
                                    <div class="col-md-10">
                                        <input required type="file" accept="image/*" value="upload" id="fileButton" class="form-control">
                                        <progress style="width: 100%;height: 25px;" role="progressbar" value="0" max="100" id="uploader">0%</progress>
+                                       <p style="text-align:right" class="prog1"></p>
                                    </div>
                                    
                                </div>
@@ -84,6 +85,7 @@
                                    <div class="col-md-10">
                                        <input required type="file" accept="image/*" value="upload" id="signature" class="form-control">
                                        <progress style="width: 100%;height: 25px;" role="progressbar" value="0" max="100" id="uploadersign">0%</progress>
+                                       <p style="text-align:right" class="prog2"></p>
                                    </div>
                                </div>
                               
@@ -183,6 +185,7 @@ fileButton.addEventListener('change', function (e) {
                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                uploader.value = progress;
                console.log('Upload is ' + progress + '% done');
+               document.querySelector('.prog1').innerHTML=`${progress}%`;
                switch (snapshot.state) {
                     case firebase.storage.TaskState.PAUSED: // or 'paused'
                          console.log('Upload is paused');
@@ -259,6 +262,7 @@ signaturefile.addEventListener('change', function (e) {
                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                signuploader.value = progress;
                console.log('Upload is ' + progress + '% done');
+               document.querySelector('.prog2').innerHTML=`${progress}%`;
                switch (snapshot.state) {
                     case firebase.storage.TaskState.PAUSED: // or 'paused'
                          console.log('Upload is paused');
