@@ -22,10 +22,6 @@ function submitForm(e){
   // Save message
   saveData(name, Email, Contact, Blood, Address);
 
-
-
- // Clear form
- document.getElementById('idreg').reset();
 }
 
 // Function to get get form values
