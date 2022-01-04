@@ -99,6 +99,18 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
+    
+       <style>
+    .profile-img .pic {
+        height: 90%;
+        width: 90%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+      }
+    </style>
+    
                         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
@@ -153,7 +165,7 @@ async function getuserInfoRealtime(userID){
                         <div class="profile-view">
                             <div class="profile-img-wrap" style="height:21vh;width:24vh" >
                                 <div class="profile-img">
-                                    <img id="proimg"  class="circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
+                                    <img id="proimg"  class="pic circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
  
                                     <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
                                 </div>
