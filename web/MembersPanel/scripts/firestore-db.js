@@ -98,9 +98,8 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
-    
-       <style>
+
+    <style>
     .profile-img .pic {
         height: 90%;
         width: 90%;
@@ -142,7 +141,6 @@ async function getuserInfoRealtime(userID){
                 </div>
             </div>
         </div>
-
         
         
         <div class="page-wrapper">
@@ -172,10 +170,10 @@ async function getuserInfoRealtime(userID){
                                 
                             </div>
                             
-                            <div class="profile-basic" style="matgin-top:20vh">
+                            <div class="profile-basic">
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <div class="profile-info-left" style="text-align:left">
+                                        <div class="profile-info-left" style="text-align:justify">
                                             <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
                                             <div class="staff-id">Registration ID : <span style="font-weight:bolder;color:red">${userInfo.regno}</span></div>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:#5793D1"> ${userInfo.department}</span></h4>
@@ -224,6 +222,7 @@ async function getuserInfoRealtime(userID){
                     </div>
                 </div>
             </div>
+            
     <div class="profile-tabs">
       <ul class="nav nav-tabs nav-tabs-bottom">
         <li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">About</a></li>
@@ -259,7 +258,7 @@ async function getuserInfoRealtime(userID){
         
       </div>
       <div class="card-box mb-0" style="text-align:left">
-      <h3 class="card-title">Experience</h3>
+      <h3 class="card-title">Experience [Prior Experience in working for a NGO/CBO]</h3>
       <div class="experience-box">
           <ul class="experience-list">
               <li>
@@ -430,12 +429,12 @@ fileButton.addEventListener('change', function uploadImage(e) {
               // Hide alert after 3 seconds
 setTimeout(function(){
     document.querySelector('.success').innerHTML=``;
-  },3000);
+  },4000);
                
                uploader.value = progress;
               
                console.log('Upload is ' + progress + '% done');
-               document.querySelector('.prog').innerHTML=`${progress}% uploaded`;
+               document.querySelector('.prog').innerHTML=`${progress}%`;
             
                switch (snapshot.state) {
                     case firebase.storage.TaskState.PAUSED: // or 'paused'
@@ -477,55 +476,6 @@ setTimeout(function(){
           });
 
 });
-
-
-
-
-
-
-
-
-
-//suggestions
-
-function sendMessage(event){
-  event.preventDefault()
-  var message = document.getElementById('msg').value
-  var name = document.getElementById('name').value
-  var userRef = firebase.firestore().collection('membermsg').add({
-    message:message,
-    name:name,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-  }).then(()=>{
-    document.querySelector('.alert').style.display = 'block';
-
-  });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
