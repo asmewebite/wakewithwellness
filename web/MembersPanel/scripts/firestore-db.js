@@ -53,22 +53,18 @@ async function getuserInfo(userID){
           <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
           font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
       </div>
-
       <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
           <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
            
           <form autocomplete="off" onsubmit="login(event)" >
               
-
             <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
               height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
               font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
              
-
               <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
               height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
               font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
               <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
                   <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                   font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
@@ -98,27 +94,20 @@ async function getuserInfoRealtime(userID){
                  const userInfo = doc.data()
                     if(userInfo){
                         userDetails.innerHTML = `
-
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-
     
-
                         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li class="menu-title">Main</li>
-
                        
-
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
-
                         <li >
 							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
 						</li>
@@ -128,36 +117,28 @@ async function getuserInfoRealtime(userID){
                         <li>
                         <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
                        </li>
-
                        <li>
                         <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
                        </li>
-
                        <li>
                        <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
-
                         <li>
                             <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </div>
 
         
-
-
-
-
+        
         <div class="page-wrapper">
         <div class="content">
             <div class="row">
                 <div class="col-sm-7 col-6">
                     <h4 class="page-title" style="float:left;font-weight:500;">My Profile</h4>
                 </div>
-
                 <div class="col-sm-5 col-6 text-right m-b-30">
                     <a href="activities.html" style="background-color:cornflowerblue;padding:10px;color:white;border">Dashboard</a>
                     
@@ -171,7 +152,7 @@ async function getuserInfoRealtime(userID){
                     <div class="col-md-12">
                         <div class="profile-view">
                             <div class="profile-img-wrap" style="height:21vh;width:24vh" >
-                                <div class="profile-img" >
+                                <div class="profile-img">
                                     <img id="proimg"  class="circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
  
                                     <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
@@ -210,12 +191,10 @@ async function getuserInfoRealtime(userID){
                                                 <span class="title">Address:</span>
                                                 <span class="text">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span>
                                             </li>
-
                                             <li>
                                                 <span class="title">Blood group:</span>
                                                 <span class="text">${userInfo.blood}</span>
                                             </li>
-
                                             <li>
                                                 <span class="title">Gender:</span>
                                                 <span class="text">${userInfo.gender}</span>
@@ -238,7 +217,6 @@ async function getuserInfoRealtime(userID){
         <li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">About</a></li>
       
       </ul>
-
       <div class="tab-content">
         <div class="tab-pane show active" id="about-cont">
             <div class="row">
@@ -256,7 +234,6 @@ async function getuserInfoRealtime(userID){
                                         </div>
                                     </div>
                                 </li>
-
                             
                                
                             </ul>
@@ -269,7 +246,6 @@ async function getuserInfoRealtime(userID){
         
         
       </div>
-
       <div class="card-box mb-0" style="text-align:left">
       <h3 class="card-title">Experience</h3>
       <div class="experience-box">
@@ -330,22 +306,18 @@ async function getuserInfoRealtime(userID){
             <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
             font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
         </div>
-
         <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
             <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
              
             <form autocomplete="off" onsubmit="login(event)" >
                 
-
               <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
                 height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
                 font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
                
-
                 <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
                 height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
                 font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
                 <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
                     <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                     font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
@@ -355,10 +327,7 @@ async function getuserInfoRealtime(userID){
             </div>
         </div></div>
     </div>
-
     </div></div>
-
-
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
@@ -443,14 +412,23 @@ fileButton.addEventListener('change', function uploadImage(e) {
           function (snapshot) {
                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-               if(progress=='100') alert('Profile picture uploaded')
-               uploader.value = progress;
+               if(progress=='100')     // Show alert
+               document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+              
+              // Hide alert after 3 seconds
+setTimeout(function(){
+    document.querySelector('.success').innerHTML=``;
+  },5000);
                
+               uploader.value = progress;
+              
                console.log('Upload is ' + progress + '% done');
-          
+               document.querySelector('.prog').innerHTML=`${progress}%'`;
+            
                switch (snapshot.state) {
                     case firebase.storage.TaskState.PAUSED: // or 'paused'
                          console.log('Upload is paused');
+                      
                          break;
                     case firebase.storage.TaskState.RUNNING: // or 'running'
                          console.log('Upload is running');
@@ -474,7 +452,9 @@ fileButton.addEventListener('change', function uploadImage(e) {
                          // Unknown error occurred, inspect error.serverResponse
                          break;
                }
-          }, function () {
+          }, 
+
+          function () {
             uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
                 console.log('File available at', downloadURL);
                 document.querySelector('#proimg').src = downloadURL
@@ -509,6 +489,10 @@ function sendMessage(event){
 
   });
 }
+
+
+
+
 
 
 
