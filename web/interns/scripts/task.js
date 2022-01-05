@@ -148,7 +148,7 @@ async function getuserInfoRealtime(userID){
         <div class="content">
             <div class="row">
                 <div class="col-sm-7 col-6">
-                    <h4 class="page-title" style="float:left;font-weight:500;">Task Updates</h4>
+                    <h4 class="page-title" ></h4>
                 </div>
 
                 <div class="col-sm-5 col-6 text-right m-b-30">
@@ -215,12 +215,18 @@ async function getuserInfoRealtime(userID){
 
 
         <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title">Tasks Updates</h4>
+        </div>
+    </div>
+
+        <div class="row">
         <div class="col-lg-12">
             <div class="table-responsive">
                 <table class="table table-striped custom-table mb-0">
                     <thead>
                         <tr style="text-align:left">
-                            <th>Employee</th>
+                            <th>Interns</th>
                             <th>Department</th>
                             <th>1</th>
                             <th>2</th>
@@ -236,6 +242,106 @@ async function getuserInfoRealtime(userID){
                         </tr>
                     </thead>
                     <tbody>
+
+                    <tr>
+                            <td>Kamalika Barman</td>
+                            <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                           
+                          
+                        </tr>
+                        
+                        <tr>
+                            <td>Dibyangana Sarmah</td>
+                            <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                          
+                        </tr>
+                        <tr>
+                            <td>Gurbaaz Singh Dhaliwal</td>
+                            <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                          
+                        </tr>
+                       
+                        
+                      
+
+                        <tr>
+                            <td>Pranjal Chaubey</td>
+                            <td>Marketing</td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                        
+                     
+                        </tr>
+
+                        <tr>
+                        <td>Mohini Mitra</td>
+                        <td>Design</td>
+                        <td><i class="fa fa-check text-success"></i> </td>
+                        <td><i class="fa fa-check text-success"></i> </td>
+                        <td><i class="fa fa-check text-success"></i> </td>
+                 
+                    </tr>
+
+                    <tr>
+                    <td>Shalinee Buragohain</td>
+                    <td>Design</td>
+                    <td><i class="fa fa-check text-success"></i> </td>
+                    <td><i class="fa fa-check text-success"></i> </td>
+                    <td><i class="fa fa-check text-success"></i> </td>
+             
+                </tr>
+
+                        <tr>
+                            <td>Shahrukh Ahmed</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                     
+                        </tr>
+
+                       
+
+                        <tr>
+                            <td>Vishal Narzary</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                     
+                        </tr>
+
                         <tr>
                             <td>Afjal Shaik</td>
                             <td>Design</td>
@@ -252,88 +358,6 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
-                        </tr>
-                        <tr>
-                            <td>Dibyangana Sarmah</td>
-                            <td>Marketing</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                          
-                        </tr>
-                        <tr>
-                            <td>Gurbaaz Singh Dhaliwal</td>
-                            <td>Marketing</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                          
-                        </tr>
-                       
-                        <tr>
-                            <td>Kamalika Barman</td>
-                            <td>Marketing</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                           
-                          
-                        </tr>
-                        <tr>
-                            <td>Mohini Mitra</td>
-                            <td>Design</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                     
-                        </tr>
-
-                        <tr>
-                            <td>Pranjal Chaubey</td>
-                            <td>Marketing</td>
-                        
-                     
-                        </tr>
-
-                        <tr>
-                            <td>Shahrukh Ahmed</td>
-                            <td>Design</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                     
-                        </tr>
-
-                        <tr>
-                            <td>Shalinee Buragohain</td>
-                            <td>Design</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                     
-                        </tr>
-
-                        <tr>
-                            <td>Vishal Narzary</td>
-                            <td>Design</td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-check text-success"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                     
                         </tr>
                     </tbody>
                 </table>
