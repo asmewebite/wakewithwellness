@@ -212,6 +212,111 @@ async function getuserInfoRealtime(userID){
             </div>
    
         </div>
+
+
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table mb-0">
+                    <thead>
+                        <tr style="text-align:left">
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                   
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Afjal Shaik</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            
+                        </tr>
+                      
+                     
+                        <tr>
+                            <td>Dhruv Bisht</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                        </tr>
+                        <tr>
+                            <td>Dibyangana Sarmah</td>
+                            <td>Marketing</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>Gurbaaz Singh Dhaliwal</td>
+                            <td>Marketing</td>
+                          
+                        </tr>
+                       
+                        <tr>
+                            <td>Kamalika Barman</td>
+                            <td>Marketing</td>
+                          
+                        </tr>
+                        <tr>
+                            <td>Mohini Mitra</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                     
+                        </tr>
+
+                        <tr>
+                            <td>Pranjal Chaubey</td>
+                            <td>Marketing</td>
+                        
+                     
+                        </tr>
+
+                        <tr>
+                            <td>Shahrukh Ahmed</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                     
+                        </tr>
+
+                        <tr>
+                            <td>Shalinee Buragohain</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                     
+                        </tr>
+
+                        <tr>
+                            <td>Vishal Narzary</td>
+                            <td>Design</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                     
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
                        
                         `
                         editProfile["name"].value = userInfo.name
