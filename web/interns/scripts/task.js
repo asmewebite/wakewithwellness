@@ -256,17 +256,40 @@ async function getuserInfoRealtime(userID){
                         <tr>
                             <td>Dibyangana Sarmah</td>
                             <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                           
                         </tr>
                         <tr>
                             <td>Gurbaaz Singh Dhaliwal</td>
                             <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                           
                         </tr>
                        
                         <tr>
                             <td>Kamalika Barman</td>
                             <td>Marketing</td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                           
                           
                         </tr>
                         <tr>
