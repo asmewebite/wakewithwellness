@@ -423,23 +423,18 @@ function uploadImage(e){
 
 
 
-
-
-
-
-
 //Attendance
 
 
 function updateattendance(event){
     event.preventDefault()
-    var Dec4 = document.getElementById('attend').value
-    var Dec4f = document.getElementById('work').value
+    var Jan1 = document.getElementById('attend').value
+    var Jan1f = document.getElementById('work').value
     var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
-      Dec4:Dec4,
-      Dec4f:Dec4f
+        Jan1:Jan1,
+        Jan1f:Jan1f
   
     },{ merge: true}).then(()=>{
       document.querySelector('.alert').style.display = 'block';
@@ -457,7 +452,6 @@ function updateattendance(event){
   
     });
   }
-  
   
 
 
