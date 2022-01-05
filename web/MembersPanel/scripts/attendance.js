@@ -124,6 +124,10 @@ async function getuserInfoRealtime(userID){
                </li>
 
                <li>
+               <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+              </li>
+
+               <li>
                <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
               </li>
 
@@ -153,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: #fff;background-color: rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h4 style="color: rgb(173, 137, 137);font-weight: 200;">I, <span style="color:red;font-weight:500">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">First half of January</span> <span style="font-size: 14px;color: tomato;">[01/01/2022 - 15/01/2022]</span></h4>
+                          <h4 style="color: rgb(173, 137, 137);font-weight: 200;">I, <span style="color:red;font-weight:500">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">First half of January</span> <span style="font-size: 14px;color: tomato;">[01/01/2022 - 15/02/2022]</span></h4>
                           <br><label>Works:</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;"  required ></textarea>
                           
@@ -163,7 +167,7 @@ async function getuserInfoRealtime(userID){
                           </select>
                                 <div class="alert">Attendance posted successfully</div>
                           <div class="btn-block">
-                            <button onclick="location.href='activities.html'" style="background-color:tomato;"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+                            <button onclick="location.href='attenUpdates.html'" style="background-color:tomato;"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
                             <button style="margin-left:16px" id="send" type="submit" >Post</button> 
                              </div>
                           <div class="container-fluid" style="margin-bottom:40px;">
