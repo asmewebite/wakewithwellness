@@ -309,6 +309,7 @@ async function getuserInfoRealtime(userID){
                         <td><i class="fa fa-check text-success"></i> </td>
                         <td><i class="fa fa-check text-success"></i> </td>
                         <td><i class="fa fa-check text-success"></i> </td>
+			      <td><i class="fa fa-check text-success"></i> </td>
                  
                     </tr>
 
@@ -318,6 +319,7 @@ async function getuserInfoRealtime(userID){
                     <td><i class="fa fa-check text-success"></i> </td>
                     <td><i class="fa fa-check text-success"></i> </td>
                     <td><i class="fa fa-check text-success"></i> </td>
+		          <td><i class="fa fa-check text-success"></i> </td>
              
                 </tr>
 
@@ -327,6 +329,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+			          <td><i class="fa fa-check text-success"></i> </td>
                      
                         </tr>
 
@@ -348,6 +351,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+			     <td><i class="fa fa-close text-danger"></i> </td>
                             
                         </tr>
                       
@@ -358,6 +362,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+			     <td><i class="fa fa-close text-danger"></i> </td>
                         </tr>
                     </tbody>
                 </table>
