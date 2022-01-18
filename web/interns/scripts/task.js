@@ -184,32 +184,6 @@ async function getuserInfoRealtime(userID){
                 </div>
             </div>
 
-            <div class="profile-tabs">
-            <ul class="nav nav-tabs nav-tabs-bottom">
-              <li class="nav-item"><a class="nav-link active" href="#about-cont" data-toggle="tab">Tasks</a></li>
-            
-            </ul>
-      
-            <div class="tab-content">
-              <div class="tab-pane show active" id="about-cont">
-                  <div class="row">
-                      <div class="col-md-12">
-                          <div class="card-box" style="text-align:left">
-                              <h3 class="card-title">${userInfo.taskno}</h3>
-                              <div class="experience-box">                        
-                                          <div class="experience-content" style="text-align:justify">                                        
-                                                  <a class="name">${userInfo.task}</a>                                 
-                                          </div>
-                              </div>
-                              <h5 style="text-align:right;color:tomato;margin-top:20px">${userInfo.labeldate} ${userInfo.date}</h5>
-                          </div>
-                         
-                      </div>
-                  </div>
-              </div>
-              
-              
-            </div>
    
         </div>
 
@@ -254,6 +228,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
                            
                           
                         </tr>
@@ -269,6 +244,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                           
                         </tr>
                         <tr>
@@ -282,26 +258,10 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                           
                         </tr>
                        
-                        
-                      
-
-                        <tr>
-                            <td>Pranjal Chaubey</td>
-                            <td>Marketing</td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                            <td><i class="fa fa-close text-danger"></i> </td>
-                        
-                     
-                        </tr>
 
                         <tr>
                         <td>Mohini Mitra</td>
@@ -309,7 +269,8 @@ async function getuserInfoRealtime(userID){
                         <td><i class="fa fa-check text-success"></i> </td>
                         <td><i class="fa fa-check text-success"></i> </td>
                         <td><i class="fa fa-check text-success"></i> </td>
-			      <td><i class="fa fa-check text-success"></i> </td>
+                        <td><i class="fa fa-check text-success"></i> </td>
+                        <td><i class="fa fa-check text-success"></i> </td>
                  
                     </tr>
 
@@ -319,7 +280,8 @@ async function getuserInfoRealtime(userID){
                     <td><i class="fa fa-check text-success"></i> </td>
                     <td><i class="fa fa-check text-success"></i> </td>
                     <td><i class="fa fa-check text-success"></i> </td>
-		          <td><i class="fa fa-check text-success"></i> </td>
+                    <td><i class="fa fa-check text-success"></i> </td>
+                    <td><i class="fa fa-check text-success"></i> </td>
              
                 </tr>
 
@@ -329,7 +291,8 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
-			          <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-check text-success"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                      
                         </tr>
 
@@ -342,6 +305,7 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                      
                         </tr>
 
@@ -351,7 +315,8 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
-			     <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                             
                         </tr>
                       
@@ -362,13 +327,16 @@ async function getuserInfoRealtime(userID){
                             <td><i class="fa fa-check text-success"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
                             <td><i class="fa fa-close text-danger"></i> </td>
-			     <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
+                            <td><i class="fa fa-close text-danger"></i> </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+ 
                        
                         `
                         editProfile["name"].value = userInfo.name
