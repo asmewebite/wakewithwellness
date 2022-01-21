@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
 </head>
 
 <body>
@@ -97,13 +100,17 @@
                   <input type="date" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
        
        
-                  <input id="StatusMod" value="Pending" style="display: none;">
+                  <select id="StatusMod" style="display: none;">
+                    <option value="Pending...">Pending...</option>
+                    <option value="Approved"></option>
+                  </select>
+                
           
        
                 
                 <div class="modal-footer" style="margin-top: 20px;">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Add New Record</button>
+                    <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Apply</button>
                      <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
                      <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()">Delete</button>
                   
@@ -133,7 +140,7 @@
                     
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <p style="color: red;font-style: italic;">This is the list of 5 recent leaves</p>
+                           
                             <table class="table custom-table" id="myTable" style="color: rgb(34, 34, 34);text-align: center;">
                                 <thead>
                                     <tr style="text-align: left;"> 
@@ -206,7 +213,7 @@
           document.getElementById('tbody1').innerHTML="";
 
           stdNo=0;
-            firebase.database().ref('leaverequest').orderByChild('status').limitToLast(5).once('value',
+            firebase.database().ref('leaverequest').orderByChild('status').once('value',
             function(AllRecords){
                 AllRecords.forEach(
                     function(CurrentRecord){
