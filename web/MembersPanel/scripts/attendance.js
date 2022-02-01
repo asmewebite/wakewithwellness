@@ -157,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: #fff;background-color: rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h4 style="color: rgb(173, 137, 137);font-weight: 200;">I, <span style="color:red;font-weight:500">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">Second half of January</span> <span style="font-size: 14px;color: tomato;">[15/01/2022 - 31/02/2022]</span></h4>
+                          <h4 style="color: rgb(173, 137, 137);font-weight: 200;">I, <span style="color:red;font-weight:500">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">First half of February</span> <span style="font-size: 14px;color: tomato;">[01/02/2022 - 15/02/2022]</span></h4>
                           <br><label>Works:</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;"  required ></textarea>
                           
@@ -258,13 +258,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
     event.preventDefault()
-    var Jan2 = document.getElementById('attend').value
-    var Jan2f = document.getElementById('work').value
+    var Feb1 = document.getElementById('attend').value
+    var Feb1f = document.getElementById('work').value
     var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
-         Jan2:Jan2,
-         Jan2f:Jan2f
+         Feb1:Feb1,
+         Feb1f:Feb1f
   
     },{ merge: true}).then(()=>{
       document.querySelector('.alert').style.display = 'block';
