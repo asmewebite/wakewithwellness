@@ -43,37 +43,7 @@ async function getuserInfo(userID){
        `
    }    
     }else{
-      userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-      height: 43vh;margin-top:180px">
-      
-      <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-      <div id="form_header_container" style="width: 100%;
-      height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-      border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-          <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-          font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
-      </div>
-      <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-          <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-           
-          <form autocomplete="off" onsubmit="login(event)" >
-              
-            <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-             
-              <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
-                  <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                  font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                  
-              </div>
-           </form>
-          </div>
-      </div></div>
-  </div>
+      userDetails.innerHTML = `
       `
     
        
@@ -110,51 +80,17 @@ async function getuserInfoRealtime(userID){
       }
     </style>
     
-                        <div class="sidebar" id="sidebar">
-            <div class="sidebar-inner slimscroll">
-                <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title">Main</li>
-                       
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                        </li>
-                        <li >
-							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-						</li>
-				
-						         
-                       
-                        <li>
-                        <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
-                       </li>
-                       <li>
-                        <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
-                       </li>
-                       <li>
-                       <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
-                      </li>
-                        <li>
-                            <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                        
         
-        
-        <div class="page-wrapper">
-        <div class="content">
+       
             <div class="row">
                 <div class="col-sm-7 col-6">
                     <h4 class="page-title" style="float:left;font-weight:500;">My Profile</h4>
                 </div>
                 <div class="col-sm-5 col-6 text-right m-b-30">
-                    <a href="activities.html" style="background-color:cornflowerblue;padding:10px;color:white;border">Dashboard</a>
+                  
                     
-      <button type="button" style="margin-left:10px;" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-      <i class="fa fa-sign-out"></i>
-    </button>
+      
                 </div>
             </div>
             <div class="card-box profile-header" style="box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.336);">
@@ -230,13 +166,16 @@ async function getuserInfoRealtime(userID){
       </ul>
       <div class="tab-content">
         <div class="tab-pane show active" id="about-cont">
-            <div class="row">
+            <div class="row" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);">
                 <div class="col-md-12">
                     <div class="card-box" style="text-align:left">
                         <h3 class="card-title">Education Informations</h3>
                         <div class="experience-box">
                             <ul class="experience-list">
                                 <li>
+                                <div class="experience-user">
+                                <div class="before-circle"></div>
+                            </div>
                                     
                                     <div class="experience-content">
                                         <div class="timeline-content">
@@ -257,7 +196,7 @@ async function getuserInfoRealtime(userID){
         
         
       </div>
-      <div class="card-box mb-0" style="text-align:left">
+      <div class="card-box mb-0" style="text-align:left" style="box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);">
       <h3 class="card-title">Experience [Prior Experience in working for a NGO/CBO]</h3>
       <div class="experience-box">
           <ul class="experience-list">
@@ -277,8 +216,7 @@ async function getuserInfoRealtime(userID){
           </ul>
       </div>
   </div>
-    </div>
-        </div>
+   
                        
                         `
                         editProfile["name"].value = userInfo.name
@@ -307,46 +245,7 @@ async function getuserInfoRealtime(userID){
 
 
     }else{
-        userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-        height: 43vh;margin-top:180px">
-        
-        <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-        <div id="form_header_container" style="width: 100%;
-        height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-        border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-            <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-            font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
-        </div>
-        <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-            <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-             
-            <form autocomplete="off" onsubmit="login(event)" >
-                
-              <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-               
-                <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-                <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
-                    <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                    font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                    
-                </div>
-             </form>
-            </div>
-        </div></div>
-    </div>
-    </div></div>
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/Chart.bundle.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="assets/js/app.js"></script>
+        userDetails.innerHTML = `
         `
     }
 }
@@ -415,20 +314,21 @@ fileButton.addEventListener('change', function uploadImage(e) {
      // upload file
      var uploadTask = storageRef.put(file);
 
-     // The part below is largely copy-pasted from the 'Full Example' section from
-     // https://firebase.google.com/docs/storage/web/upload-files
 
      // update progress bar
      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
           function (snapshot) {
                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-               if(progress=='100')     // Show alert
+               if(progress=='100')     
+               // Show alert
                document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+              
               // Hide alert after 10 seconds
 setTimeout(function(){
     document.querySelector('.success').innerHTML=``;
   },10000);
+               
                uploader.value = progress;
               
                console.log('Upload is ' + progress + '% done');
