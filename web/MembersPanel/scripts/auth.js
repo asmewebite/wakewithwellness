@@ -57,8 +57,6 @@ const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
       document.getElementById("loginli").style.display = "none"
       document.getElementById("signupli").style.display = "none"
       document.getElementById("logoutli").style.display = "block"
-      document.getElementById("Dashboard").style.display = "block"
-      document.getElementById("login").style.display = "none"
       getuserInfoRealtime(user.uid)
       if(user.uid=='TSS0ckznnpM2UkjxHIxp2Y8ivFc2'){
         allUserDetails()
@@ -72,8 +70,6 @@ const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
       document.getElementById("logoutli").style.display = "none"
       document.getElementById("loginli").style.display = "block"
       document.getElementById("signupli").style.display = "block"
-      document.getElementById("Dashboard").style.display = "none"
-      document.getElementById("login").style.display = "block"
       // M.toast({html: "signout success",classes:"green"})
     }
   });
