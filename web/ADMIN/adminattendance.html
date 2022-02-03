@@ -100,6 +100,19 @@
  
   </style>
 
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
 
 
 
@@ -120,13 +133,10 @@
     <div class="container-fluid" style="margin-top: 10px">
       <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">MEMBERS ATTENDANCE</h6>
 
-      
-    
-
 
         <div class="table-responsive custom-table-responsive">
 
-          <input type="text" id="myInput" onkeyup="myFunction()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search Reg No.">
+          <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name...">
 
             <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);cursor: pointer;">
                 <thead>
@@ -213,7 +223,10 @@
         querySnapshot.forEach(doc=>{
             let data = doc.data();
             let row  = `<tr>
-                            <td>${data.regno}</td>
+              
+                       <th scope="row">
+                          <label>${data.regno}</label>
+                        </th>
                             <td>${data.name}</td>
                             <td>${data.Feb2}</td>
                             <td>${data.Feb1}</td>
