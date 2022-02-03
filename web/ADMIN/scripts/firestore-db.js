@@ -154,9 +154,9 @@ async function getuserInfoRealtime(userID){
 		<div class="content">
 			<div class="row">
 			    <div class="col-sm-7 col-6">
-				   <h4 class="page-title">My Profile</h4>
+				   <h4 class="page-title" style="text-align:left;background-color:rgb(231, 231, 231);padding:8px">My Profile</h4>
 			    </div>
- 
+
 			 
 			</div>
 			<div class="card-box profile-header">
@@ -217,7 +217,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
 							<span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
 							<div class="dash-widget-info text-right">
-								<h3>10</h3>
+								<h3>16</h3>
 								<span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
 							</div>
                         </div>
@@ -226,7 +226,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
                             <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
                             <div class="dash-widget-info text-right">
-                                <h3>14</h3>
+                                <h3>15</h3>
                                 <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
@@ -235,7 +235,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
                             <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                             <div class="dash-widget-info text-right">
-                                <h3>8</h3>
+                                <h3>14</h3>
                                 <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
                             <span class="dash-widget-bg4"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                             <div class="dash-widget-info text-right">
-                                <h3>2</h3>
+                                <h3>12</h3>
                                 <span class="widget-title4">Events <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
@@ -253,7 +253,7 @@ async function getuserInfoRealtime(userID){
                          <div class="dash-widget">
                              <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                              <div class="dash-widget-info text-right">
-                                 <h3>6</h3>
+                                 <h3>7</h3>
                                  <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
                              </div>
                          </div>
@@ -263,7 +263,7 @@ async function getuserInfoRealtime(userID){
                          <div class="dash-widget">
                                     <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                                     <div class="dash-widget-info text-right">
-                                         <h3>0</h3>
+                                         <h3>6</h3>
                                          <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
                                     </div>
                          </div>
@@ -358,7 +358,7 @@ async function getuserInfoRealtime(userID){
 							<div class="chart clearfix">
 								<div class="item">
 									<div class="bar">
-										<span class="percent">16%</span>
+										<span class="percent">12</span>
 										<div class="item-progress" data-percent="16">
 											<span class="title">Curation</span>
 										</div>
@@ -366,7 +366,7 @@ async function getuserInfoRealtime(userID){
 								</div>
 								<div class="item">
 									<div class="bar">
-										<span class="percent">71%</span>
+										<span class="percent">15</span>
 										<div class="item-progress" data-percent="71">
 											<span class="title">Editorial</span>
 										</div>
@@ -374,7 +374,7 @@ async function getuserInfoRealtime(userID){
 								</div>
 								<div class="item">
 									<div class="bar">
-										<span class="percent">82%</span>
+										<span class="percent">8</span>
 										<div class="item-progress" data-percent="82">
 											<span class="title">PR</span>
 										</div>
@@ -382,7 +382,7 @@ async function getuserInfoRealtime(userID){
 								</div>
 								<div class="item">
 									<div class="bar">
-										<span class="percent">67%</span>
+										<span class="percent">1</span>
 										<div class="item-progress" data-percent="67">
 											<span class="title">Events</span>
 										</div>
@@ -390,7 +390,7 @@ async function getuserInfoRealtime(userID){
 								</div>
 								<div class="item">
 									<div class="bar">
-										<span class="percent">30%</span>									
+										<span class="percent">6</span>									
 										<div class="item-progress" data-percent="30">
 											<span class="title">Design</span>
 										</div>
@@ -398,7 +398,7 @@ async function getuserInfoRealtime(userID){
 								</div>
                                 <div class="item">
 									<div class="bar">
-										<span class="percent">67%</span>
+										<span class="percent">2</span>
 										<div class="item-progress" data-percent="67">
 											<span class="title">Marketing</span>
 										</div>
@@ -703,6 +703,24 @@ function sendMessage(event){
 
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
