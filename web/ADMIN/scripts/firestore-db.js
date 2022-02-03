@@ -106,7 +106,7 @@ async function getuserInfoRealtime(userID){
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Members View</li>
+                        <li class="menu-title">Admins Panel</li>
 
                        
 
@@ -146,316 +146,389 @@ async function getuserInfoRealtime(userID){
 
 
 
+
+
+        
         <div class="page-wrapper">
-        <div class="content">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>10</h3>
-                            <span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
+
+		<div class="content">
+			<div class="row">
+			    <div class="col-sm-7 col-6">
+				   <h4 class="page-title">My Profile</h4>
+			    </div>
+ 
+			 
+			</div>
+			<div class="card-box profile-header">
+			    <div class="row">
+				   <div class="col-md-12">
+					  <div class="profile-view">
+						 <div class="profile-img-wrap">
+							<div class="profile-img">
+							    <a href="#"><img class="avatar" src="../assets/img/user.png" alt=""></a>
+							</div>
+						 </div>
+						 <div class="profile-basic">
+							<div class="row">
+							    <div class="col-md-5">
+								   <div class="profile-info-left" style="text-align:left">
+									  <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
+									  <small class="text-muted" style="font-size:15px;">${userInfo.department}</small>
+									  <div class="staff-id">Registration ID : ${userInfo.regno}</div>
+									  
+								   </div>
+							    </div>
+							    <div class="col-md-7">
+								   <ul class="personal-info" style="text-align:left">
+									  <li>
+										 <span class="title">Phone:</span>
+										 <span class="text"><a href="">${userInfo.phone}</a></span>
+									  </li>
+									  <li>
+										 <span class="title">Email:</span>
+										 <span class="text"><a href=""><span class="__cf_email__" data-cfemail="97f4e5fee4e3fef9f6f0e5f8e1f2e4d7f2eff6fae7fbf2b9f4f8fa">${userInfo.email}</span></a></span>
+									  </li>
+									 
+									  <li>
+										 <span class="title">Address:</span>
+										 <span class="text">${userInfo.address}</span>
+									  </li>
+									  <li>
+										 <span class="title">Gender:</span>
+										 <span class="text">${userInfo.gender}</span>
+									  </li>
+								   </ul>
+							    </div>
+							</div>
+						 </div>
+					  </div>                        
+				   </div>
+			    </div>
+			</div>
+			 
+		 </div>
+
+
+
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget">
+							<span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+							<div class="dash-widget-info text-right">
+								<h3>10</h3>
+								<span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
+							</div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>14</h3>
-                            <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>14</h3>
+                                <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>8</h3>
-                            <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>8</h3>
+                                <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg4"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>2</h3>
-                            <span class="widget-title4">Events <i class="fa fa-check" aria-hidden="true"></i></span>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg4"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>2</h3>
+                                <span class="widget-title4">Events <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                     <div class="dash-widget">
-                         <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                         <div class="dash-widget-info text-right">
-                             <h3>6</h3>
-                             <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                         <div class="dash-widget">
+                             <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                             <div class="dash-widget-info text-right">
+                                 <h3>6</h3>
+                                 <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
+                             </div>
                          </div>
                      </div>
-                 </div>
 
-                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                     <div class="dash-widget">
-                                <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                <div class="dash-widget-info text-right">
-                                     <h3>0</h3>
-                                     <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
-                                </div>
+                     <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                         <div class="dash-widget">
+                                    <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                                    <div class="dash-widget-info text-right">
+                                         <h3>0</h3>
+                                         <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
+                                    </div>
+                         </div>
                      </div>
-                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-8 col-xl-8">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title d-inline-block">MEMBER'S PANEL</h4> 
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table mb-0">
-                                
-                                    <tbody>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="adminattendance.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="adminattendance.html"  class="btn btn-outline-success take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                            
-                                                <h2><a href="recruitments.html">Registrations</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="recruitments.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                            
-                                                <h2><a href="agreementpanel.html">Agreements</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="agreementpanel.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="members.html">Members List</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="members.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="../../leavepanel.html">Leave Requests</a></h2>
-                                            </td>                 
-                
-                                            <td class="text-right">
-                                                <a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+				
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title d-inline-block">MEMBER'S PANEL</h4> 
+							</div>
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table class="table mb-0">
+									
+										<tbody>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="adminattendance.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
+												</td>                 
 
-                     <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                    <div class="hospital-barchart">
-                        <h4 class="card-title d-inline-block">Members Management</h4>
-                    </div>
-                    <div class="bar-chart">
-                        
-                        <div class="chart clearfix">
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">16%</span>
-                                    <div class="item-progress" data-percent="16">
-                                        <span class="title">Curation</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">71%</span>
-                                    <div class="item-progress" data-percent="71">
-                                        <span class="title">Editorial</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">82%</span>
-                                    <div class="item-progress" data-percent="82">
-                                        <span class="title">Events</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">67%</span>
-                                    <div class="item-progress" data-percent="67">
-                                        <span class="title">PR</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                            <div class="bar">
-                                <span class="percent">67%</span>
-                                <div class="item-progress" data-percent="67">
-                                    <span class="title">Marketing</span>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">30%</span>									
-                                    <div class="item-progress" data-percent="30">
-                                        <span class="title">Design & Media</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-            
-            </div>
-            
+												<td class="text-right">
+													<a href="adminattendance.html"  class="btn btn-outline-success take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+												
+													<h2><a href="recruitments.html">Registrations</a></h2>
+												</td>                 
 
-                <div class="row">
-                <div class="col-12 col-md-6 col-lg-8 col-xl-8">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title d-inline-block">INTERNS'S PANEL</h4> 
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="table-responsive">
-                                <table class="table mb-0">
-                                
-                                    <tbody>
-                                        <tr>
+												<td class="text-right">
+													<a href="recruitments.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+												
+													<h2><a href="agreementpanel.html">Agreements</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="agreementpanel.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="members.html">Members List</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="members.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="../../leavepanel.html">Leave Requests</a></h2>
+												</td>                 
+					
+												<td class="text-right">
+													<a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+
+                                            <tr>
                                             <td style="min-width: 200px;">
                                                 
-                                                <h2><a href="internattendance.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="internattendance.html"  class="btn btn-outline-success take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                            
-                                                <h2><a href="registrations.html">Registrations</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="registrations.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                            
-                                                <h2><a href="Internagreement.html">Agreements</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="Internagreement.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="internmembers.html">Members List</a></h2>
-                                            </td>                 
-
-                                            <td class="text-right">
-                                                <a href="internmembers.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="InternLeave.html">Leave Requests</a></h2>
+                                                <h2><a href="payments.html">Payments</a></h2>
                                             </td>                 
                 
                                             <td class="text-right">
-                                                <a href="InternLeave.html" class="btn btn-outline-primary take-btn">View</a>
+                                                <a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                                                   <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="../interns/task.html">Task Updates</a></h2>
-                                            </td>                 
+                         <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+						<div class="hospital-barchart">
+							<h4 class="card-title d-inline-block">Member's Management</h4>
+						</div>
+						<div class="bar-chart">
+							
+							<div class="chart clearfix">
+								<div class="item">
+									<div class="bar">
+										<span class="percent">16%</span>
+										<div class="item-progress" data-percent="16">
+											<span class="title">Curation</span>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="bar">
+										<span class="percent">71%</span>
+										<div class="item-progress" data-percent="71">
+											<span class="title">Editorial</span>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="bar">
+										<span class="percent">82%</span>
+										<div class="item-progress" data-percent="82">
+											<span class="title">PR</span>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="bar">
+										<span class="percent">67%</span>
+										<div class="item-progress" data-percent="67">
+											<span class="title">Events</span>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="bar">
+										<span class="percent">30%</span>									
+										<div class="item-progress" data-percent="30">
+											<span class="title">Design</span>
+										</div>
+									</div>
+								</div>
+                                <div class="item">
+									<div class="bar">
+										<span class="percent">67%</span>
+										<div class="item-progress" data-percent="67">
+											<span class="title">Marketing</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					 </div>
                 
-                                            <td class="text-right">
-                                                <a href="../interns/task.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				</div>
+				
 
-                     <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-                    <div class="hospital-barchart">
-                        <h4 class="card-title d-inline-block">Interns Management</h4>
-                    </div>
-                    <div class="bar-chart">
-                    
-                        <div class="chart clearfix">
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">16%</span>
-                                    <div class="item-progress" data-percent="16">
-                                        <span class="title">Design & Media</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="bar">
-                                    <span class="percent">71%</span>
-                                    <div class="item-progress" data-percent="71">
-                                        <span class="title">Marketing</span>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                          
-                        
-                        </div>
-                    </div>
-                 </div>
-            
+                    <div class="row">
+					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title d-inline-block">INTERNS'S PANEL</h4> 
+							</div>
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table class="table mb-0">
+									
+										<tbody>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="internattendance.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="internattendance.html"  class="btn btn-outline-success take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+												
+													<h2><a href="registrations.html">Registrations</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="registrations.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+												
+													<h2><a href="Internagreement.html">Agreements</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="Internagreement.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="internmembers.html">Members List</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="internmembers.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="InternLeave.html">Leave Requests</a></h2>
+												</td>                 
+					
+												<td class="text-right">
+													<a href="InternLeave.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+
+                                                       <tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="../interns/task.html">Task Updates</a></h2>
+												</td>                 
+					
+												<td class="text-right">
+													<a href="../interns/task.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                         <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+						<div class="hospital-barchart">
+							<h4 class="card-title d-inline-block">Intern's Management</h4>
+						</div>
+						<div class="bar-chart">
+						
+							<div class="chart clearfix">
+								<div class="item">
+									<div class="bar">
+										<span class="percent">6</span>
+										<div class="item-progress" data-percent="16">
+											<span class="title">DESIGN</span>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="bar">
+										<span class="percent">3</span>
+										<div class="item-progress" data-percent="71">
+											<span class="title">Marketing</span>
+										</div>
+									</div>
+								</div>
+								
+							
+								
+							</div>
+						</div>
+					 </div>
+                
+				</div>
+
             </div>
-
+           
         </div>
-       
-    </div>
 
 
 
-
-
-
+    
 
 
 
@@ -630,24 +703,6 @@ function sendMessage(event){
 
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
