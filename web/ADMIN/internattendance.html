@@ -206,7 +206,7 @@
         db.settings({ timestampInSnapshots: true});
 
 
-        db.collection("attendance").get().then(querySnapshot=>{
+        db.collection("attendance").orderBy('regno').get().then(querySnapshot=>{
         querySnapshot.forEach(doc=>{
             let data = doc.data();
             let row  = `<tr>
