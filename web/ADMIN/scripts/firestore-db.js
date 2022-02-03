@@ -149,7 +149,7 @@ async function getuserInfoRealtime(userID){
 
 
         
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="background-color:white">
 
 		<div class="content">
 			<div class="row">
