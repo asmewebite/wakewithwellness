@@ -158,10 +158,10 @@ async function getuserInfoRealtime(userID){
 <div class="page-wrapper">
             <div class="content">
             <div class="container-fluid" style="margin-bottom:40px;">
-            <buttom onclick="location.href='activities.html'" style="background-color:cornflowerblue;float:right;padding:3px;padding-left:10px;padding-right:10px;color:white;border"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <buttom onclick="location.href='activities.html'" style="background-color:cornflowerblue;float:right;padding:7px;padding-left:10px;padding-right:10px;color:white;border"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
             </div>
-            <div class="container-fluid" style="padding:15px;background-color:green;margin-bottom:15px">
-            <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}<span style="font-weight:500;color:white;margin-left:12px;font-size:18px">${userInfo.regno}</span></h3>
+            <div class="container-fluid" style="padding:15px;border: 1px solid #009efb;margin-bottom:15px">
+            <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}<span style="font-weight:500;color:white;margin-left:12px;font-size:18px;color:#df0f00">${userInfo.regno}</span></h3>
            
             </div>
                 <div class="row">
