@@ -150,7 +150,7 @@ async function getuserInfoRealtime(userID){
                     <h4 class="page-title" style="float:left;font-weight:500;">My Profile</h4>
                 </div>
                 <div class="col-sm-5 col-6 text-right m-b-30">
-                    <a href="activities.html" style="background-color:#df0f00;padding:10px;color:white;border">Dashboard</a>
+                    <a href="activities.html" style="background-color:#009efb;padding:10px;color:white;border">Dashboard</a>
                     
       <button type="button" style="margin-left:10px;border-color:#df0f00;background-color:black;padding:7px;"  data-toggle="modal" data-target="#exampleModal">
       <i class="fa fa-sign-out" style="color:#df0f00"></i>
@@ -175,7 +175,7 @@ async function getuserInfoRealtime(userID){
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:justify">
                                             <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}</h3>
-                                            <div class="staff-id">Registration ID : <span style="font-weight:normal;color:red">${userInfo.regno}</span></div>
+                                            <div class="staff-id">Registration ID : <span style="font-weight:normal;color:#009efb">${userInfo.regno}</span></div>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:white"> ${userInfo.department}</span></h4>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department II :</span><span style="font-weight:500;color:white"> ${userInfo.department2}</span></h4>
                                             
@@ -212,7 +212,7 @@ async function getuserInfoRealtime(userID){
                                         </ul>
                                     </div>
                                     
-                                    <button style="background-color: #df0f00;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3">Edit details</button> 
+                                    <button style="background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3">Edit details</button> 
          
                                
                                
@@ -224,7 +224,7 @@ async function getuserInfoRealtime(userID){
             </div>
             
     <div class="profile-tabs" >
-      <ul class="nav nav-tabs nav-tabs-bottom" style="background-color:black;border-color:#df0f00">
+      <ul class="nav nav-tabs nav-tabs-bottom" style="background-color:black;border-color:#009efb">
         <li class="nav-item" style="background-color:black"><a style="background-color:black;color:white" class="nav-link active" href="#about-cont" data-toggle="tab">About</a></li>
       
       </ul>
