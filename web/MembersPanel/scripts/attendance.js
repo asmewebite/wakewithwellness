@@ -152,23 +152,23 @@ async function getuserInfoRealtime(userID){
                         
                         <div class="testbox">
                         <form onsubmit="updateattendance(event)" id="attendanceform">
-                        <h1 style="color: cornflowerblue;text-align: center;">WEEKLY ATTENDANCE</h1>
+                        <h1 style="color: #fff;text-align: center;">WEEKLY ATTENDANCE</h1>
                        
                           <hr>
-                          <p class="container-fluid" style="text-align: center;font-size: 20px;color: #fff;background-color: rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
+                          <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h4 style="color: rgb(173, 137, 137);font-weight: 200;">I, <span style="color:red;font-weight:500">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">First half of February</span> <span style="font-size: 14px;color: tomato;">[01/02/2022 - 15/02/2022]</span></h4>
+                          <h5 style="color: white;font-weight: 200;font-size:12px;text-align:left">I, <span style="color:#df0f00;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">First half of February</span> <span style="font-size: 14px;color: #df0f00;">[01/02/2022 - 15/02/2022]</span></h5>
                           <br><label>Works:</label>
-                        <textarea id="work" maxlength="300" style="padding: 1px;"  required ></textarea>
+                        <textarea id="work" maxlength="300" style="padding: 1px;color:white"  required ></textarea>
                           
-                          <select id="attend" style="color: rgb(19, 19, 19);font-weight: 600;">
-                            <option style="color: rgb(5, 216, 33);font-weight: 600;" value="Present">Present</option>
-                            <option style="color: red;font-weight: 600;" value="Absent">Absent</option>
+                          <select id="attend" style="color: white;font-weight: 400;">
+                            <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
+                            <option style="color: red;font-weight: 400;" value="Absent">Absent</option>
                           </select>
                                 <div class="alert">Attendance posted successfully</div>
                           <div class="btn-block">
-                            <button onclick="location.href='attenUpdates.html'" style="background-color:tomato;"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
-                            <button style="margin-left:16px" id="send" type="submit" >Post</button> 
+                            <button onclick="location.href='attenUpdates.html'" style="border: 1px solid #df0f00;background-color:black;color:#df0f00"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
+                            <button style="margin-left:16px;background-color:#df0f00" id="send" type="submit" >Post</button> 
                              </div>
                           <div class="container-fluid" style="margin-bottom:40px;">
            
@@ -257,32 +257,32 @@ async function getuserInfoRealtime(userID){
 
 
 function updateattendance(event){
-    event.preventDefault()
-    var Feb1 = document.getElementById('attend').value
-    var Feb1f = document.getElementById('work').value
-    var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
-  
-    var setWithMerge = userRef.set({
-         Feb1:Feb1,
-         Feb1f:Feb1f
-  
-    },{ merge: true}).then(()=>{
-      document.querySelector('.alert').style.display = 'block';
-  
-       // Show alert
-   document.querySelector('.alert').style.display = 'block';
-  
-   // Hide alert after 3 seconds
-   setTimeout(function(){
-     document.querySelector('.alert').style.display = 'none';
-   },5000);
-  
-   // Clear form
-   document.getElementById('attendanceform').reset();
-  
-    });
-  }
-  
+  event.preventDefault()
+  var Feb1 = document.getElementById('attend').value
+  var Feb1f = document.getElementById('work').value
+  var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
+
+  var setWithMerge = userRef.set({
+       Feb1:Feb1,
+       Feb1f:Feb1f
+
+  },{ merge: true}).then(()=>{
+    document.querySelector('.alert').style.display = 'block';
+
+     // Show alert
+ document.querySelector('.alert').style.display = 'block';
+
+ // Hide alert after 3 seconds
+ setTimeout(function(){
+   document.querySelector('.alert').style.display = 'none';
+ },5000);
+
+ // Clear form
+ document.getElementById('attendanceform').reset();
+
+  });
+}
+
 
 
 
