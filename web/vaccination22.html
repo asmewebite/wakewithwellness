@@ -308,15 +308,90 @@ height: 250px;
                  <select id="venue" name="venue" required>
                    <option value="" disabled selected>--Select place--</option>
                    <option value="0">School/College</option>
-                   <option value="1">Area</option>
-                   <option value="2">Other</option>
+                   <option value="1">Organisation</option>
+                   <option value="2">Entity</option>
+                   <option value="3">Area</option>
+                   <option value="4">Other</option>
           
               
                  </select>
                </div>
              </div>
 
-<div id="hidden_div" style="display: none;">
+
+             <div id="school_div" style="display: none;">
+
+              <div class="row" >
+                <div class="col-25">
+                  <label for="Institute">Name of the Institute<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="orgName" name="institute" placeholder="Name of the Institute">
+                </div>
+              </div>
+                        
+            
+              <div class="row" >
+                <div class="col-25">
+                  <label for="other">Contact info of a professional associated with the organisation</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="Econtact" name="address" placeholder="Contat no.">
+                </div>
+              </div>
+            
+            
+            </div>
+
+
+
+
+            <div id="org_div" style="display: none;">
+
+              <div class="row" >
+                <div class="col-25">
+                  <label for="Institute">Name of the Organisation<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="orgName" name="institute" placeholder="Name of the Organisation">
+                </div>
+              </div>
+                        
+            
+              <div class="row" >
+                <div class="col-25">
+                  <label for="other">Postal Address<span style="color: red;">*</span></label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="Orgaddress" name="address" placeholder="Address">
+                </div>
+              </div>
+            
+            
+            </div>
+
+
+
+
+
+
+
+
+<div class="row" id="area_div" style="display: none;">
+  <div class="col-25">
+    <label for="other">Postal Address<span style="color: red;">*</span></label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="Aaddress" name="address" placeholder="Address">
+  </div>
+</div>
+
+
+
+
+
+
+<div id="other_div" style="display: none;">
              <div class="row" >
                <div class="col-25">
                  <label for="other">Name of place<span style="color: red;">*</span></label>
@@ -339,51 +414,36 @@ height: 250px;
 
 
 
-<div id="instname" style="display: none;">
-             <div class="row" >
-               <div class="col-25">
-                 <label for="Institute">Educational Institute<span style="color: red;">*</span></label>
-               </div>
-               <div class="col-75">
-                 <input type="text" id="instName" name="institute" placeholder="Name of the Educational Institute">
-               </div>
-             </div>
 
+<div id="entity_div" style="display: none;">
 
-             <div class="row" >
-              <div class="col-25">
-                <label for="other">Postal Address<span style="color: red;">*</span></label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="Eaddress" name="address" placeholder="Address">
-              </div>
-            </div>
+  <div class="row" >
+    <div class="col-25">
+      <label for="Institute">Name of the Organisation<span style="color: red;">*</span></label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="orgName" name="institute" placeholder="Name of the Organisation">
+    </div>
+  </div>
+            
 
-</div>
-
-
-
-<div id="area_div" style="display: none;">
-             <div class="row" >
-              <div class="col-25">
-                <label for="Institute">Organisation Name<span style="color: red;">*</span></label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="orgName" name="orgname" placeholder="Organisation">
-              </div>
-            </div>
-
-            <div class="row" >
-              <div class="col-25">
-                <label for="other">Postal Address<span style="color: red;">*</span></label>
-              </div>
-              <div class="col-75">
-                <input type="text" id="Aaddress" name="address" placeholder="Address">
-              </div>
-            </div>
+  <div class="row" >
+    <div class="col-25">
+      <label for="other">Postal Address<span style="color: red;">*</span></label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Aaddress" name="address" placeholder="Address">
+    </div>
+  </div>
 
 
 </div>
+
+
+
+
+
+
 
 
             <div class="row">
@@ -535,12 +595,16 @@ height: 250px;
 
 <script>
 document.getElementById('venue').addEventListener('change', function () {
-    var style = this.value == 2 ? 'block' : 'none';
-    var area = this.value == 1 ? 'block' : 'none';
-    var none = this.value == 0 ? 'block' : 'none';
-    document.getElementById('hidden_div').style.display = style;
+  var other = this.value == 4 ? 'block' : 'none';
+  var area = this.value == 3 ? 'block' : 'none';
+    var entity = this.value == 2 ? 'block' : 'none';
+    var org = this.value == 1 ? 'block' : 'none';
+    var school = this.value == 0 ? 'block' : 'none';
+    document.getElementById('other_div').style.display = other;
     document.getElementById('area_div').style.display = area;
-    document.getElementById('instname').style.display = none;
+    document.getElementById('entity_div').style.display = entity;
+    document.getElementById('org_div').style.display = org;
+    document.getElementById('school_div').style.display = school;
 });
   </script>
 
