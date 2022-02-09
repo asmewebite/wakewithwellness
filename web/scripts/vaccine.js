@@ -24,19 +24,22 @@ var firebaseConfig = {
  
    // Get values
    var name = getInputVal('name');
-   var email = getInputVal('email');
    var contact = getInputVal('contact');
    var whatsapp = getInputVal('whatsapp');
  
    var venue = getInputVal('venue');
    var other = getInputVal('other');
    var instName = getInputVal('instName');
+   var orgName = getInputVal('orgName');
+   var Oaddress = getInputVal('Oaddress');
+   var Eaddress = getInputVal('Eaddress');
+   var Aaddress = getInputVal('Aaddress');
 
    var VaccineNo = getInputVal('VaccineNo');
 
  
    // Save message
-   saveData(name, email, contact, whatsapp, venue, other, instName, VaccineNo);
+   saveData(name, contact, whatsapp, venue, other, instName, orgName,  Oaddress,Eaddress, Aaddress, VaccineNo);
  
  
   // Show alert
@@ -57,16 +60,19 @@ var firebaseConfig = {
  }
  
  // Save message to firebase
- function saveData(name, email, contact, whatsapp, venue, other, instName, VaccineNo){
+ function saveData(name, contact, whatsapp, venue, other, instName, orgName, Oaddress,Eaddress, Aaddress, VaccineNo){
    var newDataRef = dataRef.push();
    newDataRef.set({
      name: name,
-     email:email,
      contact:contact,
      whatsapp:whatsapp,
      venue:venue,
      other:other,
      instName:instName,
+     orgName:orgName,
+     Oaddress:Oaddress,
+     Eaddress:Eaddress,
+     Aaddress:Aaddress,
      VaccineNo:VaccineNo,
    });
  }
