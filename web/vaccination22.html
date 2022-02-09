@@ -219,7 +219,7 @@ height: 250px;
  
 </head>
 
-<body style="background-color:#fff"  oncontextmenu="return false">
+<body style="background-color:#fff" oncontextmenu="return false">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
@@ -267,7 +267,8 @@ height: 250px;
         <div class="container" id="formcontainer" style="background-color: rgb(233, 233, 233);border-radius: 10px;border: 1px solid rgb(177, 177, 177);">
           
           <h4 style="text-align: center;margin-top: 15px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">WakeWithWellness</h4>
-          <h1 style="text-align: center;font-weight: 700;color: #0086df;">Vaccination Program</h1>
+          <h3 style="text-align: center;font-weight: 700;color: #0086df;">Vaccination Drive - Guwahati</h3>
+          <p style="text-align: center;font-size: 13px;color: rgb(33, 2, 105);margin-top: -5px;font-weight: 600;">Provide us the details of places where a vaccination drive is obligatory</p>
          
           <hr >
 
@@ -278,24 +279,17 @@ height: 250px;
                 <label for="name">Name<span style="color: red;">*</span></label>
               </div>
               <div class="col-75">
-                <input type="text" id="name" name="name" placeholder="Your name.." required>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
               </div>
             </div>
             
-            <div class="row">
-              <div class="col-25">
-                <label for="email">E-mail</label>
-              </div>
-              <div class="col-75">
-                <input type="email" id="email" name="email" placeholder="Your e-mail..">
-              </div>
-            </div>
+
             <div class="row">
               <div class="col-25">
                 <label for="contact">Contact no.<span style="color: red;">*</span></label>
               </div>
               <div class="col-75">
-                <input type="tel" id="contact" name="contact"  maxlength="12"  title="Ten digits code"  placeholder="Your contact number.." required>
+                <input type="tel" id="contact" name="contact"  maxlength="12"  title="Ten digits code"  placeholder="Your contact number" required>
               </div>
             </div>
             <div class="row">
@@ -303,44 +297,93 @@ height: 250px;
                 <label for="whatsapp">Whatsapp no.<span style="color: red;">*</span></label>
               </div>
               <div class="col-75">
-                <input type="tel" id="whatsapp" name="whatsapp"  maxlength="12"  title="Ten digits code"  placeholder="Your whatsapp number.." required>
+                <input type="tel" id="whatsapp" name="whatsapp"  maxlength="12"  title="Ten digits code"  placeholder="Your whatsapp number" required>
               </div>
             </div>
             <div class="row">
                <div class="col-25">
-                 <label for="venue">Venue<span style="color: red;">*</span></label>
+                 <label for="venue">Type of place<span style="color: red;">*</span></label>
                </div>
                <div class="col-75">
                  <select id="venue" name="venue" required>
                    <option value="" disabled selected>--Select venue--</option>
-                   <option value="0">School</option>
-                   <option value="0">College/University</option>
-                   <option value="1">Other</option>
+                   <option value="0">School/College</option>
+                   <option value="1">Area</option>
+                   <option value="2">Other</option>
           
               
                  </select>
                </div>
              </div>
 
-
-             <div class="row" id="hidden_div" style="display: none;">
+<div id="hidden_div" style="display: none;">
+             <div class="row" >
                <div class="col-25">
-                 <label for="other">Other<span style="color: red;">*</span></label>
+                 <label for="other">Name of place<span style="color: red;">*</span></label>
                </div>
                <div class="col-75">
-                 <input type="text" id="other" name="other" placeholder="Other places">
+                 <input type="text" id="other" name="other" placeholder="Place">
+               </div>
+             </div>
+
+             <div class="row" >
+              <div class="col-25">
+                <label for="other">Postal Address<span style="color: red;">*</span></label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Oaddress" name="address" placeholder="Address">
+              </div>
+            </div>
+
+</div>
+
+
+
+<div id="instname" style="display: none;">
+             <div class="row" >
+               <div class="col-25">
+                 <label for="Institute">Educational Institute<span style="color: red;">*</span></label>
+               </div>
+               <div class="col-75">
+                 <input type="text" id="instName" name="institute" placeholder="Name of the Educational Institute">
                </div>
              </div>
 
 
-             <div class="row" id="instname" style="display: none;">
-               <div class="col-25">
-                 <label for="Institute">Education Institute<span style="color: red;">*</span></label>
-               </div>
-               <div class="col-75">
-                 <input type="text" id="instName" name="institute" placeholder="Name of the Education Institute..">
-               </div>
-             </div>
+             <div class="row" >
+              <div class="col-25">
+                <label for="other">Postal Address<span style="color: red;">*</span></label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Eaddress" name="address" placeholder="Address">
+              </div>
+            </div>
+
+</div>
+
+
+
+<div id="area_div" style="display: none;">
+             <div class="row" >
+              <div class="col-25">
+                <label for="Institute">Organisation Name<span style="color: red;">*</span></label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="orgName" name="orgname" placeholder="Organisation">
+              </div>
+            </div>
+
+            <div class="row" >
+              <div class="col-25">
+                <label for="other">Postal Address<span style="color: red;">*</span></label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Aaddress" name="address" placeholder="Address">
+              </div>
+            </div>
+
+
+</div>
 
 
             <div class="row">
@@ -348,7 +391,7 @@ height: 250px;
                 <label for="institution">Number of vaccines required<span style="color: red;">*</span></label>
               </div>
               <div class="col-75">
-                <input type="number" id="VaccineNo" name="no.ofvaccines" placeholder="No. of vaccines required.." required>
+                <input type="number" id="VaccineNo" name="no.ofvaccines" placeholder="No. of non-vaccinated people (Approx)" required>
               </div>
             </div>
         
@@ -492,9 +535,11 @@ height: 250px;
 
 <script>
 document.getElementById('venue').addEventListener('change', function () {
-    var style = this.value == 1 ? 'block' : 'none';
+    var style = this.value == 2 ? 'block' : 'none';
+    var area = this.value == 1 ? 'block' : 'none';
     var none = this.value == 0 ? 'block' : 'none';
     document.getElementById('hidden_div').style.display = style;
+    document.getElementById('area_div').style.display = area;
     document.getElementById('instname').style.display = none;
 });
   </script>
