@@ -28,18 +28,21 @@ var firebaseConfig = {
    var whatsapp = getInputVal('whatsapp');
  
    var venue = getInputVal('venue');
-   var other = getInputVal('other');
+   
    var instName = getInputVal('instName');
+   var Instcontact = getInputVal('Instcontact');
    var orgName = getInputVal('orgName');
-   var Oaddress = getInputVal('Oaddress');
-   var Eaddress = getInputVal('Eaddress');
+   var Orgcontact = getInputVal('Orgcontact');
+   var EntityName = getInputVal('EntityName');
+   var Entitycontact = getInputVal('Entitycontact');
    var Aaddress = getInputVal('Aaddress');
-
+   var other = getInputVal('other');
+   var Oaddress = getInputVal('Oaddress');
    var VaccineNo = getInputVal('VaccineNo');
 
  
    // Save message
-   saveData(name, contact, whatsapp, venue, other, instName, orgName,  Oaddress,Eaddress, Aaddress, VaccineNo);
+   saveData(name, contact, whatsapp, venue, instName, Instcontact, orgName, Orgcontact, EntityName, Entitycontact, Aaddress, other, Oaddress,  VaccineNo);
  
  
   // Show alert
@@ -60,19 +63,22 @@ var firebaseConfig = {
  }
  
  // Save message to firebase
- function saveData(name, contact, whatsapp, venue, other, instName, orgName, Oaddress,Eaddress, Aaddress, VaccineNo){
+ function saveData(name, contact, whatsapp, venue, instName, Instcontact, orgName, Orgcontact, EntityName, Entitycontact, Aaddress, other, Oaddress,  VaccineNo){
    var newDataRef = dataRef.push();
    newDataRef.set({
      name: name,
      contact:contact,
      whatsapp:whatsapp,
      venue:venue,
-     other:other,
      instName:instName,
+     Instcontact:Instcontact,
      orgName:orgName,
-     Oaddress:Oaddress,
-     Eaddress:Eaddress,
+     Orgcontact:Orgcontact,
+     EntityName:EntityName,
+     Entitycontact:Entitycontact,
      Aaddress:Aaddress,
+     other:other,
+     Oaddress:Oaddress,
      VaccineNo:VaccineNo,
    });
  }
