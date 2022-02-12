@@ -26,6 +26,7 @@ var firebaseConfig = {
    var name = getInputVal('name');
    var gender = getInputVal('gender');
    var qualifications = getInputVal('qualifications');
+   var blood = getInputVal('blood');
    var email = getInputVal('email');
    var contact = getInputVal('contact');
    var whatsapp = getInputVal('whatsapp');
@@ -43,7 +44,7 @@ var firebaseConfig = {
  
  
    // Save message
-   saveData(name,gender, email, contact, whatsapp, qualifications, work, state, address, country, experience, checkbox);
+   saveData(name,gender, email, contact, whatsapp, qualifications,blood, work, state, address, country, experience, checkbox);
  
  
   // Show alert
@@ -64,7 +65,7 @@ var firebaseConfig = {
  }
  
  // Save message to firebase
- function saveData(name, gender, email, contact, whatsapp, qualifications, work, state, address, country, experience, checkbox){
+ function saveData(name, gender, email, contact, whatsapp, qualifications,blood, work, state, address, country, experience, checkbox){
    var newDataRef = dataRef.push();
    newDataRef.set({
      name: name,
@@ -73,6 +74,7 @@ var firebaseConfig = {
      contact:contact,
      whatsapp:whatsapp,
      qualifications:qualifications,
+     blood:blood,
      work:work,
      address:address,
      state:state,
