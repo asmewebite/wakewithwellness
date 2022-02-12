@@ -106,7 +106,7 @@
                          <th scope="col">Email</th>
                          <th scope="col">Contact</th>
                          <th scope="col">What they take mental health to be?</th>
-                         <th scope="col">Q-2</th>
+
                          <th scope="col">Do they want to know the remedies of any mental health problem they or some loved one are currently going through? If yes than what</th>
                         
                          <th scope="col">Did you got your mental health affected by COVID-19 restrictions?</th>
@@ -178,13 +178,13 @@
                         var email = CurrentRecord.val().email;
                         var contact = CurrentRecord.val().contact;
                         var Q1 = CurrentRecord.val().Q1;
-                        var Q2 = CurrentRecord.val().Q2;
+    
                         var yes = CurrentRecord.val().yes;
                         var Q3 = CurrentRecord.val().Q3;
               
 
 
-                        AddItemsToTable(name,email,contact,Q1,Q2,yes,Q3);
+                        AddItemsToTable(name,email,contact,Q1,yes,Q3);
 
                     }
                 );
@@ -206,7 +206,7 @@
             var td4 = document.createElement('td');
             var td5 = document.createElement('td');
             var td6 = document.createElement('td');
-            var td7 = document.createElement('td');
+   
   
             
             td0.innerHTML = ++stdNo;
@@ -214,9 +214,8 @@
             td2.innerHTML = email;
             td3.innerHTML = contact;
             td4.innerHTML = Q1;
-            td5.innerHTML = Q2;
-            td6.innerHTML = yes;
-            td7.innerHTML = Q3;
+            td5.innerHTML = yes;
+            td6.innerHTML = Q3;
   
         
             
@@ -229,7 +228,7 @@
             trow.appendChild(td4); 
             trow.appendChild(td5);
             trow.appendChild(td6);
-            trow.appendChild(td7);
+        
            
  
             
