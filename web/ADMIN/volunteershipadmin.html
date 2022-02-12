@@ -107,6 +107,7 @@
                          <th scope="col">Contact</th>
                          <th scope="col">Whatsapp</th>
                          <th scope="col">Gender</th>
+                         <th scope="col">Blood</th>
                          <th scope="col">Education</th>
                          <th scope="col">WorkPlace</th>
                          <th scope="col">Experience</th>
@@ -182,6 +183,7 @@
                         var contact = CurrentRecord.val().contact;
                         var whatsapp = CurrentRecord.val().whatsapp;
                         var gender = CurrentRecord.val().gender;
+                        var blood = CurrentRecord.val().blood;
                         var qualifications = CurrentRecord.val().qualifications;
                         var work = CurrentRecord.val().work;
                         var experience = CurrentRecord.val().experience;
@@ -191,7 +193,7 @@
                         var status = CurrentRecord.val().status;
 
 
-                        AddItemsToTable(name,email,contact,whatsapp,gender,qualifications,work,experience,address,state,country,status);
+                        AddItemsToTable(name,email,contact,whatsapp,gender,blood,qualifications,work,experience,address,state,country,status);
 
                     }
                 );
@@ -203,7 +205,7 @@
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,email,contact,whatsapp,gender,qualifications,work,experience,address,state,country,status){
+        function AddItemsToTable(name,email,contact,whatsapp,gender,blood,qualifications,work,experience,address,state,country,status){
           var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td0 = document.createElement('td');
@@ -219,6 +221,7 @@
             var td10 = document.createElement('td');
             var td11 = document.createElement('td');
             var td12 = document.createElement('td');
+            var td13 = document.createElement('td');
   
             
             td0.innerHTML = ++stdNo;
@@ -227,13 +230,14 @@
             td3.innerHTML = contact;
             td4.innerHTML = whatsapp;
             td5.innerHTML = gender;
-            td6.innerHTML = qualifications;
-            td7.innerHTML = work;
-            td8.innerHTML = experience;
-            td9.innerHTML = address;
-            td10.innerHTML = state;
-            td11.innerHTML = country;
-            td12.innerHTML = status;
+            td6.innerHTML = blood;
+            td7.innerHTML = qualifications;
+            td8.innerHTML = work;
+            td9.innerHTML = experience;
+            td10.innerHTML = address;
+            td11.innerHTML = state;
+            td12.innerHTML = country;
+            td13.innerHTML = status;
         
             
     
@@ -251,6 +255,7 @@
             trow.appendChild(td10);
             trow.appendChild(td11);
             trow.appendChild(td12);
+            trow.appendChild(td13);
  
             
             tbody.appendChild(trow);
