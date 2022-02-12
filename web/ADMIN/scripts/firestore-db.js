@@ -555,7 +555,7 @@ async function getuserInfoRealtime(userID){
 
                          <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 						<div class="hospital-barchart">
-							<h4 class="card-title d-inline-block">Intern's Management</h4>
+										<h4 class="card-title d-inline-block">Intern's Management</h4>
 						</div>
 						<div class="bar-chart">
 						
@@ -581,9 +581,33 @@ async function getuserInfoRealtime(userID){
 								
 							</div>
 						</div>
+
+
+                        
 					 </div>
-                
-				</div>
+                     <div class="col-12 col-md-6 col-lg-8 col-xl-8">
+                     <div class="card">
+                         <div class="card-header">
+                             <h4 class="card-title d-inline-block">EXTRA PANEL</h4> 
+                         </div>
+                         <div class="card-body p-0">
+                             <div class="table-responsive">
+                                 <table class="table mb-0">
+                                 
+                                     <tbody>
+                                         <tr>
+                                             <td style="min-width: 200px;">
+                                                 
+                                                 <h2><a href="../instagramlive.html"  >InstaLiveForm</a></h2>
+                                             </td>                 
+     
+                                             <td class="text-right">
+                                                 <a href="../instagramlive.html"  class="btn btn-outline-primary take-btn">View</a>
+                                             </td>
+                                         </tr>
+     
+     
+                                        
 
             </div>
            
@@ -591,6 +615,7 @@ async function getuserInfoRealtime(userID){
 
 
 
+    
     
 
 
