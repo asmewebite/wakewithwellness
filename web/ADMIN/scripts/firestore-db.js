@@ -595,17 +595,7 @@ async function getuserInfoRealtime(userID){
                                  <table class="table mb-0">
                                  
                                      <tbody>
-                                         <tr>
-                                             <td style="min-width: 200px;">
-                                                 
-                                                 <h2><a href="../instagramlive.html"  >InstaLiveForm</a></h2>
-                                             </td>                 
-     
-                                             <td class="text-right">
-                                                 <a href="../instagramlive.html"  class="btn btn-outline-primary take-btn">View</a>
-                                             </td>
-                                         </tr>
-					 
+                                       
 					 
 					  <tr>
                                          <td style="min-width: 200px;">
