@@ -463,6 +463,18 @@ async function getuserInfoRealtime(userID){
                                 </tr>
                                    
                       
+		                 
+                                <tr>
+                                <td style="min-width: 200px;">
+                                    
+                                    <h2><a href="wellnessfund.html"  >Wellness Fundraiser</a></h2>
+                                </td>                 
+
+                                <td class="text-right">
+                                    <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
+                                </td>
+                            </tr>
+
 
 
 
