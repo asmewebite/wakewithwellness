@@ -49,11 +49,7 @@ var firebaseConfig = {
  
   // Show alert
   document.querySelector('.alert').style.display = 'block';
- 
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.alert').style.display = 'none';
-  },3000);
+  document.querySelector('#volunteership').style.display = 'none';
  
   // Clear form
   document.getElementById('volunteership').reset();
