@@ -44,6 +44,20 @@ async function login(e){
 }
 
 
+
+function forgotPass(){
+  const email = document.getElementById("loginEmail").value
+  firebase.auth().sendPasswordResetEmail(email)
+  .then(() => {
+      alert("Reset link sent to your email id")
+  })
+  .catch((err) => {
+    console.log(err)
+    M.toast({html: err.message,classes:"red"})
+  });
+}
+
+
 function logout(){
     firebase.auth().signOut()
     
@@ -75,18 +89,7 @@ const unsubscribe  = firebase.auth().onAuthStateChanged((user) => {
   });
 
 
-async function loginWithGoogle(){
-    try{
-      var provider = new firebase.auth.GoogleAuthProvider();
-    const result =  await firebase.auth()
-    .signInWithPopup(provider)  
-    console.log(result)
-    }catch(err){
-        console.log(err)
-    }
-    
-  
-}
+
 
 
 
