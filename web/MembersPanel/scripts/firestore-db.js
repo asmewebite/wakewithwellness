@@ -65,7 +65,8 @@ async function getuserInfo(userID){
               <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
               height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
               font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
+             <a href="#" onclick="forgotPass()">Forgot Password</a><br>
+              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
                   <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                   font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
                   
@@ -329,9 +330,10 @@ async function getuserInfoRealtime(userID){
                 <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
                 height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
                 font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-                <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
-                    <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                    font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
+                <a href="#" onclick="forgotPass()">Forgot Password</a><br>
+              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
+                  <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
+                  font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
                     
                 </div>
              </form>
