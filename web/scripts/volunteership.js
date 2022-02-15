@@ -1,17 +1,4 @@
-//Connection
-var firebaseConfig = {
-     apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
-     authDomain: "website-818ed.firebaseapp.com",
-     projectId: "website-818ed",
-     storageBucket: "website-818ed.appspot.com",
-     messagingSenderId: "542030860652",
-     appId: "1:542030860652:web:ee0bef0509915aa1da2349",
-     measurementId: "G-2VWCQ9QR4S"
-   };
- 
- //Init Firebase
- firebase.initializeApp(firebaseConfig);
- 
+
  // Reference messages collection
  var dataRef = firebase.database().ref('VolunteershipP');
  
@@ -50,7 +37,7 @@ var firebaseConfig = {
   // Show alert
   document.querySelector('.alert').style.display = 'block';
   document.querySelector('#volunteership').style.display = 'none';
- 
+
   // Clear form
   document.getElementById('volunteership').reset();
  }
