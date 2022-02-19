@@ -620,6 +620,19 @@ async function getuserInfoRealtime(userID){
                                              <a href="instagramlive.html"  class="btn btn-outline-primary take-btn">View</a>
                                          </td>
                                      </tr>
+				     
+				     
+				      <tr>
+                                     <td style="min-width: 200px;">
+                                         
+                                         <h2><a href="RazorpayPayment/index.html"  >Wellness Fundraiser Trial</a></h2>
+                                     </td>                 
+
+                                     <td class="text-right">
+                                         <a href="RazorpayPayment/index.html"  class="btn btn-outline-primary take-btn">View</a>
+                                     </td>
+                                 </tr>
+     
      
      
      
@@ -792,22 +805,6 @@ function updateattendance(event){
 }
 
 
-
-//suggestions
-
-function sendMessage(event){
-  event.preventDefault()
-  var message = document.getElementById('msg').value
-  var name = document.getElementById('name').value
-  var userRef = firebase.firestore().collection('membermsg').add({
-    message:message,
-    name:name,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-  }).then(()=>{
-    document.querySelector('.alert').style.display = 'block';
-
-  });
-}
 
 
 
