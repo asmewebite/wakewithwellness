@@ -9,22 +9,22 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
-       inv1:"",
-       inv2:"",
-       inv3:"",
-       inv4:"",
-       purpose1:"",
-       purpose2:"",
-       purpose3:"",
-       purpose4:"",
-       amount1:"",
-       amount2:"",
-       amount3:"",
-       ampunt4:"",
-       date1:"",
-       date2:"",
-       date3:"",
-       date4:""
+       i1:"",
+       i2:"",
+       i3:"",
+       i4:"",
+       p1:"",
+       p2:"",
+       p3:"",
+       p4:"",
+       a1:"",
+       a2:"",
+       a3:"",
+       a4:"",
+       d1:"",
+       d2:"",
+       d3:"",
+       d4:""
 
        
 
@@ -96,7 +96,7 @@ async function getuserInfo(userID){
 async function getuserInfoRealtime(userID){
     if(userID){
       const userdocRef = await  firebase.firestore()
-        .collection('users')
+        .collection('Payments')
         .doc(userID)
         userdocRef.onSnapshot((doc)=>{
             if(doc.exists){
@@ -184,41 +184,56 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a>${userInfo.inv1}</a></td>
+                                        <td><a>${userInfo.i1}</a></td>
                                         <td>
-                                            <h2><a>${userInfo.purpose1}</a></h2>
+                                            <h2><a>${userInfo.p1}</a></h2>
                                         </td>
                                   
-                                        <td>${userInfo.date1}</td>
-                                        <td>${userInfo.amount1}</td>
+                                        <td>${userInfo.d1}</td>
+                                        <td>${userInfo.a1}</td>
                                     </tr>
                                     <tr>
-                                        <td><a>${userInfo.inv2}</a></td>
+                                        <td><a>${userInfo.i2}</a></td>
                                         <td>
-                                            <h2><a>${userInfo.purpose2}</a></h2>
+                                            <h2><a>${userInfo.p2}</a></h2>
                                         </td>
                                     
-                                        <td>${userInfo.date2}</td>
-                                        <td>${userInfo.amount2}</td>
+                                        <td>${userInfo.d2}</td>
+                                        <td>${userInfo.a2}</td>
                                     </tr>
                                     <tr>
-                                        <td><a>${userInfo.inv3}</a></td>
+                                        <td><a>${userInfo.i3}</a></td>
                                         <td>
-                                            <h2><a>${userInfo.purpose3}</a></h2>
+                                            <h2><a>${userInfo.p3}</a></h2>
                                         </td>
                                     
-                                        <td>${userInfo.date3}</td>
-                                        <td>${userInfo.amount3}</td>
+                                        <td>${userInfo.d3}</td>
+                                        <td>${userInfo.a3}</td>
                                     </tr>
+
+
                                     <tr>
-                                    <td><a>${userInfo.inv4}</a></td>
+                                    <td><a>${userInfo.i4}</a></td>
                                     <td>
-                                        <h2><a>${userInfo.purpose4}</a></h2>
+                                        <h2><a>${userInfo.p4}</a></h2>
                                     </td>
                                 
-                                    <td>${userInfo.date4}</td>
-                                    <td>${userInfo.amount4}</td>
+                                    <td>${userInfo.d4}</td>
+                                    <td>${userInfo.a4}</td>
                                 </tr>
+
+
+                                <tr>
+                                    <td><a>${userInfo.i5}</a></td>
+                                    <td>
+                                        <h2><a>${userInfo.p5}</a></h2>
+                                    </td>
+                                
+                                    <td>${userInfo.d5}</td>
+                                    <td>${userInfo.a5}</td>
+                                </tr>
+
+                               
                                 </tbody>
                             </table>
                         </div>
