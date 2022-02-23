@@ -141,7 +141,10 @@ margin-bottom: 12px; /* Add some space below the input */
                     <tr style="background-color: #5793D1;color: #fff;"> 
                       <th scope="col">Reg No.</th>
                       <th scope="col">Name</th>  
-                    <th scope="col">Contact</th>
+               
+                    <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
+                    <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
+                    <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
                     <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
                     <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
                     <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
@@ -204,7 +207,7 @@ margin-bottom: 12px; /* Add some space below the input */
         db.settings({ timestampInSnapshots: true});
 
 
-        db.collection("users").orderBy('regno').get().then(querySnapshot=>{
+        db.collection("Payments").orderBy('regno').get().then(querySnapshot=>{
         querySnapshot.forEach(doc=>{
             let data = doc.data();
             let row  = `<tr>
@@ -213,16 +216,22 @@ margin-bottom: 12px; /* Add some space below the input */
                           <label>${data.regno}</label>
                         </th>
                             <td>${data.name}</td>
-                            <td>${data.phone}</td>
-                            <td>${data.purpose1}</td> 
-                            <td>${data.inv1}</td> 
-                            <td>${data.amount1}</td>
-                            <td>${data.purpose2}</td>
-                            <td>${data.inv2}</td>
-                            <td>${data.amount2}</td>
-                            <td>${data.purpose3}</td>
-                            <td>${data.inv3}</td>
-                            <td>${data.amount3}</td>
+                         
+                            <td>${data.p1}</td> 
+                            <td>${data.i1}</td> 
+                            <td>${data.a1}</td>
+
+                            <td>${data.p2}</td>
+                            <td>${data.i2}</td>
+                            <td>${data.a2}</td>
+
+                            <td>${data.p3}</td>
+                            <td>${data.i3}</td>
+                            <td>${data.a3}</td>
+
+                            <td>${data.p4}</td>
+                            <td>${data.i4}</td>
+                            <td>${data.a4}</td>
                             
                       </tr>`;
             let table = document.getElementById('myTable')
