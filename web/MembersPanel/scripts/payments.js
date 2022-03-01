@@ -20,8 +20,11 @@ function createUserCollection(user){
        a1:"",
        a2:"",
        a3:"",
-       a4:""
-     
+       a4:"",
+       d1:"",
+       d2:"",
+       d3:"",
+       d4:""
 
        
 
@@ -174,6 +177,8 @@ async function getuserInfoRealtime(userID){
                                     <tr>
                                         <th>Invoice ID</th>
                                         <th>Pupose</th>
+                                    
+                                        <th>Paid Date</th>
                                         <th>Paid Amount</th>
                                     </tr>
                                 </thead>
@@ -183,6 +188,8 @@ async function getuserInfoRealtime(userID){
                                         <td>
                                             <h2><a>${userInfo.p1}</a></h2>
                                         </td>
+                                  
+                                        <td>${userInfo.d1}</td>
                                         <td>${userInfo.a1}</td>
                                     </tr>
                                     <tr>
@@ -190,7 +197,8 @@ async function getuserInfoRealtime(userID){
                                         <td>
                                             <h2><a>${userInfo.p2}</a></h2>
                                         </td>
-
+                                    
+                                        <td>${userInfo.d2}</td>
                                         <td>${userInfo.a2}</td>
                                     </tr>
                                     <tr>
@@ -198,7 +206,8 @@ async function getuserInfoRealtime(userID){
                                         <td>
                                             <h2><a>${userInfo.p3}</a></h2>
                                         </td>
-
+                                    
+                                        <td>${userInfo.d3}</td>
                                         <td>${userInfo.a3}</td>
                                     </tr>
 
@@ -208,7 +217,8 @@ async function getuserInfoRealtime(userID){
                                     <td>
                                         <h2><a>${userInfo.p4}</a></h2>
                                     </td>
-
+                                
+                                    <td>${userInfo.d4}</td>
                                     <td>${userInfo.a4}</td>
                                 </tr>
 
@@ -218,7 +228,8 @@ async function getuserInfoRealtime(userID){
                                     <td>
                                         <h2><a>${userInfo.p5}</a></h2>
                                     </td>
-
+                                
+                                    <td>${userInfo.d5}</td>
                                     <td>${userInfo.a5}</td>
                                 </tr>
 
