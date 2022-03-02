@@ -93,11 +93,11 @@ function card(title, content, publisher, date) {
   return `
   <div class="card" style="padding:15px">
     <header class="card-header">
-      <h3 class="card-header-content" id="data-content">${title}</h3>
-      <p id="data-url" style="text-align: justify;">${content}</p>
+      <h3 class="card-header-content" id="data-title">${title}</h3>
+      <p id="data-content" style="text-align: justify;">${content}</p>
     </header>
     <div class="card-publisher">
-      <span id="data-publisher">${publisher}</span> | <span style="color:red" id="data-title">${date}</span>
+      <span id="data-publisher">${publisher}</span> | <span style="color:red" id="data-date">${date}</span>
     </div>
     <footer class="card-footer">
       <a class="card-footer-item" href="#preview" id="edit">Edit</a>
