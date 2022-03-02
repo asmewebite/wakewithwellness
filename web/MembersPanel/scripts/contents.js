@@ -97,22 +97,11 @@ function card(title, content, publisher, date) {
       <p id="data-content" style="text-align: justify;">${content}</p>
     </header><hr>
     <div class="card-publisher" style="padding:15px">
-      <span id="data-publisher">${publisher}</span> | <span style="color:red" id="data-date">Posted on: ${date}</span>
+      <span id="data-publisher">${publisher}</span> | Posted on: <span style="color:red" id="data-date">${date}</span>
     </div>
     <footer class="card-footer" style="padding:10px">
-    <div class="container" style="text-align: center">
-  <div class="row">
-    <div class="col order-last">
-    <a class="card-footer-item" style="color:red;cursor: pointer;" id="delete">Delete</a>
-    </div>
-    <div class="col">
-    <a class="card-footer-item" style="cursor: pointer;" href="#preview" id="edit">Edit</a>
-   
-    </div>
-  
-  </div>
-</div>
-   
+      <a class="card-footer-item" href="#preview" id="edit">Edit</a>
+      
     </footer>
   </div>
   <br>
