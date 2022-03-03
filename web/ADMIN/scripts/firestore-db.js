@@ -64,7 +64,7 @@ async function getuserInfo(userID){
               height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
               font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
 
-             <a href="#" onclick="forgotPass()">Forgot Password</a><br>
+              <a href="#" onclick="forgotPass()">Forgot Password</a><br>
               <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
                   <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                   font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
@@ -440,6 +440,20 @@ async function getuserInfoRealtime(userID){
                             <table class="table mb-0">
                             
                                 <tbody>
+
+                                <tr>
+                                <td style="min-width: 200px;">
+                                    
+                                    <h2><a href="contents.html"  >Contents</a></h2>
+                                </td>                 
+
+                                <td class="text-right">
+                                    <a href="contents.html"  class="btn btn-outline-primary take-btn">View</a>
+                                </td>
+                            </tr>
+
+
+
                                     <tr>
                                         <td style="min-width: 200px;">
                                             
@@ -462,9 +476,9 @@ async function getuserInfoRealtime(userID){
                                         <a href="vaccinesadmin22.html"  class="btn btn-outline-primary take-btn">View</a>
                                     </td>
                                 </tr>
+
+
                                    
-                      
-		                 
                                 <tr>
                                 <td style="min-width: 200px;">
                                     
@@ -475,7 +489,6 @@ async function getuserInfoRealtime(userID){
                                     <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
                                 </td>
                             </tr>
-
 
 
 
@@ -568,7 +581,7 @@ async function getuserInfoRealtime(userID){
 
                          <div class="col-12 col-md-6 col-lg-4 col-xl-4">
 						<div class="hospital-barchart">
-										<h4 class="card-title d-inline-block">Intern's Management</h4>
+							<h4 class="card-title d-inline-block">Intern's Management</h4>
 						</div>
 						<div class="bar-chart">
 						
@@ -608,33 +621,32 @@ async function getuserInfoRealtime(userID){
                                  <table class="table mb-0">
                                  
                                      <tbody>
-                                       
-					 
-					  <tr>
+                                         <tr>
+                                             <td style="min-width: 200px;">
+                                                 
+                                                 <h2><a href="../instagramlive.html"  >InstaLiveForm</a></h2>
+                                             </td>                 
+     
+                                             <td class="text-right">
+                                                 <a href="../instagramlive.html"  class="btn btn-outline-primary take-btn">View</a>
+                                             </td>
+                                         </tr>
+     
+
+                                         <tr>
                                          <td style="min-width: 200px;">
                                              
-                                             <h2><a href="instagramlive.html"  >MentalHealth InstaLive</a></h2>
+                                             <h2><a href="instagramlive.html"  >InstaLiveForm Responses</a></h2>
                                          </td>                 
  
                                          <td class="text-right">
                                              <a href="instagramlive.html"  class="btn btn-outline-primary take-btn">View</a>
                                          </td>
                                      </tr>
-				     
-				     
-				      <tr>
-                                     <td style="min-width: 200px;">
-                                         
-                                         <h2><a href="RazorpayPayment/index.html"  >Wellness Fundraiser Trial</a></h2>
-                                     </td>                 
 
-                                     <td class="text-right">
-                                         <a href="RazorpayPayment/index.html"  class="btn btn-outline-primary take-btn">View</a>
-                                     </td>
-                                 </tr>
-     
-     
-     
+
+
+                                   
      
                                         
 
@@ -644,7 +656,6 @@ async function getuserInfoRealtime(userID){
 
 
 
-    
     
 
 
@@ -693,10 +704,10 @@ async function getuserInfoRealtime(userID){
                 height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
                 font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
 
-           <a href="#" onclick="forgotPass()">Forgot Password</a><br>
-              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
-                  <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                  font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
+                <a href="#" onclick="forgotPass()">Forgot Password</a><br>
+                <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
+                    <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
+                    font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
                     
                 </div>
              </form>
@@ -768,41 +779,6 @@ async function allUserDetails(){
 
 
 
-
-
-
-
-
-
-//Attendance
-
-
-function updateattendance(event){
-  event.preventDefault()
-  var Dec2 = document.getElementById('attend').value
-  var Dec2f = document.getElementById('work').value
-  var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
-
-  var setWithMerge = userRef.set({
-    Dec2:Dec2,
-    Dec2f:Dec2f
-
-  },{ merge: true}).then(()=>{
-    document.querySelector('.alert').style.display = 'block';
-
-     // Show alert
- document.querySelector('.alert').style.display = 'block';
-
- // Hide alert after 3 seconds
- setTimeout(function(){
-   document.querySelector('.alert').style.display = 'none';
- },5000);
-
- // Clear form
- document.getElementById('attendanceform').reset();
-
-  });
-}
 
 
 
