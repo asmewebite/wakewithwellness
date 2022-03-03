@@ -17,24 +17,23 @@ let preview = document.getElementById("preview");
 let title = document.getElementById("title");
 let content = document.getElementById("content");
 let publisher = document.getElementById("publisher");
-let date = document.getElementById("date");
+
 
 preview.addEventListener("submit", e => {
   e.preventDefault();
 
-  if (!title.value || !content.value || !publisher.value || !date.value)
+  if (!title.value || !content.value || !publisher.value )
     return null;
 
   db.ref("contents/" + title.value).set({
     content: content.value,
-    date: date.value,
-    publisher: publisher.value
+    publisher: publisher.value,
+    when: firebase.database.ServerValue.TIMESTAMP
   });
 
   title.value = "";
   publisher.value = "";
   content.value = "";
-  date.value = "";
 });
 
 // READ
@@ -45,12 +44,13 @@ listRef.on("child_added", data => {
   let title = data.key;
   let content = data.val().content;
   let publisher = data.val().publisher;
-  let date = data.val().date;
+  let when = data.val().when;
+
 
   let div = document.createElement("div");
   div.id = title;
   div.setAttribute("class", "column");
-  div.innerHTML = card(title, content, publisher, date);
+  div.innerHTML = card(title, content, publisher, when);
   list.appendChild(div);
 });
 
@@ -62,7 +62,8 @@ list.addEventListener("click", e => {
     title.value = listNode.querySelector("#data-title").innerText;
     content.value = listNode.querySelector("#data-content").innerText;
     publisher.value = listNode.querySelector("#data-publisher").innerText;
-    date.value = listNode.querySelector("#data-date").innerText;
+    
+
   }
 
   // DELETE
@@ -78,10 +79,11 @@ listRef.on("child_changed", data => {
   let title = data.key;
   let content = data.val().content;
   let publisher = data.val().publisher;
-  let date = data.val().date;
+  let when = data.val().when;
+
 
   let listNode = document.getElementById(title);
-  listNode.innerHTML = card(title, content, publisher, date);
+  listNode.innerHTML = card(title, content, publisher, when);
 });
 
 listRef.on("child_removed", data => {
@@ -89,7 +91,7 @@ listRef.on("child_removed", data => {
   listNode.parentNode.removeChild(listNode);
 });
 
-function card(title, content, publisher, date) {
+function card(title, content, publisher, when) {
   return `
   <div class="card" style="padding:15px">
     <header class="card-header">
@@ -97,7 +99,7 @@ function card(title, content, publisher, date) {
       <p id="data-content" style="text-align: justify;">${content}</p>
     </header><hr>
     <div class="card-publisher" style="padding:15px">
-      <span id="data-publisher">${publisher}</span> | Posted on: <span style="color:red" id="data-date">${date}</span>
+      <span id="data-publisher">${publisher}</span> | Posted on: <span style="color:red" id="data-date">${when} </span>
     </div>
     <footer class="card-footer" style="padding:10px">
     
