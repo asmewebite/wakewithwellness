@@ -97,8 +97,8 @@ function card(title, content, publisher, when) {
     <header class="card-header">
       <h3 class="card-header-content" id="data-title">${title}</h3><hr>
       <p id="data-content" style="text-align: justify;">${content}</p>
-    </header><hr>
-    <div class="card-publisher" style="padding:8px;font-size:11px">
+    </header>
+    <div class="card-publisher" style="margin-left:10px;font-size:11.5px">
       <span id="data-publisher">${publisher}</span> | Posted on: <span style="color:red" id="data-date">${when} </span>
     </div>
     <footer class="card-footer" style="padding:10px">
