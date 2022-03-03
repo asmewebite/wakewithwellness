@@ -93,12 +93,12 @@ listRef.on("child_removed", data => {
 
 function card(title, content, publisher, when) {
   return `
-  <div class="card" style="padding:15px">
+   <div class="card" style="padding:4px">
     <header class="card-header">
       <h3 class="card-header-content" id="data-title">${title}</h3><hr>
       <p id="data-content" style="text-align: justify;">${content}</p>
     </header><hr>
-    <div class="card-publisher" style="padding:15px">
+    <div class="card-publisher" style="padding:8px;font-size:11px">
       <span id="data-publisher">${publisher}</span> | Posted on: <span style="color:red" id="data-date">${when} </span>
     </div>
     <footer class="card-footer" style="padding:10px">
